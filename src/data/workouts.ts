@@ -1,0 +1,433 @@
+import { Workout } from "@/types/workout";
+
+export const workouts: Workout[] = [
+  {
+    id: "sawtooth",
+    title: "WORKOUT ONE",
+    subtitle: "SAWTOOTH",
+    duration: "TOTAL REPS",
+    workoutType: "AMRAP",
+    format: "partner",
+    rx: {
+      deadlifts: {
+        reps: 10,
+        weight: "(225/155)"
+      },
+      burpees: {
+        reps: 15,
+        type: "BAR-FACING BURPEES"
+      },
+      wallBalls: {
+        reps: 20,
+        weight: "(20/14)",
+        height: "(10FT/9FT)"
+      }
+    },
+    intermediate: {
+      deadlifts: {
+        reps: 10,
+        weight: "(185/125)"
+      },
+      burpees: {
+        reps: 15,
+        type: "BAR-FACING BURPEES"
+      },
+      wallBalls: {
+        reps: 20,
+        weight: "(20/14)",
+        height: "(10FT/9FT)"
+      }
+    },
+    rookie: {
+      deadlifts: {
+        reps: 10,
+        weight: "(155/105)"
+      },
+      burpees: {
+        reps: 15,
+        type: "BAR-FACING BURPEES"
+      },
+      wallBalls: {
+        reps: 20,
+        weight: "(14/10)",
+        height: "(10FT/9FT)"
+      }
+    },
+    athlete2Instructions: "MAX CALORIE ROW",
+    switchInstructions: "ATHLETES SWITCH AFTER EVERY COMPLETED ROUND.",
+    scoring: "SCORE: TOTAL REPS + TOTAL CALORIES",
+    sponsor: {
+      name: "PROPATH FINANCIAL",
+      logo: "/brands/pro-path-financial.svg"
+    }
+  },
+  {
+    id: "steelhead",
+    title: "WORKOUT TWO",
+    subtitle: "STEELHEAD",
+    duration: "FOR TIME",
+    workoutType: "",
+    format: "partner",
+    rx: {
+      rounds: [
+        {
+          movements: [
+            "30 FT. HANDSTAND WALK",
+            "20 TOES TO BAR",
+            "30 FT. HANDSTAND WALK"
+          ]
+        },
+        {
+          movements: [
+            "30 FT. HANDSTAND WALK",
+            "20 CHEST TO BAR PULL-UPS",
+            "30 FT. HANDSTAND WALK"
+          ]
+        },
+        {
+          movements: [
+            "30 FT. HANDSTAND WALK",
+            "10 BAR MUSCLE-UPS",
+            "30 FT. HANDSTAND WALK"
+          ]
+        }
+      ],
+      notes: ["2 ROUNDS:", "2 ROUNDS:", "2 ROUNDS:"]
+    },
+    intermediate: {
+      rounds: [
+        {
+          movements: [
+            "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY",
+            "15 TOES TO BAR",
+            "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY"
+          ]
+        },
+        {
+          movements: [
+            "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY",
+            "15 PULL-UPS",
+            "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY"
+          ]
+        },
+        {
+          movements: [
+            "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY",
+            "15 CHEST TO BAR PULL-UPS",
+            "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY"
+          ]
+        }
+      ],
+      dumbbellWeight: "(50S/35S)",
+      notes: ["2 ROUNDS:", "2 ROUNDS:", "2 ROUNDS:"]
+    },
+    rookie: {
+      rounds: [
+        {
+          movements: [
+            "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY",
+            "30 AB MAT SIT UPS",
+            "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY"
+          ]
+        },
+        {
+          movements: [
+            "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY",
+            "20 HANGING KNEE RAISES",
+            "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY"
+          ]
+        },
+        {
+          movements: [
+            "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY",
+            "20 HEELS ABOVE HIPS",
+            "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY"
+          ]
+        }
+      ],
+      dumbbellWeight: "(50S/35S)",
+      notes: ["2 ROUNDS:", "2 ROUNDS:", "2 ROUNDS:"]
+    },
+    switchInstructions: "ATHLETES ALTERNATE ROUNDS",
+    additionalNotes: [
+      "(EACH ATHLETE DOES 1 ROUND OF EACH VARIANT)",
+      "*10FT SECTIONS UNBROKEN."
+    ],
+    sponsor: {
+      name: "SCHEELS",
+      logo: "/brands/scheels.svg"
+    }
+  },
+  {
+    id: "spud-nation",
+    title: "WORKOUT THREE",
+    subtitle: "SPUD NATION",
+    duration: "FOR TIME",
+    workoutType: "",
+    format: "partner",
+    rx: {
+      movements: [
+        "160 DRAG ROPE DOUBLE-UNDERS",
+        "80/60 CALORIE ECHO BIKE",
+        "*CO-ED: 40/30 CALORIES"
+      ],
+      barbellHold: {
+        men: "115LBS",
+        women: "75LBS",
+        coed: "95LBS"
+      }
+    },
+    intermediate: {
+      movements: [
+        "120 DRAG ROPE DOUBLE-UNDERS",
+        "80/60 CALORIE ECHO BIKE",
+        "*CO-ED: 40/30 CALORIES"
+      ],
+      barbellHold: {
+        men: "115LBS",
+        women: "75LBS",
+        coed: "95LBS"
+      }
+    },
+    rookie: {
+      movements: [
+        "160 DRAG ROPE SINGLE-UNDERS",
+        "80/60 CALORIE ECHO BIKE",
+        "*CO-ED: 40/30 CALORIES"
+      ],
+      barbellHold: {
+        men: "115LBS",
+        women: "75LBS",
+        coed: "95LBS"
+      }
+    },
+    switchInstructions: "ONE ATHLETE MUST HOLD A BARBELL IN THE RACK POSITION. THE WORKING ATHLETE MAY ONLY COMPLETE REPS WHILE THEIR TEAMMATE IS MAINTAINING THE BARBELL RACK POSITION HOLD.",
+    additionalNotes: [
+      "TIMECAP 10:00 MINUTES"
+    ],
+    sponsor: {
+      name: "RXSG",
+      logo: "/brands/rxsg.svg"
+    }
+  },
+  {
+    id: "bronco",
+    title: "WORKOUT FOUR",
+    subtitle: "BRONCO",
+    duration: "",
+    workoutType: "FOR TOTAL CUMULATIVE LOAD",
+    format: "partner",
+    rx: {
+      movements: [
+        "EVERY 90 SECONDS X 6 SETS",
+        "ATHLETE 1: 8 SANDBAG OVER BARRIER (150/100) (4FT)",
+        "- THEN, IN REMAINING TIME -",
+        "ATHLETE 2: 1 BARBELL CLEAN",
+        "",
+        "SETS 1,2,3",
+        "ATHLETE 1 SANDBAG OVER BARRIER",
+        "ATHLETE 2 BARBELL CLEAN",
+        "",
+        "- 1 MINUTE TRANSITION -",
+        "",
+        "SETS 4,5,6",
+        "ATHLETE 2 SANDBAG OVER BARRIER",
+        "ATHLETE 1 BARBELL CLEAN"
+      ]
+    },
+    intermediate: {
+      movements: [
+        "EVERY 90 SECONDS X 6 SETS",
+        "ATHLETE 1: 8 SANDBAG OVER BARRIER (125/75) (4FT)",
+        "- THEN, IN REMAINING TIME -",
+        "ATHLETE 2: 1 BARBELL CLEAN",
+        "",
+        "SETS 1,2,3",
+        "ATHLETE 1 SANDBAG OVER BARRIER",
+        "ATHLETE 2 BARBELL CLEAN",
+        "",
+        "- 1 MINUTE TRANSITION -",
+        "",
+        "SETS 4,5,6",
+        "ATHLETE 2 SANDBAG OVER BARRIER",
+        "ATHLETE 1 BARBELL CLEAN"
+      ]
+    },
+    rookie: {
+      movements: [
+        "EVERY 90 SECONDS X 6 SETS",
+        "ATHLETE 1: 8 SANDBAG OVER BARRIER (100/50) (4FT)",
+        "- THEN, IN REMAINING TIME -",
+        "ATHLETE 2: 1 BARBELL CLEAN",
+        "",
+        "SETS 1,2,3",
+        "ATHLETE 1 SANDBAG OVER BARRIER",
+        "ATHLETE 2 BARBELL CLEAN",
+        "",
+        "- 1 MINUTE TRANSITION -",
+        "",
+        "SETS 4,5,6",
+        "ATHLETE 2 SANDBAG OVER BARRIER",
+        "ATHLETE 1 BARBELL CLEAN"
+      ]
+    },
+    scoring: "(THE SUM OF 3 SUCCESSFUL LIFTS BY EACH ATHLETE)",
+    sponsor: {
+      name: "GYMREAPERS",
+      logo: "/brands/gymreapers.svg"
+    }
+  },
+  {
+    id: "vandal",
+    title: "WORKOUT FIVE",
+    subtitle: "VANDAL",
+    duration: "FOR TIME",
+    workoutType: "",
+    format: "partner",
+    rx: {
+      movements: [
+        "4 ROUNDS FOR TIME:",
+        "",
+        "500M PARTNER RUN",
+        "30FT. IMPLEMENT CARRY",
+        "",
+        "ATHLETES WILL JUMP OVER 4FT TALL BARRIER ON THE WAY",
+        "DOWN & IN FROM THE 500M RUN EACH ROUND.",
+        "",
+        "ALL IMPLEMENTS MUST BE MOVED 30 FT. EVERY ROUND.",
+        "",
+        "BOTH PARTNERS CAN WORK SIMULTANEOUSLY AND DIVIDE THE",
+        "WORK ANYWAY.",
+        "",
+        "4 SANDBAGS",
+        "(MEN/CO-ED: 150, 125, 100, 75)",
+        "(WOMEN: 125, 100, 75, 50)",
+        "",
+        "4 DBS PER TEAM",
+        "(MEN/CO-ED: (2 X 70) & (2 X 50)",
+        "(WOMEN: (2 X 50), (2 X 35)",
+        "",
+        "TIME CAP: 17:00"
+      ]
+    },
+    intermediate: {
+      movements: [
+        "4 ROUNDS FOR TIME:",
+        "",
+        "500M PARTNER RUN",
+        "30FT. IMPLEMENT CARRY",
+        "",
+        "ATHLETES WILL JUMP OVER 4FT TALL BARRIER ON THE WAY",
+        "DOWN & IN FROM THE 500M RUN EACH ROUND.",
+        "",
+        "ALL IMPLEMENTS MUST BE MOVED 30 FT. EVERY ROUND.",
+        "",
+        "BOTH PARTNERS CAN WORK SIMULTANEOUSLY AND DIVIDE THE",
+        "WORK ANYWAY.",
+        "",
+        "4 SANDBAGS",
+        "(MEN/CO-ED: 150, 125, 100, 75)",
+        "(WOMEN: 125, 100, 75, 50)",
+        "",
+        "4 DBS PER TEAM",
+        "(MEN/CO-ED: (2 X 70) & (2 X 50)",
+        "(WOMEN: (2 X 50), (2 X 35)",
+        "",
+        "TIME CAP: 17:00"
+      ]
+    },
+    rookie: {
+      movements: [
+        "FOR TIME:",
+        "",
+        "30FT. IMPLEMENT CARRY",
+        "500M RUN",
+        "30FT. IMPLEMENT CARRY",
+        "500M RUN",
+        "30FT. IMPLEMENT CARRY",
+        "500M RUN",
+        "30FT. IMPLEMENT CARRY",
+        "",
+        "ATHLETES WILL JUMP OVER 4FT TALL BARRIER ON THE WAY",
+        "DOWN & IN FROM THE 500M RUN EACH ROUND.",
+        "",
+        "ALL IMPLEMENTS MUST BE MOVED 30 FT. EVERY ROUND.",
+        "",
+        "BOTH PARTNERS CAN WORK SIMULTANEOUSLY AND DIVIDE THE",
+        "WORK ANYWAY.",
+        "",
+        "4 SANDBAGS",
+        "(MEN/CO-ED: 150, 125, 100, 75)",
+        "(WOMEN: 125, 100, 75, 50)",
+        "",
+        "4 DBS PER TEAM",
+        "(MEN/CO-ED: (2 X 70) & (2 X 50)",
+        "(WOMEN: (2 X 50), (2 X 35)"
+      ]
+    },
+    sponsor: {
+      name: "REIGN",
+      logo: "/brands/reign.svg"
+    }
+  },
+  {
+    id: "mw-tommy-v",
+    title: "WORKOUT SIX",
+    subtitle: "MW TOMMY V",
+    duration: "FOR TIME",
+    workoutType: "",
+    format: "partner",
+    rx: {
+      movements: [
+        "FOR TIME:",
+        "",
+        "21-15-9",
+        "SYNCHRO THRUSTERS",
+        "12-9-6",
+        "ROPE CLIMBS",
+        "",
+        "TIME CAP: 12:00",
+        "",
+        "SHORTY BARBELL: 115/75",
+        "12FT ROPE CLIMB HEIGHT",
+        "*CAN SPLIT ROPE CLIMBS"
+      ]
+    },
+    intermediate: {
+      movements: [
+        "FOR TIME:",
+        "",
+        "21-15-9",
+        "SYNCHRO THRUSTERS",
+        "9-6-3",
+        "ROPE CLIMBS",
+        "",
+        "TIME CAP: 12:00",
+        "",
+        "SHORTY BARBELL: 95/65",
+        "12FT ROPE CLIMB HEIGHT",
+        "*CAN SPLIT ROPE CLIMBS"
+      ]
+    },
+    rookie: {
+      movements: [
+        "FOR TIME:",
+        "",
+        "21-15-9",
+        "SYNCHRO THRUSTERS",
+        "42-30-18",
+        "RING ROWS",
+        "",
+        "TIME CAP: 12:00",
+        "",
+        "SHORTY BARBELL: 75/55",
+        "*RING ROWS: SPLIT W/TEAMMATE"
+      ]
+    },
+    sponsor: {
+      name: "NUTRISHOP / RESTORE",
+      logo: "/brands/nutrishop.svg",
+      secondaryLogo: "/brands/restore-hyper-wellness.svg"
+    }
+  }
+];
