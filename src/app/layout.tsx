@@ -22,6 +22,17 @@ const bebasNeue = Bebas_Neue({
 export const metadata: Metadata = {
   title: "Mountain West Fitness Championship",
   description: "The official website of the Mountain West Fitness Championship",
+  openGraph: {
+    title: "Mountain West Fitness Championship",
+    description: "The official website of the Mountain West Fitness Championship",
+    images: ["/og-mwfc.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mountain West Fitness Championship",
+    description: "The official website of the Mountain West Fitness Championship",
+    images: ["/og-mwfc.png"],
+  },
 };
 
 export default function RootLayout({
