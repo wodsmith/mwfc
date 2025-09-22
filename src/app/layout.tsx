@@ -19,19 +19,21 @@ const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_URL || "https://mwfc.pages.dev";
+
 export const metadata: Metadata = {
   title: "Mountain West Fitness Championship",
   description: "The official website of the Mountain West Fitness Championship",
   openGraph: {
     title: "Mountain West Fitness Championship",
     description: "The official website of the Mountain West Fitness Championship",
-    images: ["/og-mwfc.png"],
+    images: [`${siteUrl}/og-mwfc.png`],
   },
   twitter: {
     card: "summary_large_image",
     title: "Mountain West Fitness Championship",
     description: "The official website of the Mountain West Fitness Championship",
-    images: ["/og-mwfc.png"],
+    images: [`${siteUrl}/og-mwfc.png`],
   },
 };
 
