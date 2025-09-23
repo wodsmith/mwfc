@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
+import { scrollToElementWithOffset } from "@/lib/scrollUtils";
+import ViewLeaderboardButton from "./ui/view-leaderboard-button";
 
 export default function Header() {
   return (
@@ -39,12 +41,17 @@ export default function Header() {
           <p className="text-white text-2xl md:text-3xl font-bold mb-12">
             OCTOBER 10-11, 2025
           </p>
-          <Link
-            href="/register"
-            className="inline-block bg-[#FFB700] text-black px-10 py-4 font-black text-xl rounded hover:bg-[#FFB700]/90 transition-colors transform hover:scale-105"
-          >
-            REGISTER FOR MWFC 2025
-          </Link>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link
+              href="https://competitioncorner.net/ff/15905/results#team_101884"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#FFB700] text-black px-6 py-3 font-bold text-lg rounded hover:bg-[#FFB700]/90 transition-colors min-w-[205px]"
+            >
+              View Leaderboard
+            </Link>
+            <ViewLeaderboardButton />
+          </div>
           </div>
         </div>
       </header>

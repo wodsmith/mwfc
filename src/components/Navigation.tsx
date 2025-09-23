@@ -44,10 +44,12 @@ export default function Navigation() {
           </button>
           <WorkoutDropdown />
           <Link
-            href="/register"
+            href="https://competitioncorner.net/ff/15905/results#team_101884"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-[#FFB700] text-black px-6 py-3 font-bold text-lg rounded hover:bg-[#FFB700]/90 transition-colors"
           >
-            REGISTER NOW
+            View Leaderboard
           </Link>
         </div>
 
@@ -113,12 +115,13 @@ export default function Navigation() {
             </button>
             <WorkoutDropdown isMobile={true} onItemClick={() => setIsMenuOpen(false)} />
             <Link
-              href="/register"
-              className="bg-[#FFB700] text-black px-6 py-3 font-bold text-lg rounded hover:bg-[#FFB700]/90 transition-colors text-center"
-              onClick={() => setIsMenuOpen(false)}
+              href="https://competitioncorner.net/ff/15905/results#team_101884"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#FFB700] text-black px-6 py-3 font-bold text-lg rounded hover:bg-[#FFB700]/90 transition-colors"
             >
-              REGISTER NOW
-            </Link>
+              View Leaderboard
+          </Link>
           </div>
         </div>
       )}
