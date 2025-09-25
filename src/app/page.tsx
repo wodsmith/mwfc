@@ -147,7 +147,28 @@ export default function Home() {
 					</div>
 				</section>
 
-				<Schedule />
+				{/* Schedule with Coming Soon Overlay */}
+				<div className="relative">
+					{/* Coming Soon Overlay */}
+					<div className="absolute inset-0 z-20 flex items-center justify-center">
+						<div className="absolute inset-0 bg-black/60"></div>
+						<div className="relative z-30 text-center">
+							<h3 className="text-5xl font-bebas text-[#FFB700] mb-2">
+								SCHEDULE COMING SOON
+							</h3>
+							<p className="text-gray-400 text-lg">
+								Check back for the full competition schedule
+							</p>
+						</div>
+					</div>
+
+					{/* Blurred Schedule Component */}
+					<div className="filter blur-sm pointer-events-none select-none">
+						<Schedule />
+					</div>
+				</div>
+
+				
 
 				<Partners />
 
