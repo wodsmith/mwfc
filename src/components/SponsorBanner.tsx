@@ -63,7 +63,7 @@ export default function SponsorBanner() {
   return (
     <div className="relative w-full overflow-hidden" style={{ backgroundColor: '#326549' }}>
       <div className="h-24 sm:h-28 md:h-32 flex items-center justify-center">
-        <div className="w-full max-w-[66.666%] overflow-hidden">
+        <div className="w-full sm:max-w-[66.666%] overflow-hidden">
           <div
             ref={scrollRef}
             className="flex items-center"

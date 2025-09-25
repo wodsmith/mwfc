@@ -89,17 +89,17 @@ export default function Partners() {
 						</div>
 					</div>
 
-					<div className="flex gap-12 justify-center scale-90">
+					<div className="flex flex-col sm:flex-row gap-12 justify-center">
 						<div className="text-center">
 							<p className="text-lg font-bold text-[#FFB700] mb-6 uppercase">Official Apparel Sponsor</p>
-							<div className="flex justify-center">
+							<div className="flex justify-center scale-90">
 								<div className="bg-white rounded-lg p-8 shadow-lg">
 									<Image
 										src="/brands/gymreapers.svg"
 										alt="GYMREAPERS"
 										width={300}
 										height={120}
-										className="w-auto h-24"
+										className="w-[235px] h-24"
 									/>
 								</div>
 							</div>
@@ -107,14 +107,14 @@ export default function Partners() {
 
 						<div className="text-center">
 							<p className="text-lg font-bold text-[#FFB700] mb-6 uppercase">Official Jump Rope Sponsor</p>
-							<div className="flex justify-center">
+							<div className="flex justify-center scale-90">
 								<div className="bg-white rounded-lg p-8 shadow-lg">
 									<Image
 										src="/brands/rxsg.svg"
 										alt="Rx Smart Gear"
 										width={300}
 										height={120}
-										className="w-auto h-24"
+										className="w-[235px] h-24"
 									/>
 								</div>
 							</div>

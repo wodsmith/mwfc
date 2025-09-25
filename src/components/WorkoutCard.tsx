@@ -17,7 +17,7 @@ function PartnerDivisionContent({ division, athlete2Instructions, switchInstruct
   return (
     <div className="flex flex-col gap-6 justify-around h-full">
       <div>
-      <div className="flex justify-between">
+      <div className="flex flex-col sm:flex-row justify-between">
         <h4 className="text-xl font-bold text-white mb-4">ATHLETE 1</h4>
         <div className="space-y-2 text-white text-lg">
           {division.deadlifts && (

@@ -40,7 +40,7 @@ export default function Home() {
 				</section>
 
 				<section className="grid md:grid-cols-2 gap-12 mb-16">
-					<div>
+					<div className="px-8">
 						<h3 className="text-3xl font-bebas text-[#FFB700] mb-4">
 							Professional Programming
 						</h3>
@@ -50,11 +50,11 @@ export default function Home() {
 							at every level.
 						</p>
 						<p className="text-lg text-white">
-							From Intermediate to RX divisions, find your level and test
+							From Rookie to RX divisions, find your level and test
 							yourself against the best in the Mountain West region.
 						</p>
 					</div>
-					<div>
+					<div className="px-8">
 						<h3 className="text-3xl font-bebas text-[#FFB700] mb-4">
 							Conquer the Mountain
 						</h3>

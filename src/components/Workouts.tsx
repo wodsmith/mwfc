@@ -7,7 +7,7 @@ export default function Workouts() {
       <h2 className="text-5xl font-bebas text-center mb-12 text-white">
         WORKOUTS
       </h2>
-      <p className="text-center text-white text-lg mb-12 max-w-3xl mx-auto">
+      <p className="text-center text-white text-lg mb-12 max-w-3xl mx-auto text-balance">
         Test your limits with professionally programmed workouts designed to challenge athletes at every level
       </p>
 
