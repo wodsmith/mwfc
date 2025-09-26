@@ -43,7 +43,7 @@ export interface Workout {
   subtitle?: string;
   duration: string;
   workoutType: string;
-  format?: 'partner' | 'individual';
+  format?: "partner" | "individual";
   description?: string;
   rx: WorkoutDivision;
   intermediate: WorkoutDivision;

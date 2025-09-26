@@ -5,7 +5,7 @@
 
 :root {
   --forest-green: #326549;
-  --forest-green-light: #4a8a66;  /* Lighter green for better contrast on black (WCAG AAA) */
+  --forest-green-light: #4a8a66; /* Lighter green for better contrast on black (WCAG AAA) */
   --pitch-black: #000000;
   --summit-white: #ffffff;
   --alpine-gray: #4a5568;
@@ -96,17 +96,25 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-bebas-neue), sans-serif;
   font-weight: 400;
   letter-spacing: 0.02em;
 }
 
 .hero-gradient {
-  background: linear-gradient(180deg,
+  background: linear-gradient(
+    180deg,
     rgba(0, 0, 0, 0.7) 0%,
     rgba(0, 0, 0, 0.5) 50%,
     rgba(0, 0, 0, 0.7) 100%

@@ -25,20 +25,20 @@ export default function Navigation() {
 
         <div className="hidden lg:flex items-center space-x-8">
           <button
-            onClick={() => scrollToElementWithOffset('location')}
-            className="text-white font-semibold text-lg hover:text-[#FFB700] transition-colors"
+            onClick={() => scrollToElementWithOffset("location")}
+            className="text-white font-semibold text-lg hover:text-sunrise-gold transition-colors"
           >
             LOCATION
           </button>
           <button
-            onClick={() => scrollToElementWithOffset('schedule')}
-            className="text-white font-semibold text-lg hover:text-[#FFB700] transition-colors"
+            onClick={() => scrollToElementWithOffset("schedule")}
+            className="text-white font-semibold text-lg hover:text-sunrise-gold transition-colors"
           >
             SCHEDULE
           </button>
           <button
-            onClick={() => scrollToElementWithOffset('partners')}
-            className="text-white font-semibold text-lg hover:text-[#FFB700] transition-colors"
+            onClick={() => scrollToElementWithOffset("partners")}
+            className="text-white font-semibold text-lg hover:text-sunrise-gold transition-colors"
           >
             PARTNERS
           </button>
@@ -47,7 +47,7 @@ export default function Navigation() {
             href="https://competitioncorner.net/ff/15905/results#team_101884"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#FFB700] text-black px-6 py-3 font-bold text-lg rounded hover:bg-[#FFB700]/90 transition-colors"
+            className="bg-sunrise-gold text-black px-6 py-3 font-bold text-lg rounded hover:bg-sunrise-gold/90 transition-colors"
           >
             View Leaderboard
           </Link>
@@ -88,40 +88,43 @@ export default function Navigation() {
           <div className="flex flex-col space-y-4">
             <button
               onClick={() => {
-                scrollToElementWithOffset('location');
+                scrollToElementWithOffset("location");
                 setIsMenuOpen(false);
               }}
-              className="text-white font-semibold text-lg hover:text-[#FFB700] transition-colors text-left"
+              className="text-white font-semibold text-lg hover:text-sunrise-gold transition-colors text-left"
             >
               LOCATION
             </button>
             <button
               onClick={() => {
-                scrollToElementWithOffset('schedule');
+                scrollToElementWithOffset("schedule");
                 setIsMenuOpen(false);
               }}
-              className="text-white font-semibold text-lg hover:text-[#FFB700] transition-colors text-left"
+              className="text-white font-semibold text-lg hover:text-sunrise-gold transition-colors text-left"
             >
               SCHEDULE
             </button>
             <button
               onClick={() => {
-                scrollToElementWithOffset('partners');
+                scrollToElementWithOffset("partners");
                 setIsMenuOpen(false);
               }}
-              className="text-white font-semibold text-lg hover:text-[#FFB700] transition-colors text-left"
+              className="text-white font-semibold text-lg hover:text-sunrise-gold transition-colors text-left"
             >
               PARTNERS
             </button>
-            <WorkoutDropdown isMobile={true} onItemClick={() => setIsMenuOpen(false)} />
+            <WorkoutDropdown
+              isMobile={true}
+              onItemClick={() => setIsMenuOpen(false)}
+            />
             <Link
               href="https://competitioncorner.net/ff/15905/results#team_101884"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#FFB700] text-black px-6 py-3 font-bold text-lg rounded hover:bg-[#FFB700]/90 transition-colors"
+              className="bg-sunrise-gold text-black px-6 py-3 font-bold text-lg rounded hover:bg-sunrise-gold/90 transition-colors"
             >
               View Leaderboard
-          </Link>
+            </Link>
           </div>
         </div>
       )}

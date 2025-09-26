@@ -11,55 +11,55 @@ export const workouts: Workout[] = [
     rx: {
       deadlifts: {
         reps: 10,
-        weight: "(225/155)"
+        weight: "(225/155)",
       },
       burpees: {
         reps: 15,
-        type: "BAR-FACING BURPEES"
+        type: "BAR-FACING BURPEES",
       },
       wallBalls: {
         reps: 20,
         weight: "(20/14)",
-        height: "(10FT/9FT)"
-      }
+        height: "(10FT/9FT)",
+      },
     },
     intermediate: {
       deadlifts: {
         reps: 10,
-        weight: "(185/125)"
+        weight: "(185/125)",
       },
       burpees: {
         reps: 15,
-        type: "BAR-FACING BURPEES"
+        type: "BAR-FACING BURPEES",
       },
       wallBalls: {
         reps: 20,
         weight: "(20/14)",
-        height: "(10FT/9FT)"
-      }
+        height: "(10FT/9FT)",
+      },
     },
     rookie: {
       deadlifts: {
         reps: 10,
-        weight: "(155/105)"
+        weight: "(155/105)",
       },
       burpees: {
         reps: 15,
-        type: "BAR-FACING BURPEES"
+        type: "BAR-FACING BURPEES",
       },
       wallBalls: {
         reps: 20,
         weight: "(14/10)",
-        height: "(10FT/9FT)"
-      }
+        height: "(10FT/9FT)",
+      },
     },
     athlete2Instructions: "MAX CALORIE ROW",
     switchInstructions: "ATHLETES SWITCH AFTER EVERY COMPLETED ROUND.",
     scoring: "SCORE: TOTAL REPS + TOTAL CALORIES",
     sponsor: {
       name: "PROPATH FINANCIAL",
-      logo: "/brands/pro-path-financial.svg"
-    }
+      logo: "/brands/pro-path-financial.svg",
+    },
   },
   {
     id: "steelhead",
@@ -74,25 +74,25 @@ export const workouts: Workout[] = [
           movements: [
             "30 FT. HANDSTAND WALK",
             "20 TOES TO BAR",
-            "30 FT. HANDSTAND WALK"
-          ]
+            "30 FT. HANDSTAND WALK",
+          ],
         },
         {
           movements: [
             "30 FT. HANDSTAND WALK",
             "20 CHEST TO BAR PULL-UPS",
-            "30 FT. HANDSTAND WALK"
-          ]
+            "30 FT. HANDSTAND WALK",
+          ],
         },
         {
           movements: [
             "30 FT. HANDSTAND WALK",
             "10 BAR MUSCLE-UPS",
-            "30 FT. HANDSTAND WALK"
-          ]
-        }
+            "30 FT. HANDSTAND WALK",
+          ],
+        },
       ],
-      notes: ["2 ROUNDS:", "2 ROUNDS:", "2 ROUNDS:"]
+      notes: ["2 ROUNDS:", "2 ROUNDS:", "2 ROUNDS:"],
     },
     intermediate: {
       rounds: [
@@ -100,26 +100,26 @@ export const workouts: Workout[] = [
           movements: [
             "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY",
             "15 TOES TO BAR",
-            "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY"
-          ]
+            "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY",
+          ],
         },
         {
           movements: [
             "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY",
             "15 PULL-UPS",
-            "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY"
-          ]
+            "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY",
+          ],
         },
         {
           movements: [
             "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY",
             "15 CHEST TO BAR PULL-UPS",
-            "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY"
-          ]
-        }
+            "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY",
+          ],
+        },
       ],
       dumbbellWeight: "(50S/35S)",
-      notes: ["2 ROUNDS:", "2 ROUNDS:", "2 ROUNDS:"]
+      notes: ["2 ROUNDS:", "2 ROUNDS:", "2 ROUNDS:"],
     },
     rookie: {
       rounds: [
@@ -127,36 +127,36 @@ export const workouts: Workout[] = [
           movements: [
             "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY",
             "30 AB MAT SIT UPS",
-            "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY"
-          ]
+            "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY",
+          ],
         },
         {
           movements: [
             "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY",
             "20 HANGING KNEE RAISES",
-            "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY"
-          ]
+            "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY",
+          ],
         },
         {
           movements: [
             "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY",
             "20 HEELS ABOVE HIPS",
-            "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY"
-          ]
-        }
+            "30 FT. DOUBLE DUMBBELL OVERHEAD CARRY",
+          ],
+        },
       ],
       dumbbellWeight: "(50S/35S)",
-      notes: ["2 ROUNDS:", "2 ROUNDS:", "2 ROUNDS:"]
+      notes: ["2 ROUNDS:", "2 ROUNDS:", "2 ROUNDS:"],
     },
     switchInstructions: "ATHLETES ALTERNATE ROUNDS",
     additionalNotes: [
       "(EACH ATHLETE DOES 1 ROUND OF EACH VARIANT)",
-      "*10FT SECTIONS UNBROKEN."
+      "*10FT SECTIONS UNBROKEN.",
     ],
     sponsor: {
       name: "SCHEELS",
-      logo: "/brands/scheels.svg"
-    }
+      logo: "/brands/scheels.svg",
+    },
   },
   {
     id: "spud-nation",
@@ -169,46 +169,45 @@ export const workouts: Workout[] = [
       movements: [
         "160 DRAG ROPE DOUBLE-UNDERS",
         "80/60 CALORIE ECHO BIKE",
-        "*CO-ED: 40/30 CALORIES"
+        "*CO-ED: 40/30 CALORIES",
       ],
       barbellHold: {
         men: "115LBS",
         women: "75LBS",
-        coed: "95LBS"
-      }
+        coed: "95LBS",
+      },
     },
     intermediate: {
       movements: [
         "120 DRAG ROPE DOUBLE-UNDERS",
         "80/60 CALORIE ECHO BIKE",
-        "*CO-ED: 40/30 CALORIES"
+        "*CO-ED: 40/30 CALORIES",
       ],
       barbellHold: {
         men: "115LBS",
         women: "75LBS",
-        coed: "95LBS"
-      }
+        coed: "95LBS",
+      },
     },
     rookie: {
       movements: [
         "160 DRAG ROPE SINGLE-UNDERS",
         "80/60 CALORIE ECHO BIKE",
-        "*CO-ED: 40/30 CALORIES"
+        "*CO-ED: 40/30 CALORIES",
       ],
       barbellHold: {
         men: "115LBS",
         women: "75LBS",
-        coed: "95LBS"
-      }
+        coed: "95LBS",
+      },
     },
-    switchInstructions: "ONE ATHLETE MUST HOLD A BARBELL IN THE RACK POSITION. THE WORKING ATHLETE MAY ONLY COMPLETE REPS WHILE THEIR TEAMMATE IS MAINTAINING THE BARBELL RACK POSITION HOLD.",
-    additionalNotes: [
-      "TIMECAP 10:00 MINUTES"
-    ],
+    switchInstructions:
+      "ONE ATHLETE MUST HOLD A BARBELL IN THE RACK POSITION. THE WORKING ATHLETE MAY ONLY COMPLETE REPS WHILE THEIR TEAMMATE IS MAINTAINING THE BARBELL RACK POSITION HOLD.",
+    additionalNotes: ["TIMECAP 10:00 MINUTES"],
     sponsor: {
       name: "RXSG",
-      logo: "/brands/rxsg.svg"
-    }
+      logo: "/brands/rxsg.svg",
+    },
   },
   {
     id: "bronco",
@@ -232,8 +231,8 @@ export const workouts: Workout[] = [
         "",
         "SETS 4,5,6",
         "ATHLETE 2 SANDBAG OVER BARRIER",
-        "ATHLETE 1 BARBELL CLEAN"
-      ]
+        "ATHLETE 1 BARBELL CLEAN",
+      ],
     },
     intermediate: {
       movements: [
@@ -250,8 +249,8 @@ export const workouts: Workout[] = [
         "",
         "SETS 4,5,6",
         "ATHLETE 2 SANDBAG OVER BARRIER",
-        "ATHLETE 1 BARBELL CLEAN"
-      ]
+        "ATHLETE 1 BARBELL CLEAN",
+      ],
     },
     rookie: {
       movements: [
@@ -268,14 +267,14 @@ export const workouts: Workout[] = [
         "",
         "SETS 4,5,6",
         "ATHLETE 2 SANDBAG OVER BARRIER",
-        "ATHLETE 1 BARBELL CLEAN"
-      ]
+        "ATHLETE 1 BARBELL CLEAN",
+      ],
     },
     scoring: "(THE SUM OF 3 SUCCESSFUL LIFTS BY EACH ATHLETE)",
     sponsor: {
       name: "GYMREAPERS",
-      logo: "/brands/gymreapers.svg"
-    }
+      logo: "/brands/gymreapers.svg",
+    },
   },
   {
     id: "vandal",
@@ -307,8 +306,8 @@ export const workouts: Workout[] = [
         "(MEN/CO-ED: (2 X 70) & (2 X 50)",
         "(WOMEN: (2 X 50), (2 X 35)",
         "",
-        "TIME CAP: 17:00"
-      ]
+        "TIME CAP: 17:00",
+      ],
     },
     intermediate: {
       movements: [
@@ -333,8 +332,8 @@ export const workouts: Workout[] = [
         "(MEN/CO-ED: (2 X 70) & (2 X 50)",
         "(WOMEN: (2 X 50), (2 X 35)",
         "",
-        "TIME CAP: 17:00"
-      ]
+        "TIME CAP: 17:00",
+      ],
     },
     rookie: {
       movements: [
@@ -362,13 +361,13 @@ export const workouts: Workout[] = [
         "",
         "4 DBS PER TEAM",
         "(MEN/CO-ED: (2 X 70) & (2 X 50)",
-        "(WOMEN: (2 X 50), (2 X 35)"
-      ]
+        "(WOMEN: (2 X 50), (2 X 35)",
+      ],
     },
     sponsor: {
       name: "REIGN",
-      logo: "/brands/reign.svg"
-    }
+      logo: "/brands/reign.svg",
+    },
   },
   {
     id: "mw-tommy-v",
@@ -390,8 +389,8 @@ export const workouts: Workout[] = [
         "",
         "SHORTY BARBELL: 115/75",
         "12FT ROPE CLIMB HEIGHT",
-        "*CAN SPLIT ROPE CLIMBS"
-      ]
+        "*CAN SPLIT ROPE CLIMBS",
+      ],
     },
     intermediate: {
       movements: [
@@ -406,8 +405,8 @@ export const workouts: Workout[] = [
         "",
         "SHORTY BARBELL: 95/65",
         "12FT ROPE CLIMB HEIGHT",
-        "*CAN SPLIT ROPE CLIMBS"
-      ]
+        "*CAN SPLIT ROPE CLIMBS",
+      ],
     },
     rookie: {
       movements: [
@@ -421,13 +420,13 @@ export const workouts: Workout[] = [
         "TIME CAP: 12:00",
         "",
         "SHORTY BARBELL: 75/55",
-        "*RING ROWS: SPLIT W/TEAMMATE"
-      ]
+        "*RING ROWS: SPLIT W/TEAMMATE",
+      ],
     },
     sponsor: {
       name: "NUTRISHOP / RESTORE",
       logo: "/brands/nutrishop.svg",
-      secondaryLogo: "/brands/restore-hyper-wellness.svg"
-    }
-  }
+      secondaryLogo: "/brands/restore-hyper-wellness.svg",
+    },
+  },
 ];

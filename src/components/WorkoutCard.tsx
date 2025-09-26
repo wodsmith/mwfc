@@ -8,7 +8,12 @@ interface WorkoutCardProps {
   workout: Workout;
 }
 
-function PartnerDivisionContent({ division, athlete2Instructions, switchInstructions, scoring }: {
+function PartnerDivisionContent({
+  division,
+  athlete2Instructions,
+  switchInstructions,
+  scoring,
+}: {
   division: WorkoutDivision;
   athlete2Instructions?: string;
   switchInstructions?: string;
@@ -17,49 +22,63 @@ function PartnerDivisionContent({ division, athlete2Instructions, switchInstruct
   return (
     <div className="flex flex-col gap-6 justify-around h-full">
       <div>
-      <div className="flex flex-col sm:flex-row justify-between">
-        <h4 className="text-xl font-bold text-white mb-4">ATHLETE 1</h4>
-        <div className="space-y-2 text-white text-lg">
-          {division.deadlifts && (
-            <div>{division.deadlifts.reps} DEADLIFTS <span className="text-stone-300">{division.deadlifts.weight}</span></div>
-          )}
-          {division.burpees && (
-            <div>{division.burpees.reps} {division.burpees.type}</div>
-          )}
-          {division.wallBalls && (
-            <div>{division.wallBalls.reps} WALL BALLS <span className="text-stone-300">{division.wallBalls.weight}{division.wallBalls.height}</span></div>
+        <div className="flex flex-col sm:flex-row justify-between">
+          <h4 className="text-xl font-bold text-white mb-4">ATHLETE 1</h4>
+          <div className="space-y-2 text-white text-lg">
+            {division.deadlifts && (
+              <div>
+                {division.deadlifts.reps} DEADLIFTS{" "}
+                <span className="text-stone-300">
+                  {division.deadlifts.weight}
+                </span>
+              </div>
+            )}
+            {division.burpees && (
+              <div>
+                {division.burpees.reps} {division.burpees.type}
+              </div>
+            )}
+            {division.wallBalls && (
+              <div>
+                {division.wallBalls.reps} WALL BALLS{" "}
+                <span className="text-stone-300">
+                  {division.wallBalls.weight}
+                  {division.wallBalls.height}
+                </span>
+              </div>
+            )}
+          </div>
+          {athlete2Instructions && (
+            <>
+              <div className="text-3xl font-bold text-sunrise-gold text-center">
+                +
+              </div>
+              <div>
+                <h4 className="text-xl font-bold text-white mb-4">ATHLETE 2</h4>
+                <div className="text-white text-lg">{athlete2Instructions}</div>
+              </div>
+            </>
           )}
         </div>
-        {athlete2Instructions && (
-        <>
-          <div className="text-3xl font-bold text-[#FFB700] text-center">+</div>
-          <div>
-            <h4 className="text-xl font-bold text-white mb-4">ATHLETE 2</h4>
-            <div className="text-white text-lg">
-              {athlete2Instructions}
-            </div>
-          </div>
-        </>
-      )}
       </div>
-
-      
-      </div>
-      
 
       <div className="border-t border-stone-600 pt-4">
         {switchInstructions && (
-          <p className="text-stone-300 italic text-sm mb-4">-{switchInstructions}</p>
+          <p className="text-stone-300 italic text-sm mb-4">
+            -{switchInstructions}
+          </p>
         )}
-        {scoring && (
-          <p className="text-white font-bold">{scoring}</p>
-        )}
+        {scoring && <p className="text-white font-bold">{scoring}</p>}
       </div>
     </div>
   );
 }
 
-function RoundsDivisionContent({ division, switchInstructions, additionalNotes }: {
+function RoundsDivisionContent({
+  division,
+  switchInstructions,
+  additionalNotes,
+}: {
   division: WorkoutDivision;
   switchInstructions?: string;
   additionalNotes?: string[];
@@ -69,7 +88,9 @@ function RoundsDivisionContent({ division, switchInstructions, additionalNotes }
       {division.rounds?.map((round, index) => (
         <div key={index}>
           {division.notes?.[index] && (
-            <h4 className="text-xl font-bold text-[#FFB700] mb-3">{division.notes[index]}</h4>
+            <h4 className="text-xl font-bold text-sunrise-gold mb-3">
+              {division.notes[index]}
+            </h4>
           )}
           <div className="space-y-2 text-white text-lg">
             {round.movements.map((movement, moveIndex) => (
@@ -81,17 +102,24 @@ function RoundsDivisionContent({ division, switchInstructions, additionalNotes }
 
       {division.dumbbellWeight && (
         <div className="text-white">
-          <p className="font-bold">DUMBBELL WEIGHTS: <span className="text-stone-300">{division.dumbbellWeight}</span></p>
+          <p className="font-bold">
+            DUMBBELL WEIGHTS:{" "}
+            <span className="text-stone-300">{division.dumbbellWeight}</span>
+          </p>
         </div>
       )}
 
       {(switchInstructions || additionalNotes) && (
         <div className="border-t border-stone-600 pt-4 space-y-2">
           {switchInstructions && (
-            <p className="text-stone-300 italic text-sm">-{switchInstructions}</p>
+            <p className="text-stone-300 italic text-sm">
+              -{switchInstructions}
+            </p>
           )}
           {additionalNotes?.map((note, index) => (
-            <p key={index} className="text-stone-300 italic text-sm">{note}</p>
+            <p key={index} className="text-stone-300 italic text-sm">
+              {note}
+            </p>
           ))}
         </div>
       )}
@@ -99,7 +127,11 @@ function RoundsDivisionContent({ division, switchInstructions, additionalNotes }
   );
 }
 
-function BarbellHoldDivisionContent({ division, switchInstructions, additionalNotes }: {
+function BarbellHoldDivisionContent({
+  division,
+  switchInstructions,
+  additionalNotes,
+}: {
   division: WorkoutDivision;
   switchInstructions?: string;
   additionalNotes?: string[];
@@ -109,7 +141,14 @@ function BarbellHoldDivisionContent({ division, switchInstructions, additionalNo
       {division.movements && (
         <div className="space-y-2 text-white text-lg">
           {division.movements.map((movement, index) => (
-            <div key={index} className={movement.startsWith('*') ? 'text-stone-300 italic text-base ml-4' : ''}>
+            <div
+              key={index}
+              className={
+                movement.startsWith("*")
+                  ? "text-stone-300 italic text-base ml-4"
+                  : ""
+              }
+            >
               {movement}
             </div>
           ))}
@@ -118,11 +157,21 @@ function BarbellHoldDivisionContent({ division, switchInstructions, additionalNo
 
       {division.barbellHold && (
         <div className="bg-stone-700/30 p-4 rounded-lg">
-          <h4 className="text-lg font-bold text-[#FFB700] mb-3">*BARBELL HOLD:</h4>
+          <h4 className="text-lg font-bold text-sunrise-gold mb-3">
+            *BARBELL HOLD:
+          </h4>
           <div className="space-y-1 text-white">
-            <div>MEN: <span className="font-bold">{division.barbellHold.men}</span></div>
-            <div>WOMEN: <span className="font-bold">{division.barbellHold.women}</span></div>
-            <div>CO-ED: <span className="font-bold">{division.barbellHold.coed}</span></div>
+            <div>
+              MEN: <span className="font-bold">{division.barbellHold.men}</span>
+            </div>
+            <div>
+              WOMEN:{" "}
+              <span className="font-bold">{division.barbellHold.women}</span>
+            </div>
+            <div>
+              CO-ED:{" "}
+              <span className="font-bold">{division.barbellHold.coed}</span>
+            </div>
           </div>
         </div>
       )}
@@ -136,7 +185,9 @@ function BarbellHoldDivisionContent({ division, switchInstructions, additionalNo
       {additionalNotes && (
         <div className="text-center">
           {additionalNotes.map((note, index) => (
-            <p key={index} className="text-white font-bold text-lg">{note}</p>
+            <p key={index} className="text-white font-bold text-lg">
+              {note}
+            </p>
           ))}
         </div>
       )}
@@ -147,17 +198,17 @@ function BarbellHoldDivisionContent({ division, switchInstructions, additionalNo
 function getSponsorLogo(sponsorName: string): string {
   const logoMap: { [key: string]: string } = {
     "PROPATH FINANCIAL": "pro-path-financial.svg",
-    "SCHEELS": "scheels.svg",
-    "RXSG": "rxsg.svg",
-    "GYMREAPERS": "gymreapers.svg",
-    "REIGN": "reign.svg",
+    SCHEELS: "scheels.svg",
+    RXSG: "rxsg.svg",
+    GYMREAPERS: "gymreapers.svg",
+    REIGN: "reign.svg",
     "NUTRISHOP / RESTORE": "nutrishop.svg",
     "Advanced Mobile IV": "advanced-mobile-iv.svg",
     "Heavy Handed": "heavy-handed.svg",
     "HGR CBD": "hgr-cbd.svg",
-    "Linear": "linear.svg",
+    Linear: "linear.svg",
     "Strong Coffee": "strong-coffee.svg",
-    "TYR": "tyr.svg",
+    TYR: "tyr.svg",
     "US Army": "us-army.svg",
   };
 
@@ -166,11 +217,11 @@ function getSponsorLogo(sponsorName: string): string {
 
 function getWorkoutLayout(workoutId: string): string {
   const layoutMap: { [key: string]: string } = {
-    "sawtooth": "workout-1-layout.jpg",
-    "steelhead": "workout-2-layout.jpg",
+    sawtooth: "workout-1-layout.jpg",
+    steelhead: "workout-2-layout.jpg",
     "spud-nation": "workout-3-layout.jpg",
-    "bronco": "workout-4-layout.jpg",
-    "vandal": "workout-5-layout.jpg",
+    bronco: "workout-4-layout.jpg",
+    vandal: "workout-5-layout.jpg",
     "mw-tommy-v": "workout-6-layout.jpg",
   };
 
@@ -216,7 +267,10 @@ export default function WorkoutCard({ workout }: WorkoutCardProps) {
   const workoutLayout = getWorkoutLayout(workout.id);
 
   return (
-    <div id={workout.id} className="w-full bg-gradient-to-br from-stone-900 to-stone-800 rounded-lg overflow-hidden shadow-xl">
+    <div
+      id={workout.id}
+      className="w-full bg-gradient-to-br from-stone-900 to-stone-800 rounded-lg overflow-hidden shadow-xl"
+    >
       <Tabs defaultValue="rx" className="w-full">
         {/* Desktop Layout */}
         <div className="hidden lg:flex min-h-[400px]">
@@ -225,10 +279,13 @@ export default function WorkoutCard({ workout }: WorkoutCardProps) {
             {/* Title and Format */}
             <div className="mb-8">
               <h3 className="text-4xl font-bebas text-white mb-4">
-                {workout.title}: <span className="text-[#FFB700]">{workout.subtitle}</span>
+                {workout.title}:{" "}
+                <span className="text-sunrise-gold">{workout.subtitle}</span>
               </h3>
-              <div className="bg-[#FFB700] text-black px-6 py-3 rounded-lg inline-block">
-                <span className="text-2xl font-bold">{workout.duration} {workout.workoutType}</span>
+              <div className="bg-sunrise-gold text-black px-6 py-3 rounded-lg inline-block">
+                <span className="text-2xl font-bold">
+                  {workout.duration} {workout.workoutType}
+                </span>
               </div>
             </div>
 
@@ -349,10 +406,13 @@ export default function WorkoutCard({ workout }: WorkoutCardProps) {
           {/* Title and Format */}
           <div className="p-6 pb-4">
             <h3 className="text-3xl font-bebas text-white mb-4">
-              {workout.title}: <span className="text-[#FFB700]">{workout.subtitle}</span>
+              {workout.title}:{" "}
+              <span className="text-sunrise-gold">{workout.subtitle}</span>
             </h3>
-            <div className="bg-[#FFB700] text-black px-6 py-3 rounded-lg inline-block mb-6">
-              <span className="text-xl font-bold">{workout.duration} {workout.workoutType}</span>
+            <div className="bg-sunrise-gold text-black px-6 py-3 rounded-lg inline-block mb-6">
+              <span className="text-xl font-bold">
+                {workout.duration} {workout.workoutType}
+              </span>
             </div>
 
             {/* View Mode Toggle */}

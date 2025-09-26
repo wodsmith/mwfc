@@ -65,7 +65,7 @@ export default function AthleteCarousel() {
   const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
 
   const handleImageLoad = (src: string) => {
-    setLoadedImages(prev => new Set(prev).add(src));
+    setLoadedImages((prev) => new Set(prev).add(src));
   };
 
   const autoplayPlugin = Autoplay({
@@ -86,7 +86,10 @@ export default function AthleteCarousel() {
       >
         <CarouselContent className="-ml-2 md:-ml-4">
           {athletePhotos.map((photo, index) => (
-            <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+            <CarouselItem
+              key={index}
+              className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3"
+            >
               <Card className="overflow-hidden bg-gray-900/50 border-gray-700">
                 <CardContent className="p-0">
                   <div className="relative aspect-[4/5] overflow-hidden">
@@ -95,7 +98,9 @@ export default function AthleteCarousel() {
                       alt={photo.alt}
                       fill
                       className={`object-cover transition-opacity duration-300 ${
-                        loadedImages.has(photo.src) ? 'opacity-100' : 'opacity-0'
+                        loadedImages.has(photo.src)
+                          ? "opacity-100"
+                          : "opacity-0"
                       }`}
                       onLoad={() => handleImageLoad(photo.src)}
                       loading="lazy"
@@ -103,11 +108,10 @@ export default function AthleteCarousel() {
                     />
                     {!loadedImages.has(photo.src) && (
                       <div className="absolute inset-0 bg-gray-800 animate-pulse flex items-center justify-center">
-                        <div className="w-8 h-8 border-2 border-[#FFB700] border-t-transparent rounded-full animate-spin" />
+                        <div className="w-8 h-8 border-2 border-sunrise-gold border-t-transparent rounded-full animate-spin" />
                       </div>
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                    
                   </div>
                 </CardContent>
               </Card>
@@ -115,8 +119,8 @@ export default function AthleteCarousel() {
           ))}
         </CarouselContent>
         <div className="flex justify-center mt-8 gap-4">
-          <CarouselPrevious className="relative left-0 top-0 translate-y-0 bg-[#FFB700] text-black hover:bg-[#FFB700]/90 border-none" />
-          <CarouselNext className="relative right-0 top-0 translate-y-0 bg-[#FFB700] text-black hover:bg-[#FFB700]/90 border-none" />
+          <CarouselPrevious className="relative left-0 top-0 translate-y-0 bg-sunrise-gold text-black hover:bg-sunrise-gold/90 border-none" />
+          <CarouselNext className="relative right-0 top-0 translate-y-0 bg-sunrise-gold text-black hover:bg-sunrise-gold/90 border-none" />
         </div>
       </Carousel>
     </div>
