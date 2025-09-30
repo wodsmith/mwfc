@@ -149,26 +149,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Schedule with Coming Soon Overlay */}
-        <div className="relative">
-          {/* Coming Soon Overlay */}
-          <div className="absolute inset-0 z-20 flex items-center justify-center">
-            <div className="absolute inset-0 bg-black/60"></div>
-            <div className="relative z-30 text-center">
-              <h3 className="text-5xl font-bebas text-sunrise-gold mb-2">
-                SCHEDULE COMING SOON
-              </h3>
-              <p className="text-gray-400 text-lg">
-                Check back for the full competition schedule
-              </p>
-            </div>
-          </div>
-
-          {/* Blurred Schedule Component */}
-          <div className="filter blur-sm pointer-events-none select-none">
-            <Schedule />
-          </div>
-        </div>
+        <Schedule />
 
         <Partners />
 
@@ -196,6 +177,39 @@ export default function Home() {
 						</a>
 					</div>
 				</section> */}
+
+        {/* 2026 Season Preview */}
+        <section className="mt-24 mb-16">
+          <div className="bg-gradient-to-br from-forest-green/20 to-sunrise-gold/20 border border-sunrise-gold/30 p-12 backdrop-blur-sm rounded-lg">
+            <div className="text-center max-w-4xl mx-auto">
+              <div className="inline-block bg-sunrise-gold text-pitch-black px-6 py-2 font-bold text-sm mb-6">
+                COMING 2026
+              </div>
+              <h2 className="text-5xl font-bebas text-white mb-6">
+                THE ROAD TO THE CHAMPIONSHIP
+              </h2>
+              <p className="text-xl text-gray-300 mb-6 leading-relaxed">
+                The 2026 season brings an expanded competition structure with
+                local throwdowns across the Mountain West region, online
+                qualifiers, and culminating in the ultimate Championship
+                weekend. Multiple paths to qualify mean more opportunities for
+                athletes at every level to compete and earn their spot on the
+                biggest stage.
+              </p>
+              <p className="text-lg text-gray-400 mb-8">
+                Host gym applications are now open through March 1st, 2026.
+                Bring an MWFC Throwdown to your community and be part of the
+                movement.
+              </p>
+              <Link
+                href="/2026"
+                className="inline-block bg-sunrise-gold text-pitch-black px-8 py-4 font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg"
+              >
+                LEARN MORE ABOUT 2026 →
+              </Link>
+            </div>
+          </div>
+        </section>
       </main>
 
       <Footer />

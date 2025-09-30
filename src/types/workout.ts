@@ -52,6 +52,14 @@ export interface Workout {
   switchInstructions?: string;
   additionalNotes?: string[];
   scoring?: string;
+  videoUrl?: string;
+  flow?: string[];
+  flowNotes?: string[];
+  movementStandards?: {
+    movement: string;
+    description: string;
+    points?: string[];
+  }[];
   sponsor: {
     name: string;
     logo?: string;

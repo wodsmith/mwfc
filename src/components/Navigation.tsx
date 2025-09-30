@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import WorkoutDropdown from "@/components/WorkoutDropdown";
-import { scrollToElementWithOffset } from "@/lib/scrollUtils";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +13,7 @@ export default function Navigation() {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <Image
-            src="/mwfc-2025.png"
+            src="/mwfc-logo-new.svg"
             alt="Mountain West Fitness Championship 2025"
             width={243}
             height={243}
@@ -24,25 +23,31 @@ export default function Navigation() {
         </Link>
 
         <div className="hidden lg:flex items-center space-x-8">
-          <button
-            onClick={() => scrollToElementWithOffset("location")}
+          <Link
+            href="/#location"
             className="text-white font-semibold text-lg hover:text-sunrise-gold transition-colors"
           >
             LOCATION
-          </button>
-          <button
-            onClick={() => scrollToElementWithOffset("schedule")}
+          </Link>
+          <Link
+            href="/#schedule"
             className="text-white font-semibold text-lg hover:text-sunrise-gold transition-colors"
           >
             SCHEDULE
-          </button>
-          <button
-            onClick={() => scrollToElementWithOffset("partners")}
+          </Link>
+          <Link
+            href="/#partners"
             className="text-white font-semibold text-lg hover:text-sunrise-gold transition-colors"
           >
             PARTNERS
-          </button>
+          </Link>
           <WorkoutDropdown />
+          <Link
+            href="/2026"
+            className="text-white font-semibold text-lg hover:text-sunrise-gold transition-colors"
+          >
+            2026
+          </Link>
           <Link
             href="https://competitioncorner.net/ff/15905/results#team_101884"
             target="_blank"
@@ -86,37 +91,38 @@ export default function Navigation() {
       {isMenuOpen && (
         <div className="lg:hidden mt-6 bg-black/90 rounded-lg p-6 mx-4">
           <div className="flex flex-col space-y-4">
-            <button
-              onClick={() => {
-                scrollToElementWithOffset("location");
-                setIsMenuOpen(false);
-              }}
+            <Link
+              href="/#location"
+              onClick={() => setIsMenuOpen(false)}
               className="text-white font-semibold text-lg hover:text-sunrise-gold transition-colors text-left"
             >
               LOCATION
-            </button>
-            <button
-              onClick={() => {
-                scrollToElementWithOffset("schedule");
-                setIsMenuOpen(false);
-              }}
+            </Link>
+            <Link
+              href="/#schedule"
+              onClick={() => setIsMenuOpen(false)}
               className="text-white font-semibold text-lg hover:text-sunrise-gold transition-colors text-left"
             >
               SCHEDULE
-            </button>
-            <button
-              onClick={() => {
-                scrollToElementWithOffset("partners");
-                setIsMenuOpen(false);
-              }}
+            </Link>
+            <Link
+              href="/#partners"
+              onClick={() => setIsMenuOpen(false)}
               className="text-white font-semibold text-lg hover:text-sunrise-gold transition-colors text-left"
             >
               PARTNERS
-            </button>
+            </Link>
             <WorkoutDropdown
               isMobile={true}
               onItemClick={() => setIsMenuOpen(false)}
             />
+            <Link
+              href="/2026"
+              onClick={() => setIsMenuOpen(false)}
+              className="text-white font-semibold text-lg hover:text-sunrise-gold transition-colors text-left"
+            >
+              2026
+            </Link>
             <Link
               href="https://competitioncorner.net/ff/15905/results#team_101884"
               target="_blank"
