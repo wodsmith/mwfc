@@ -15,6 +15,32 @@ export type Division =
   | "Masters Men's - Rookie"
   | "Masters Women's - Intermediate";
 
+export type Day = "Friday" | "Saturday";
+
+export interface LaneAssignment {
+  lane: number;
+  competitor: string;
+  affiliate: string;
+  division: string;
+}
+
+export interface Heat {
+  heatNumber: number;
+  time: string;
+  lanes: LaneAssignment[] | null; // null means "Lane Assignment Pending"
+}
+
+export interface WorkoutSchedule {
+  id: number;
+  day: Day;
+  workoutNumber: number;
+  workoutName: string;
+  timeRange: string;
+  location: string;
+  heats: Heat[];
+}
+
+// Legacy type for backward compatibility
 export type Workout =
   | "Sawtooth"
   | "Steelhead"
@@ -25,8 +51,6 @@ export type Workout =
   | "TOMMY V.";
 
 export type Location = "Main Stage" | "Side Stage";
-
-export type Day = "Friday" | "Saturday";
 
 export interface ScheduleEvent {
   id: string;

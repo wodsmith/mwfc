@@ -1,11 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Workout, WorkoutDivision } from "@/types/workout";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 interface WorkoutCardProps {
   workout: Workout;
+  showViewStandardsButton?: boolean;
 }
 
 function PartnerDivisionContent({
@@ -228,7 +230,10 @@ function getWorkoutLayout(workoutId: string): string {
   return layoutMap[workoutId] || "";
 }
 
-export default function WorkoutCard({ workout }: WorkoutCardProps) {
+export default function WorkoutCard({
+  workout,
+  showViewStandardsButton = true,
+}: WorkoutCardProps) {
   const [viewMode, setViewMode] = useState<"workout" | "layout">("workout");
   const hasRounds = workout.rx.rounds && workout.rx.rounds.length > 0;
   const hasBarbellHold = workout.rx.barbellHold !== undefined;
@@ -269,13 +274,13 @@ export default function WorkoutCard({ workout }: WorkoutCardProps) {
   return (
     <div
       id={workout.id}
-      className="w-full bg-gradient-to-br from-stone-900 to-stone-800 rounded-lg overflow-hidden shadow-xl"
+      className="w-full bg-gradient-to-br from-stone-900 to-stone-800 rounded-lg overflow-hidden shadow-xl relative"
     >
       <Tabs defaultValue="rx" className="w-full">
         {/* Desktop Layout */}
         <div className="hidden lg:flex min-h-[400px]">
           {/* Left side - Title, Format, and Toggles */}
-          <div className="flex flex-col w-1/3 p-8 relative">
+          <div className="flex flex-col w-1/3 p-8 relative min-w-[300px]">
             {/* Title and Format */}
             <div className="mb-8">
               <h3 className="text-4xl font-bebas text-white mb-4">
@@ -364,6 +369,29 @@ export default function WorkoutCard({ workout }: WorkoutCardProps) {
                   )}
                 </div>
               </div>
+            )}
+
+            {/* View Standards Button - Desktop */}
+            {showViewStandardsButton && (
+              <Link
+                href={`/workouts/${workout.id}`}
+                className="mt-6 bg-sunrise-gold text-pitch-black px-4 py-3 font-bold text-sm rounded shadow-lg hover:bg-yellow-400 transition-all transform hover:scale-105 flex items-center justify-center gap-2"
+              >
+                <span>VIEW STANDARDS</span>
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </Link>
             )}
           </div>
 
@@ -519,6 +547,31 @@ export default function WorkoutCard({ workout }: WorkoutCardProps) {
                     )}
                   </div>
                 </div>
+              </div>
+            )}
+
+            {/* View Standards Button - Mobile (Full Width) */}
+            {showViewStandardsButton && (
+              <div className="mt-6">
+                <Link
+                  href={`/workouts/${workout.id}`}
+                  className="w-full bg-sunrise-gold text-pitch-black px-4 py-3 font-bold text-sm rounded shadow-lg hover:bg-yellow-400 transition-all flex items-center justify-center gap-2"
+                >
+                  <span>VIEW STANDARDS</span>
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </Link>
               </div>
             )}
           </div>
