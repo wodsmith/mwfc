@@ -2,21 +2,79 @@
 
 import { useQuery } from "@tanstack/react-query";
 import type { WorkoutSchedule } from "@/types/schedule";
-import { workoutSchedules } from "@/data/scheduleData";
+import { workoutSchedules, WORKOUT_API_URLS } from "@/data/scheduleData";
+import {
+  transformApiDataToWorkout,
+  mergeWorkoutData,
+  type CompetitionCornerHeat,
+} from "@/lib/scheduleUtils";
 
-interface ScheduleResponse {
-  workouts: WorkoutSchedule[];
+async function fetchWorkoutData(
+  workoutId: number,
+): Promise<Partial<WorkoutSchedule> | null> {
+  const url = WORKOUT_API_URLS[workoutId as keyof typeof WORKOUT_API_URLS];
+  if (!url) {
+    console.warn(`No API URL found for workout ${workoutId}`);
+    return null;
+  }
+
+  try {
+    const response = await fetch(url, {
+      headers: {
+        "User-Agent": "MWFC-Schedule-Bot/1.0",
+      },
+    });
+
+    if (!response.ok) {
+      console.error(
+        `Failed to fetch workout ${workoutId}: ${response.status} ${response.statusText}`,
+      );
+      return null;
+    }
+
+    const apiData: CompetitionCornerHeat[] = await response.json();
+    return transformApiDataToWorkout(apiData, workoutId);
+  } catch (error) {
+    console.error(`Error fetching workout ${workoutId}:`, error);
+    return null;
+  }
 }
 
 async function fetchSchedule(): Promise<WorkoutSchedule[]> {
-  const response = await fetch("/api/schedule");
+  try {
+    // Fetch all workouts in parallel
+    const results = await Promise.allSettled(
+      workoutSchedules.map(async (workout) => {
+        try {
+          const freshData = await fetchWorkoutData(workout.id);
+          if (freshData) {
+            return mergeWorkoutData(workout, freshData);
+          }
+          return workout;
+        } catch (error) {
+          console.error(`Error processing workout ${workout.id}:`, error);
+          return workout; // Return static data on error
+        }
+      }),
+    );
 
-  if (!response.ok) {
-    throw new Error(`Failed to fetch schedule: ${response.status}`);
+    // Extract successful results or fall back to static data
+    const workouts = results.map((result, index) => {
+      if (result.status === "fulfilled") {
+        return result.value;
+      }
+      console.warn(
+        `Failed to fetch workout ${workoutSchedules[index].id}, using static data`,
+      );
+      return workoutSchedules[index];
+    });
+
+    return workouts;
+  } catch (error) {
+    console.error("Critical error in schedule fetch:", error);
+    // Always return static data as ultimate fallback
+    return workoutSchedules;
   }
-
-  const data: ScheduleResponse = await response.json();
-  return data.workouts;
 }
 
 export function useScheduleData() {

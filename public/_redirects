@@ -1,0 +1,4 @@
+# Cloudflare Pages redirects
+/home / 301
+/proven-30 / 301
+/sponsorship /#our-partners 301

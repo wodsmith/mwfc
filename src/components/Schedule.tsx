@@ -305,6 +305,128 @@ interface WorkoutScheduleListProps {
   checkMatch: (text: string) => boolean;
 }
 
+interface LaneDisplayProps {
+  lane: NonNullable<Heat["lanes"]>[0];
+  isMatch: boolean;
+}
+
+function LaneCard({ lane, isMatch }: LaneDisplayProps) {
+  return (
+    <div
+      className={`rounded p-4 transition-all md:hidden ${
+        isMatch
+          ? "bg-sunrise-gold/20 border-2 border-sunrise-gold"
+          : "bg-stone-900 border border-gray-800 hover:border-gray-700"
+      }`}
+    >
+      <div className="flex items-center gap-3 mb-3">
+        <div
+          className={`flex-shrink-0 w-10 h-10 rounded flex items-center justify-center ${
+            isMatch ? "bg-sunrise-gold" : "bg-forest-green"
+          }`}
+        >
+          <span
+            className={`font-bold ${
+              isMatch ? "text-black" : "text-white"
+            }`}
+          >
+            {lane.lane}
+          </span>
+        </div>
+        <span className="text-xs text-gray-500 uppercase">Lane</span>
+      </div>
+      <div className="space-y-2">
+        <div>
+          <span className="text-xs text-gray-500 block mb-1">Competitor</span>
+          <span
+            className={`font-semibold text-sm block ${
+              isMatch ? "text-white" : "text-white"
+            }`}
+          >
+            {lane.competitor}
+          </span>
+        </div>
+        <div>
+          <span className="text-xs text-gray-500 block mb-1">Affiliate</span>
+          <span
+            className={`text-xs block ${
+              isMatch ? "text-gray-200" : "text-gray-400"
+            }`}
+          >
+            {lane.affiliate}
+          </span>
+        </div>
+        <div>
+          <span className="text-xs text-gray-500 block mb-1">Division</span>
+          <span
+            className={`text-xs block ${
+              isMatch
+                ? "text-sunrise-gold font-semibold"
+                : "text-sunrise-gold"
+            }`}
+          >
+            {lane.division}
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function LaneRow({ lane, isMatch }: LaneDisplayProps) {
+  return (
+    <div
+      className={`rounded p-2 transition-all hidden md:block ${
+        isMatch
+          ? "bg-sunrise-gold/20 border-2 border-sunrise-gold"
+          : "bg-stone-900 border border-gray-800 hover:border-gray-700"
+      }`}
+    >
+      <div className="grid grid-cols-[auto_1fr_1.5fr_1fr] gap-3 items-center">
+        <div className="flex items-center gap-2">
+          <div
+            className={`flex-shrink-0 w-8 h-8 rounded flex items-center justify-center ${
+              isMatch ? "bg-sunrise-gold" : "bg-forest-green"
+            }`}
+          >
+            <span
+              className={`font-bold text-sm ${
+                isMatch ? "text-black" : "text-white"
+              }`}
+            >
+              {lane.lane}
+            </span>
+          </div>
+          <span className="text-xs text-gray-500 uppercase">Lane</span>
+        </div>
+        <span
+          className={`font-semibold text-sm ${
+            isMatch ? "text-white" : "text-white"
+          }`}
+        >
+          {lane.competitor}
+        </span>
+        <span
+          className={`text-xs ${
+            isMatch ? "text-gray-200" : "text-gray-400"
+          }`}
+        >
+          {lane.affiliate}
+        </span>
+        <span
+          className={`text-xs text-right ${
+            isMatch
+              ? "text-sunrise-gold font-semibold"
+              : "text-sunrise-gold"
+          }`}
+        >
+          {lane.division}
+        </span>
+      </div>
+    </div>
+  );
+}
+
 function WorkoutScheduleList({
   workouts,
   expandedWorkouts,
@@ -481,61 +603,9 @@ function WorkoutScheduleList({
                                 checkMatch(lane.affiliate);
 
                               return (
-                                <div
-                                  key={lane.lane}
-                                  className={`rounded p-2 transition-all ${
-                                    isMatch
-                                      ? "bg-sunrise-gold/20 border-2 border-sunrise-gold"
-                                      : "bg-stone-900 border border-gray-800 hover:border-gray-700"
-                                  }`}
-                                >
-                                  <div className="flex items-center justify-between gap-3">
-                                    <div className="flex items-center gap-2 flex-shrink-0">
-                                      <div
-                                        className={`flex-shrink-0 w-8 h-8 rounded flex items-center justify-center ${
-                                          isMatch
-                                            ? "bg-sunrise-gold"
-                                            : "bg-forest-green"
-                                        }`}
-                                      >
-                                        <span
-                                          className={`font-bold text-sm ${
-                                            isMatch ? "text-black" : "text-white"
-                                          }`}
-                                        >
-                                          {lane.lane}
-                                        </span>
-                                      </div>
-                                      <span className="text-xs text-gray-500 uppercase">Lane</span>
-                                    </div>
-                                    <div className="flex items-center gap-3 flex-1 justify-between min-w-0">
-                                      <span
-                                        className={`font-semibold text-sm min-w-[180px] max-w-[250px] ${
-                                          isMatch ? "text-white" : "text-white"
-                                        }`}
-                                      >
-                                        {lane.competitor}
-                                      </span>
-                                      <span
-                                        className={`text-xs min-w-[200px] max-w-[300px] ${
-                                          isMatch
-                                            ? "text-gray-200"
-                                            : "text-gray-400"
-                                        }`}
-                                      >
-                                        {lane.affiliate}
-                                      </span>
-                                      <span
-                                        className={`text-xs min-w-[140px] max-w-[180px] text-right ${
-                                          isMatch
-                                            ? "text-sunrise-gold font-semibold"
-                                            : "text-sunrise-gold"
-                                        }`}
-                                      >
-                                        {lane.division}
-                                      </span>
-                                    </div>
-                                  </div>
+                                <div key={lane.lane}>
+                                  <LaneCard lane={lane} isMatch={isMatch} />
+                                  <LaneRow lane={lane} isMatch={isMatch} />
                                 </div>
                               );
                             })}
