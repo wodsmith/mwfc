@@ -30,6 +30,11 @@ const athletePhotos: AthletePhoto[] = [
     title: "Muscle Up",
   },
   {
+    src: "/athlete-photos/sled-push.PNG",
+    alt: "Athlete pushing a torque tank",
+    title: "Sled Push",
+  },
+  {
     src: "/athlete-photos/oh-lunge.jpg",
     alt: "Athlete performing overhead lunges with weights",
     title: "Overhead Lunge",
