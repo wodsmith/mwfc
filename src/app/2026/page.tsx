@@ -145,11 +145,11 @@ export default function Timeline2026() {
                     APPLY TO HOST NOW →
                   </a>
                 </div>
-                <div className="bg-forest-green/10 border border-forest-green/30 p-8 h-96 flex items-center justify-center">
+                {/* <div className="bg-forest-green/10 border border-forest-green/30 p-8 h-96 flex items-center justify-center">
                   <p className="text-forest-green-light text-center">
                     [Image: Gym application materials and excited gym owners]
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -180,11 +180,11 @@ export default function Timeline2026() {
               </div>
 
               <div className="grid md:grid-cols-2 gap-8">
-                <div className="order-2 md:order-1 bg-forest-green/10 border border-forest-green/30 p-8 h-96 flex items-center justify-center">
+                {/* <div className="order-2 md:order-1 bg-forest-green/10 border border-forest-green/30 p-8 h-96 flex items-center justify-center">
                   <p className="text-forest-green-light text-center">
                     [Image: Selected gyms receiving their host packages]
                   </p>
-                </div>
+                </div> */}
                 <div className="order-1 md:order-2">
                   <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                     After careful review, selected host gyms will be announced.
@@ -335,11 +335,11 @@ export default function Timeline2026() {
                       </div>
                     </div>
                   </div>
-                  <div className="bg-forest-green/10 border border-forest-green/30 p-8 h-64 flex items-center justify-center">
+                  {/* <div className="bg-forest-green/10 border border-forest-green/30 p-8 h-64 flex items-center justify-center">
                     <p className="text-forest-green-light text-center">
                       [Image: Athletes recording qualifier workouts]
                     </p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -540,11 +540,11 @@ export default function Timeline2026() {
                     </p>
                   </div>
 
-                  <div className="bg-forest-green/10 border border-forest-green/30 p-8 h-64 flex items-center justify-center">
+                  {/* <div className="bg-forest-green/10 border border-forest-green/30 p-8 h-64 flex items-center justify-center">
                     <p className="text-forest-green-light text-center">
                       [Image: Athletes competing at regional throwdowns]
                     </p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -627,11 +627,11 @@ export default function Timeline2026() {
                     </ul>
                   </div>
                 </div>
-                <div className="bg-gradient-to-br from-forest-green/20 to-sunrise-gold/20 border border-sunrise-gold/30 p-8 h-96 flex items-center justify-center">
+                {/* <div className="bg-gradient-to-br from-forest-green/20 to-sunrise-gold/20 border border-sunrise-gold/30 p-8 h-96 flex items-center justify-center">
                   <p className="text-sunrise-gold text-center">
                     [Image: Championship podium celebration]
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
