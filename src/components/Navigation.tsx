@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import WorkoutDropdown from "@/components/WorkoutDropdown";
 
-export default function Navigation() {
+export default function Navigation2025() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -23,38 +23,11 @@ export default function Navigation() {
         </Link>
 
         <div className="hidden lg:flex items-center space-x-8">
-          <Link
-            href="/#location"
-            className="text-white font-semibold text-lg hover:text-sunrise-gold transition-colors"
-          >
-            LOCATION
-          </Link>
-          <Link
-            href="/#schedule"
-            className="text-white font-semibold text-lg hover:text-sunrise-gold transition-colors"
-          >
-            SCHEDULE
-          </Link>
-          <Link
-            href="/#partners"
-            className="text-white font-semibold text-lg hover:text-sunrise-gold transition-colors"
-          >
-            PARTNERS
-          </Link>
-          <WorkoutDropdown />
-          <Link
-            href="/2026"
-            className="text-white font-semibold text-lg hover:text-sunrise-gold transition-colors"
-          >
-            2026
-          </Link>
-          <Link
-            href="https://competitioncorner.net/ff/15905/results#team_101884"
-            target="_blank"
-            rel="noopener noreferrer"
+        <Link
+            href="/2025" 
             className="bg-sunrise-gold text-black px-6 py-3 font-bold text-lg rounded hover:bg-sunrise-gold/90 transition-colors"
           >
-            View Leaderboard
+            2025 Competition
           </Link>
         </div>
 
@@ -92,44 +65,10 @@ export default function Navigation() {
         <div className="lg:hidden mt-6 bg-black/90 rounded-lg p-6 mx-4">
           <div className="flex flex-col space-y-4">
             <Link
-              href="/#location"
-              onClick={() => setIsMenuOpen(false)}
-              className="text-white font-semibold text-lg hover:text-sunrise-gold transition-colors text-left"
+              href="/2025"
+              className="bg-sunrise-gold text-black px-6 py-3 font-bold text-lg rounded hover:bg-sunrise-gold/90 transition-colors text-center"
             >
-              LOCATION
-            </Link>
-            <Link
-              href="/#schedule"
-              onClick={() => setIsMenuOpen(false)}
-              className="text-white font-semibold text-lg hover:text-sunrise-gold transition-colors text-left"
-            >
-              SCHEDULE
-            </Link>
-            <Link
-              href="/#partners"
-              onClick={() => setIsMenuOpen(false)}
-              className="text-white font-semibold text-lg hover:text-sunrise-gold transition-colors text-left"
-            >
-              PARTNERS
-            </Link>
-            <WorkoutDropdown
-              isMobile={true}
-              onItemClick={() => setIsMenuOpen(false)}
-            />
-            <Link
-              href="/2026"
-              onClick={() => setIsMenuOpen(false)}
-              className="text-white font-semibold text-lg hover:text-sunrise-gold transition-colors text-left"
-            >
-              2026
-            </Link>
-            <Link
-              href="https://competitioncorner.net/ff/15905/results#team_101884"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-sunrise-gold text-black px-6 py-3 font-bold text-lg rounded hover:bg-sunrise-gold/90 transition-colors"
-            >
-              View Leaderboard
+              2025 Competition
             </Link>
           </div>
         </div>

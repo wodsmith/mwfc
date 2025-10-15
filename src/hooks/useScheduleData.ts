@@ -19,11 +19,7 @@ async function fetchWorkoutData(
   }
 
   try {
-    const response = await fetch(url, {
-      headers: {
-        "User-Agent": "MWFC-Schedule-Bot/1.0",
-      },
-    });
+    const response = await fetch(url);
 
     if (!response.ok) {
       console.error(
@@ -81,13 +77,14 @@ export function useScheduleData() {
   const { data, isLoading, error, refetch } = useQuery({
     queryKey: ["schedule"],
     queryFn: fetchSchedule,
-    initialData: workoutSchedules, // Start with static data
-    staleTime: 5 * 60 * 1000, // 5 minutes
-    refetchInterval: 5 * 60 * 1000, // Auto-refetch every 5 minutes
+    placeholderData: workoutSchedules, // Use placeholder instead of initialData to avoid caching static data
+    staleTime: 1 * 60 * 1000, // 1 minute - reduced to refetch more frequently
+    refetchInterval: 1 * 60 * 1000, // Auto-refetch every 1 minute
+    gcTime: 0, // Don't cache failed results
   });
 
   return {
-    workouts: data,
+    workouts: data ?? workoutSchedules, // Fallback to static if no data
     isValidating: isLoading,
     error: error as Error | null,
     mutate: refetch,

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Bebas_Neue } from "next/font/google";
-import "./globals.css";
-import Navigation from "@/components/Navigation";
+import "../globals.css";
+import Navigation from "@/app/2025/_components/Navigation-2025";
 import { QueryProvider } from "@/components/QueryProvider";
 
 const geistSans = Geist({
@@ -29,14 +29,14 @@ export const metadata: Metadata = {
 		title: "Mountain West Fitness Championship",
 		description:
 			"The official website of the Mountain West Fitness Championship",
-		images: [`${siteUrl}/og-mwfc-2026.png`],
+		images: [`${siteUrl}/og-mwfc.png`],
 	},
 	twitter: {
 		card: "summary_large_image",
 		title: "Mountain West Fitness Championship",
 		description:
 			"The official website of the Mountain West Fitness Championship",
-		images: [`${siteUrl}/og-mwfc-2026.png`],
+		images: [`${siteUrl}/og-mwfc.png`],
 	},
 };
 
@@ -46,14 +46,9 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
-			<body
-				className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} antialiased bg-black`}
-			>
-				<QueryProvider>
-					{children}
-				</QueryProvider>
-			</body>
-		</html>
+		<div>
+      <Navigation />
+      {children}
+		</div>
 	);
 }

@@ -9,6 +9,7 @@ export interface CompetitionCornerHeat {
     participantName: string;
     affiliate: string;
     division: string;
+    teammates: string;
   }>;
 }
 
@@ -28,6 +29,7 @@ export function transformApiDataToWorkout(
         competitor: station.participantName,
         affiliate: station.affiliate,
         division: station.division,
+        teammates: station.teammates,
       }),
     ),
   }));

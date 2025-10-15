@@ -38,7 +38,8 @@ export default function Schedule() {
             (lane) =>
               lane.competitor.toLowerCase().includes(term) ||
               lane.division.toLowerCase().includes(term) ||
-              lane.affiliate.toLowerCase().includes(term),
+              lane.affiliate.toLowerCase().includes(term) ||
+              (lane.teammates?.toLowerCase().includes(term) ?? false),
           );
         });
 
@@ -142,7 +143,7 @@ export default function Schedule() {
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              placeholder="Search for a team, division, or affiliate..."
+              placeholder="Search for a team, teammate, division, or affiliate..."
               className="w-full pl-12 pr-4 py-3 bg-stone-900 border border-gray-700 text-white placeholder-gray-500 rounded-lg focus:ring-2 focus:ring-sunrise-gold focus:border-transparent"
             />
             {searchTerm && (
@@ -346,6 +347,18 @@ function LaneCard({ lane, isMatch }: LaneDisplayProps) {
             {lane.competitor}
           </span>
         </div>
+        {lane.teammates && (
+          <div>
+            <span className="text-xs text-gray-500 block mb-1">Teammates</span>
+            <span
+              className={`text-xs block ${
+                isMatch ? "text-gray-200" : "text-gray-400"
+              }`}
+            >
+              {lane.teammates}
+            </span>
+          </div>
+        )}
         <div>
           <span className="text-xs text-gray-500 block mb-1">Affiliate</span>
           <span
@@ -382,7 +395,7 @@ function LaneRow({ lane, isMatch }: LaneDisplayProps) {
           : "bg-stone-900 border border-gray-800 hover:border-gray-700"
       }`}
     >
-      <div className="grid grid-cols-[auto_1fr_1.5fr_1fr] gap-3 items-center">
+      <div className="grid grid-cols-[auto_1fr_1.5fr_1.5fr_1fr] gap-3 items-center">
         <div className="flex items-center gap-2">
           <div
             className={`flex-shrink-0 w-8 h-8 rounded flex items-center justify-center ${
@@ -399,13 +412,24 @@ function LaneRow({ lane, isMatch }: LaneDisplayProps) {
           </div>
           <span className="text-xs text-gray-500 uppercase">Lane</span>
         </div>
-        <span
-          className={`font-semibold text-sm ${
-            isMatch ? "text-white" : "text-white"
-          }`}
-        >
-          {lane.competitor}
-        </span>
+        <div>
+          <span
+            className={`font-semibold text-sm block ${
+              isMatch ? "text-white" : "text-white"
+            }`}
+          >
+            {lane.competitor}
+          </span>
+          {lane.teammates && (
+            <span
+              className={`text-xs block mt-1 ${
+                isMatch ? "text-gray-300" : "text-gray-500"
+              }`}
+            >
+              {lane.teammates}
+            </span>
+          )}
+        </div>
         <span
           className={`text-xs ${
             isMatch ? "text-gray-200" : "text-gray-400"
@@ -414,10 +438,8 @@ function LaneRow({ lane, isMatch }: LaneDisplayProps) {
           {lane.affiliate}
         </span>
         <span
-          className={`text-xs text-right ${
-            isMatch
-              ? "text-sunrise-gold font-semibold"
-              : "text-sunrise-gold"
+          className={`text-xs ${
+            isMatch ? "text-gray-200" : "text-gray-400"
           }`}
         >
           {lane.division}
@@ -600,7 +622,8 @@ function WorkoutScheduleList({
                               const isMatch =
                                 checkMatch(lane.competitor) ||
                                 checkMatch(lane.division) ||
-                                checkMatch(lane.affiliate);
+                                checkMatch(lane.affiliate) ||
+                                (lane.teammates ? checkMatch(lane.teammates) : false);
 
                               return (
                                 <div key={lane.lane}>

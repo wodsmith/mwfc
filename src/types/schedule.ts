@@ -22,6 +22,7 @@ export interface LaneAssignment {
   competitor: string;
   affiliate: string;
   division: string;
+  teammates?: string;
 }
 
 export interface Heat {
