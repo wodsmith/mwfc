@@ -326,13 +326,13 @@ export default function Timeline2026() {
                         </p>
                         <div className="space-y-1 md:space-y-2 ml-2 md:ml-4">
                           <p className="text-gray-300 text-xs md:text-sm">
-                            <span className="text-sunrise-gold font-bold">1. Online Qualifier:</span> Top 3 Athletes per division qualify
+                            <span className="text-sunrise-gold font-bold">1. Online Qualifier:</span> Top 5 Athletes per division qualify
                           </p>
                           <p className="text-gray-300 text-xs md:text-sm">
                             <span className="text-sunrise-gold font-bold">2. In-Person Throwdowns:</span> 8 qualify as 1st place winners (8 host gyms)
                           </p>
                           <p className="text-gray-300 text-xs md:text-sm">
-                            <span className="text-sunrise-gold font-bold">3. Global Leaderboard:</span> Next Top 5 individuals qualify
+                            <span className="text-sunrise-gold font-bold">3. Global Throwdown Leaderboard:</span> Next Top 3 individuals qualify
                           </p>
                           <p className="text-gray-400 text-xs mt-2 md:mt-3 italic">
                             = 16 total spots per division (Men's RX, Men's INT, Women's RX, Women's INT + Masters 35+ divisions)
@@ -343,13 +343,13 @@ export default function Timeline2026() {
                         <p className="text-white font-bold mb-2 md:mb-3 text-sm md:text-base">TEAMS (RX, Intermediate, Rookie):</p>
                         <div className="space-y-1 md:space-y-2 ml-2 md:ml-4">
                           <p className="text-gray-300 text-xs md:text-sm">
-                            <span className="text-forest-green-light font-bold">1. Team Online Qualifier:</span> Top 3 Teams per division qualify
+                            <span className="text-forest-green-light font-bold">1. Team Online Qualifier:</span> Top 5 Teams per division qualify
                           </p>
                           <p className="text-gray-300 text-xs md:text-sm">
                             <span className="text-forest-green-light font-bold">2. In-Person Throwdowns:</span> 8 qualify as 1st place winners (8 host gyms)
                           </p>
                           <p className="text-gray-300 text-xs md:text-sm">
-                            <span className="text-forest-green-light font-bold">3. Global Leaderboard:</span> Next Top 5 teams qualify
+                            <span className="text-forest-green-light font-bold">3. Global Throwdown Leaderboard:</span> Next Top 3 teams qualify
                           </p>
                           <p className="text-gray-400 text-xs mt-2 md:mt-3 italic">
                             = 16 total spots per division across all team divisions
@@ -551,7 +551,7 @@ export default function Timeline2026() {
                       <li className="flex items-start">
                         <span className="text-sunrise-gold mr-2">•</span>
                         <span>
-                          See how you stack up on the Global Leaderboard
+                          See how you stack up on the Global Throwdown Leaderboard
                         </span>
                       </li>
                     </ul>
@@ -562,7 +562,7 @@ export default function Timeline2026() {
                       MULTIPLE PATHS TO THE CHAMPIONSHIP
                     </h4>
                     <p className="text-gray-300 leading-relaxed mb-4">
-                      All scores from every Throwdown are added to a Global
+                      All scores from every Throwdown are added to a Global Throwdown
                       Leaderboard. Multiple qualification paths exist:
                     </p>
 
@@ -572,7 +572,7 @@ export default function Timeline2026() {
                         <li className="flex items-start">
                           <span className="text-sunrise-gold mr-2">1.</span>
                           <span>
-                            <strong className="text-white">Online Qualifier:</strong> Top 3 teams per division qualify
+                            <strong className="text-white">Online Qualifier:</strong> Top 5 teams per division qualify
                           </span>
                         </li>
                         <li className="flex items-start">
@@ -584,7 +584,7 @@ export default function Timeline2026() {
                         <li className="flex items-start">
                           <span className="text-sunrise-gold mr-2">3.</span>
                           <span>
-                            <strong className="text-white">Global Leaderboard:</strong> Next Top 5 teams qualify
+                            <strong className="text-white">Global Throwdown Leaderboard:</strong> Next Top 3 teams qualify
                           </span>
                         </li>
                       </ul>
@@ -596,7 +596,7 @@ export default function Timeline2026() {
                         <li className="flex items-start">
                           <span className="text-sunrise-gold mr-2">1.</span>
                           <span>
-                            <strong className="text-white">Online Qualifier:</strong> Top 3 athletes per division qualify
+                            <strong className="text-white">Online Qualifier:</strong> Top 5 athletes per division qualify
                           </span>
                         </li>
                         <li className="flex items-start">
@@ -608,7 +608,7 @@ export default function Timeline2026() {
                         <li className="flex items-start">
                           <span className="text-sunrise-gold mr-2">3.</span>
                           <span>
-                            <strong className="text-white">Global Leaderboard:</strong> Next Top 5 individuals qualify
+                            <strong className="text-white">Global Throwdown Leaderboard:</strong> Next Top 3 individuals qualify
                           </span>
                         </li>
                       </ul>
@@ -616,7 +616,7 @@ export default function Timeline2026() {
 
                     <p className="text-xs text-gray-400 mt-4 italic">
                       = 16 total qualification spots per division. Even if you don't win your local Throwdown, a strong
-                      performance can still earn you a Championship invite through the Global Leaderboard!
+                      performance can still earn you a Championship invite through the Global Throwdown Leaderboard!
                     </p>
                   </div>
 
@@ -661,7 +661,7 @@ export default function Timeline2026() {
                           PATH 1: Online Qualifier
                         </p>
                         <p className="text-gray-300 text-sm md:text-base mb-1">
-                          <span className="text-sunrise-gold font-bold">Top 3 Athletes</span> per division
+                          <span className="text-sunrise-gold font-bold">Top 5 Athletes</span> per division
                         </p>
                         <p className="text-gray-400 text-xs md:text-sm">April 10-20, 2026</p>
                       </div>
@@ -678,10 +678,10 @@ export default function Timeline2026() {
 
                       <div className="border-l-4 border-sunrise-gold pl-3 md:pl-4">
                         <p className="text-white font-bold text-base md:text-lg mb-1 md:mb-2">
-                          PATH 3: Global Leaderboard
+                          PATH 3: Global Throwdown Leaderboard
                         </p>
                         <p className="text-gray-300 text-sm md:text-base mb-1">
-                          <span className="text-sunrise-gold font-bold">Next Top 5</span> individuals from all throwdowns
+                          <span className="text-sunrise-gold font-bold">Next Top 3</span> individuals from all throwdowns
                         </p>
                         <p className="text-gray-400 text-xs md:text-sm">Aggregate scores across all events</p>
                       </div>
@@ -708,7 +708,7 @@ export default function Timeline2026() {
                           PATH 1: Team Online Qualifier
                         </p>
                         <p className="text-gray-300 text-sm md:text-base mb-1">
-                          <span className="text-forest-green-light font-bold">Top 3 Teams</span> per division
+                          <span className="text-forest-green-light font-bold">Top 5 Teams</span> per division
                         </p>
                         <p className="text-gray-400 text-xs md:text-sm">April 10-20, 2026</p>
                       </div>
@@ -725,10 +725,10 @@ export default function Timeline2026() {
 
                       <div className="border-l-4 border-forest-green pl-3 md:pl-4">
                         <p className="text-white font-bold text-base md:text-lg mb-1 md:mb-2">
-                          PATH 3: Global Leaderboard
+                          PATH 3: Global Throwdown Leaderboard
                         </p>
                         <p className="text-gray-300 text-sm md:text-base mb-1">
-                          <span className="text-forest-green-light font-bold">Next Top 5</span> teams from all throwdowns
+                          <span className="text-forest-green-light font-bold">Next Top 3</span> teams from all throwdowns
                         </p>
                         <p className="text-gray-400 text-xs md:text-sm">Aggregate scores across all events</p>
                       </div>
@@ -745,7 +745,7 @@ export default function Timeline2026() {
                   <p className="text-gray-300 text-base md:text-lg max-w-4xl mx-auto">
                     <span className="text-sunrise-gold font-bold">Key Takeaway:</span> Multiple chances to qualify!
                     Compete in the Online Qualifier in April, attend in-person Throwdowns in July, or rank high on the
-                    Global Leaderboard across all events to secure your spot at the October Championship.
+                    Global Throwdown Leaderboard across all events to secure your spot at the October Championship.
                   </p>
                 </div>
               </div>
