@@ -202,7 +202,7 @@ export default function Home() {
                 movement.
               </p>
               <Link
-                href="/2026"
+                href="/"
                 className="inline-block bg-sunrise-gold text-pitch-black px-8 py-4 font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg"
               >
                 LEARN MORE ABOUT 2026 →

@@ -113,23 +113,14 @@ export default function Timeline2026() {
                           ▸
                         </span>
                         <span>
-                          Minimum 5,000 sq ft competition space with proper
-                          equipment
+                          Space to run 6-lanes with 15ft of lane length with 6 rig stations
                         </span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-sunrise-gold mr-3 text-xl">
                           ▸
                         </span>
-                        <span>Capacity for 100+ athletes and spectators</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-sunrise-gold mr-3 text-xl">
-                          ▸
-                        </span>
-                        <span>
-                          Proven track record of hosting fitness events
-                        </span>
+                        <span>Capacity for 60-120 athletes and spectators inside and outside during summer months</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-sunrise-gold mr-3 text-xl">
@@ -462,7 +453,7 @@ export default function Timeline2026() {
                             ▸
                           </span>
                           <span className="font-bold text-white">
-                            July 25th - Team Competition
+                            August 1st- Team Competition
                           </span>
                         </div>
                         <span className="ml-8 text-sm">
