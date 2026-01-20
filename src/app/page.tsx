@@ -10,7 +10,7 @@ export default function Timeline2026() {
       <div className="relative flex items-center justify-center overflow-hidden">
         <div className="relative z-10 text-center px-4">
           <div className="inline-block bg-sunrise-gold text-pitch-black px-6 py-2 font-bold text-sm mb-6">
-            ⚡ OCTOBER 10-11, 2026 ⚡
+            ⚡ OCTOBER 9-10, 2026 ⚡
           </div>
           <h1 className="text-7xl md:text-8xl font-bebas text-white mb-4">
             MOUNTAIN WEST
@@ -23,7 +23,7 @@ export default function Timeline2026() {
             Qualify through online workouts or local throwdowns.
           </p>
           <p className="text-lg text-sunrise-gold font-bold mb-8">
-            Championship Weekend: October 10-11, 2026 • Caldwell, Idaho
+            Championship Weekend: October 9-10, 2026 • Caldwell, Idaho
           </p>
           <a
             href="#qualify"
