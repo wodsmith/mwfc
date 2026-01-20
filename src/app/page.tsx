@@ -441,7 +441,7 @@ export default function Timeline2026() {
             <div className="hidden md:block w-32 flex-shrink-0">
               <div className="sticky top-8">
                 <div className="bg-gradient-to-br from-sunrise-gold/90 to-forest-green/60 backdrop-blur-sm border border-sunrise-gold/30 text-white px-4 py-2 font-bold text-sm">
-                  OCT 10-11
+                  OCT 9-10
                 </div>
               </div>
             </div>
@@ -453,13 +453,13 @@ export default function Timeline2026() {
                     PHASE 3
                   </span>
                   <span className="md:hidden inline-block bg-gradient-to-br from-sunrise-gold/90 to-forest-green/60 backdrop-blur-sm border border-sunrise-gold/30 text-white px-4 py-2 text-xs font-bold w-fit">
-                    OCT 10-11, 2026
+                    OCT 9-10, 2026
                   </span>
                 </div>
                 <h3 className="text-5xl font-bebas text-white mb-6">
                   2026 CHAMPIONSHIP
                   <span className="block text-sunrise-gold text-3xl mt-2">
-                    OCTOBER 10-11TH, 2026
+                    OCTOBER 9-10TH, 2026
                   </span>
                 </h3>
               </div>
