@@ -133,13 +133,13 @@ export default function Timeline2026() {
                         </p>
                         <div className="space-y-1 md:space-y-2 ml-2 md:ml-4">
                           <p className="text-gray-300 text-xs md:text-sm">
-                            <span className="text-sunrise-gold font-bold">1. Online Qualifier:</span> Top 5 Athletes per division qualify
+                            <span className="text-sunrise-gold font-bold">1. Online Qualifier:</span> Top 8 Athletes per division qualify
                           </p>
                           <p className="text-gray-300 text-xs md:text-sm">
-                            <span className="text-sunrise-gold font-bold">2. In-Person Throwdowns:</span> 8 qualify as 1st place winners (8 host gyms)
+                            <span className="text-sunrise-gold font-bold">2. In-Person Throwdowns:</span> 4 qualify as 1st place winners (4 host gyms)
                           </p>
                           <p className="text-gray-300 text-xs md:text-sm">
-                            <span className="text-sunrise-gold font-bold">3. Global Throwdown Leaderboard:</span> Next Top 3 individuals qualify
+                            <span className="text-sunrise-gold font-bold">3. Global Throwdown Leaderboard:</span> Next Top 4 individuals qualify
                           </p>
                           <p className="text-gray-400 text-xs mt-2 md:mt-3 italic">
                             = 16 total spots per division (Men's RX, Men's INT, Women's RX, Women's INT + Masters 35+ divisions)
@@ -403,19 +403,19 @@ export default function Timeline2026() {
                         <li className="flex items-start">
                           <span className="text-sunrise-gold mr-2">1.</span>
                           <span>
-                            <strong className="text-white">Online Qualifier:</strong> Top 5 athletes per division qualify
+                            <strong className="text-white">Online Qualifier:</strong> Top 8 athletes per division qualify
                           </span>
                         </li>
                         <li className="flex items-start">
                           <span className="text-sunrise-gold mr-2">2.</span>
                           <span>
-                            <strong className="text-white">Win your Throwdown:</strong> 8 athletes qualify (1st place from each of 8 host gyms)
+                            <strong className="text-white">Win your Throwdown:</strong> 4 athletes qualify (1st place from each of 4 host gyms)
                           </span>
                         </li>
                         <li className="flex items-start">
                           <span className="text-sunrise-gold mr-2">3.</span>
                           <span>
-                            <strong className="text-white">Global Throwdown Leaderboard:</strong> Next Top 3 individuals qualify
+                            <strong className="text-white">Global Throwdown Leaderboard:</strong> Next Top 4 individuals qualify
                           </span>
                         </li>
                       </ul>
@@ -557,7 +557,7 @@ export default function Timeline2026() {
                       PATH 1: Online Qualifier
                     </p>
                     <p className="text-gray-300 text-sm md:text-base mb-1">
-                      <span className="text-sunrise-gold font-bold">Top 5 Athletes</span> per division
+                      <span className="text-sunrise-gold font-bold">Top 8 Athletes</span> per division
                     </p>
                     <p className="text-gray-400 text-xs md:text-sm">April 10-20, 2026</p>
                   </div>
@@ -567,7 +567,7 @@ export default function Timeline2026() {
                       PATH 2: Win Your Throwdown
                     </p>
                     <p className="text-gray-300 text-sm md:text-base mb-1">
-                      <span className="text-sunrise-gold font-bold">8 Athletes</span> qualify (1st place at each host gym)
+                      <span className="text-sunrise-gold font-bold">4 Athletes</span> qualify (1st place at each host gym)
                     </p>
                     <p className="text-gray-400 text-xs md:text-sm">July 11th - Individual Competitions</p>
                   </div>
@@ -577,7 +577,7 @@ export default function Timeline2026() {
                       PATH 3: Global Throwdown Leaderboard
                     </p>
                     <p className="text-gray-300 text-sm md:text-base mb-1">
-                      <span className="text-sunrise-gold font-bold">Next Top 3</span> individuals from all throwdowns
+                      <span className="text-sunrise-gold font-bold">Next Top 4</span> individuals from all throwdowns
                     </p>
                     <p className="text-gray-400 text-xs md:text-sm">Aggregate scores across all events</p>
                   </div>
