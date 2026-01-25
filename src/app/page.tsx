@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ThrowdownMap from "@/components/ThrowdownMap";
 
 export default function Timeline2026() {
   return (
@@ -433,6 +434,11 @@ export default function Timeline2026() {
                   </div> */}
                 </div>
               </div>
+
+              {/* Throwdown Map */}
+              <div className="mt-12">
+                <ThrowdownMap />
+              </div>
             </div>
           </div>
 
@@ -610,7 +616,7 @@ export default function Timeline2026() {
                     <p className="text-gray-300 text-sm md:text-base mb-1">
                       <span className="text-forest-green-light font-bold">8 Teams</span> qualify (1st place at each host gym)
                     </p>
-                    <p className="text-gray-400 text-xs md:text-sm">July 18th & 25th - Team Competitions</p>
+                    <p className="text-gray-400 text-xs md:text-sm">July 18th & August 1st - Team Competitions</p>
                   </div>
 
                   <div className="border-l-4 border-forest-green pl-3 md:pl-4">
@@ -736,7 +742,7 @@ export default function Timeline2026() {
                       Revenue Share
                     </p>
                     <p className="text-xs mt-2 text-gray-400">
-                      Make up to $4.5-6k for hosting
+                      Make up to $6K for hosting
                     </p>
                   </div>
                   <div className="bg-pitch-black/40 backdrop-blur-sm p-6 rounded-lg border border-sunrise-gold/20">
@@ -802,7 +808,7 @@ export default function Timeline2026() {
                       </div>
                     </div>
                     <p className="text-xs text-gray-500 mt-3 italic">
-                      July 18th & 25th - Team Competitions
+                      July 18th & August 1st - Team Competitions
                     </p>
                   </div>
 
@@ -875,8 +881,7 @@ export default function Timeline2026() {
 
                 <p className="text-lg mb-6 text-gray-300">
                   Host a one-day competition with everything you need for a
-                  successful event. Choose from three July Saturdays: July 11th,
-                  18th, or 25th, 2026.
+                  successful event. Choose from July 11th, July 18th, or August 1st, 2026.
                 </p>
                 <p className="text-sm text-gray-400">
                   Fill out the application below and we will reach out to
