@@ -30,6 +30,7 @@ const throwdownLocations: ThrowdownLocation[] = [
   { id: 13, city: "Idaho Falls", state: "Idaho", stateCode: "ID", gym: "Maltese CrossFit", x: 23, y: 26 },
   { id: 14, city: "Twin Falls", state: "Idaho", stateCode: "ID", gym: "208 CrossFit", x: 23, y: 33 },
   { id: 15, city: "Vancouver", state: "Washington", stateCode: "WA", gym: "CrossFit Fort Vancouver", x: 11, y: 18 },
+  { id: 16, city: "Riverton", state: "Utah", stateCode: "UT", gym: "Skol CrossFit", x: 24, y: 46 },
 ];
 
 // Mountain West region states
