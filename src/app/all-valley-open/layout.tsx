@@ -10,14 +10,14 @@ export const metadata: Metadata = {
     title: "All Valley Open 2026 Leaderboard",
     description:
       "Live division and gym leaderboard for The All Valley Open 2026.",
-    images: [`${siteUrl}/og-mwfc-2026.png`],
+    images: [`${siteUrl}/og-all-valley-open-2026.png`],
   },
   twitter: {
     card: "summary_large_image",
     title: "All Valley Open 2026 Leaderboard",
     description:
       "Live division and gym leaderboard for The All Valley Open 2026.",
-    images: [`${siteUrl}/og-mwfc-2026.png`],
+    images: [`${siteUrl}/og-all-valley-open-2026.png`],
   },
 };
 
