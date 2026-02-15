@@ -22,9 +22,15 @@ export default function Navigation2025() {
           />
         </Link>
 
-        <div className="hidden lg:flex items-center space-x-8">
-        <Link
-            href="/2025" 
+        <div className="hidden lg:flex items-center space-x-4">
+          <Link
+            href="/all-valley-open"
+            className="border border-sunrise-gold text-sunrise-gold px-6 py-3 font-bold text-lg rounded hover:bg-sunrise-gold/10 transition-colors"
+          >
+            All Valley Open 2026
+          </Link>
+          <Link
+            href="/2025"
             className="bg-sunrise-gold text-black px-6 py-3 font-bold text-lg rounded hover:bg-sunrise-gold/90 transition-colors"
           >
             2025 Competition
@@ -64,6 +70,12 @@ export default function Navigation2025() {
       {isMenuOpen && (
         <div className="lg:hidden mt-6 bg-black/90 rounded-lg p-6 mx-4">
           <div className="flex flex-col space-y-4">
+            <Link
+              href="/all-valley-open"
+              className="border border-sunrise-gold text-sunrise-gold px-6 py-3 font-bold text-lg rounded hover:bg-sunrise-gold/10 transition-colors text-center"
+            >
+              All Valley Open 2026
+            </Link>
             <Link
               href="/2025"
               className="bg-sunrise-gold text-black px-6 py-3 font-bold text-lg rounded hover:bg-sunrise-gold/90 transition-colors text-center"
