@@ -19,7 +19,8 @@ export function useLeaderboard(competitionId: string) {
   return useQuery({
     queryKey: ["leaderboard", competitionId],
     queryFn: () => fetchLeaderboard(competitionId),
-    refetchInterval: 60_000,
-    staleTime: 60_000,
+    refetchInterval: 30_000,
+    staleTime: 30_000,
+    refetchOnMount: "always",
   });
 }
