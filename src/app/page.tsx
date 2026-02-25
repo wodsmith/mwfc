@@ -117,6 +117,14 @@ export default function Timeline2026() {
                       </li>
                     </ul>
                   </div>
+                  <a
+                    href="https://wodsmith.com/compete/mwfc-mountain-west-fitness-championship-online-qualifier-2026"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-forest-green text-white px-8 py-4 font-bold text-lg hover:bg-forest-green-light transition-all transform hover:scale-105 shadow-lg mt-6"
+                  >
+                    REGISTER FOR THE ONLINE QUALIFIER →
+                  </a>
                 </div>
                 <div className="space-y-6">
                   <div className="bg-gradient-to-br from-forest-green/20 to-sunrise-gold/20 border border-sunrise-gold/30 p-4 md:p-8">
