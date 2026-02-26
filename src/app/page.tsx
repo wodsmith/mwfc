@@ -129,49 +129,50 @@ export default function Timeline2026() {
                 <div className="space-y-6">
                   <div className="bg-gradient-to-br from-forest-green/20 to-sunrise-gold/20 border border-sunrise-gold/30 p-4 md:p-8">
                     <h4 className="text-xl md:text-2xl font-bebas text-sunrise-gold mb-3 md:mb-4">
-                      QUALIFICATION PATHS TO CHAMPIONSHIP
+                      QUALIFICATION SPOTS BREAKDOWN
                     </h4>
                     <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-3 md:mb-4">
-                      Multiple paths lead to the MWFC 2026 Championship. Different qualification rules apply for individuals vs. teams:
+                      16 total spots per division. Three paths to qualify: Throwdown winners, Online Qualifier top finishers, and Global Throwdown Leaderboard.
                     </p>
-                    <div className="space-y-3 md:space-y-4 text-sm">
-                      <div className="bg-pitch-black/40 p-3 md:p-4 rounded border border-sunrise-gold/20">
-                        <p className="text-white font-bold mb-2 md:mb-3 text-sm md:text-base">
-                          INDIVIDUAL ATHLETES (RX & Intermediate):
-                        </p>
-                        <div className="space-y-1 md:space-y-2 ml-2 md:ml-4">
-                          <p className="text-gray-300 text-xs md:text-sm">
-                            <span className="text-sunrise-gold font-bold">1. Online Qualifier:</span> Top 8 Athletes per division qualify
-                          </p>
-                          <p className="text-gray-300 text-xs md:text-sm">
-                            <span className="text-sunrise-gold font-bold">2. In-Person Throwdowns:</span> 4 qualify as 1st place winners (4 host gyms)
-                          </p>
-                          <p className="text-gray-300 text-xs md:text-sm">
-                            <span className="text-sunrise-gold font-bold">3. Global Throwdown Leaderboard:</span> Next Top 4 individuals qualify
-                          </p>
-                          <p className="text-gray-400 text-xs mt-2 md:mt-3 italic">
-                            = 16 total spots per division (Men's RX, Men's INT, Women's RX, Women's INT + Masters 35+ divisions)
-                          </p>
-                        </div>
-                      </div>
-                      <div className="bg-pitch-black/40 p-3 md:p-4 rounded border border-forest-green/20">
-                        <p className="text-white font-bold mb-2 md:mb-3 text-sm md:text-base">TEAMS (RX, Intermediate, Rookie):</p>
-                        <div className="space-y-1 md:space-y-2 ml-2 md:ml-4">
-                          <p className="text-gray-300 text-xs md:text-sm">
-                            <span className="text-forest-green-light font-bold">1. Team Online Qualifier:</span> Top 5 Teams per division qualify
-                          </p>
-                          <p className="text-gray-300 text-xs md:text-sm">
-                            <span className="text-forest-green-light font-bold">2. In-Person Throwdowns:</span> 8 qualify as 1st place winners (8 host gyms)
-                          </p>
-                          <p className="text-gray-300 text-xs md:text-sm">
-                            <span className="text-forest-green-light font-bold">3. Global Throwdown Leaderboard:</span> Next Top 3 teams qualify
-                          </p>
-                          <p className="text-gray-400 text-xs mt-2 md:mt-3 italic">
-                            = 16 total spots per division across all team divisions
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                    <table className="w-full text-sm">
+                      <thead>
+                        <tr className="border-b border-sunrise-gold/30">
+                          <th className="text-left text-white py-2 pr-2 text-xs md:text-sm">Competition</th>
+                          <th className="text-center text-forest-green-light py-2 px-1 text-xs md:text-sm">Online</th>
+                          <th className="text-center text-sunrise-gold py-2 px-1 text-xs md:text-sm">Throwdowns</th>
+                          <th className="text-center text-gray-300 py-2 px-1 text-xs md:text-sm">Global</th>
+                        </tr>
+                      </thead>
+                      <tbody className="text-gray-300">
+                        <tr className="border-b border-gray-700/50">
+                          <td className="py-2 pr-2 text-xs md:text-sm">Individual<br /><span className="text-gray-500">(Jul 11)</span></td>
+                          <td className="text-center py-2 px-1">5</td>
+                          <td className="text-center py-2 px-1">6</td>
+                          <td className="text-center py-2 px-1">5</td>
+                        </tr>
+                        <tr className="border-b border-gray-700/50">
+                          <td className="py-2 pr-2 text-xs md:text-sm">Masters Indy<br /><span className="text-gray-500">(Jul 11)</span></td>
+                          <td className="text-center py-2 px-1">6</td>
+                          <td className="text-center py-2 px-1">4</td>
+                          <td className="text-center py-2 px-1">6</td>
+                        </tr>
+                        <tr className="border-b border-gray-700/50">
+                          <td className="py-2 pr-2 text-xs md:text-sm">Masters Teams<br /><span className="text-gray-500">(Jul 18)</span></td>
+                          <td className="text-center py-2 px-1">6</td>
+                          <td className="text-center py-2 px-1">5</td>
+                          <td className="text-center py-2 px-1">5</td>
+                        </tr>
+                        <tr>
+                          <td className="py-2 pr-2 text-xs md:text-sm">Teams<br /><span className="text-gray-500">(Aug 1)</span></td>
+                          <td className="text-center py-2 px-1">4</td>
+                          <td className="text-center py-2 px-1">8</td>
+                          <td className="text-center py-2 px-1">4</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p className="text-xs text-gray-400 mt-3 md:mt-4 italic">
+                      * 16 spots per division. Subject to change if more throwdowns are added.
+                    </p>
                   </div>
                   {/* <div className="bg-forest-green/10 border border-forest-green/30 p-8 h-64 flex items-center justify-center">
                     <p className="text-forest-green-light text-center">
@@ -236,7 +237,7 @@ export default function Timeline2026() {
                           4 Divisions: Men's RX, Men's Intermediate, Women's RX, Women's Intermediate (60 Athlete Cap)
                         </span>
                         <span className="ml-8 text-xs text-gray-400 mt-1">
-                          4 Gym Hosts
+                          6 Gym Hosts
                         </span>
                       </li>
                       <li className="flex items-start flex-col">
@@ -268,7 +269,7 @@ export default function Timeline2026() {
                           6 Divisions: Men's Masters 35+ (M/M) RX, INT, Rookie & Women's Masters 35+ (F/F) RX, INT, Rookie (60 Team Cap)
                         </span>
                         <span className="ml-8 text-xs text-gray-400 mt-1">
-                          8 Gym Hosts
+                          5 Gym Hosts
                         </span>
                       </li>
                       <li className="flex items-start flex-col">
@@ -277,7 +278,7 @@ export default function Timeline2026() {
                             ▸
                           </span>
                           <span className="font-bold text-white">
-                            August 1st- Team Competition
+                            August 1st - Team Competition
                           </span>
                         </div>
                         <span className="ml-8 text-sm">
@@ -372,66 +373,51 @@ export default function Timeline2026() {
                     </ul>
                   </div>
 
-                  <div className="bg-gradient-to-br from-sunrise-gold/20 to-forest-green/20 border border-sunrise-gold/30 p-8">
+                  <div className="bg-gradient-to-br from-sunrise-gold/20 to-forest-green/20 border border-sunrise-gold/30 p-4 md:p-8">
                     <h4 className="text-2xl font-bebas text-sunrise-gold mb-4">
-                      MULTIPLE PATHS TO THE CHAMPIONSHIP
+                      QUALIFICATION SPOTS BY COMPETITION
                     </h4>
-                    <p className="text-gray-300 leading-relaxed mb-4">
-                      All scores from every Throwdown are added to a Global Throwdown
-                      Leaderboard. Multiple qualification paths exist:
+                    <p className="text-gray-300 leading-relaxed mb-4 text-sm md:text-base">
+                      All scores from every Throwdown feed the Global Throwdown Leaderboard. 16 spots per division, allocated across three paths:
                     </p>
-
-                    <div className="mb-6">
-                      <p className="text-white font-bold mb-3 uppercase text-sm tracking-wide">For Team Divisions:</p>
-                      <ul className="space-y-2 text-gray-300 text-sm ml-4">
-                        <li className="flex items-start">
-                          <span className="text-sunrise-gold mr-2">1.</span>
-                          <span>
-                            <strong className="text-white">Online Qualifier:</strong> Top 5 teams per division qualify
-                          </span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-sunrise-gold mr-2">2.</span>
-                          <span>
-                            <strong className="text-white">Win your Throwdown:</strong> 8 teams qualify (1st place from each of 8 host gyms)
-                          </span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-sunrise-gold mr-2">3.</span>
-                          <span>
-                            <strong className="text-white">Global Throwdown Leaderboard:</strong> Next Top 3 teams qualify
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div className="mb-4">
-                      <p className="text-white font-bold mb-3 uppercase text-sm tracking-wide">For Individual Divisions:</p>
-                      <ul className="space-y-2 text-gray-300 text-sm ml-4">
-                        <li className="flex items-start">
-                          <span className="text-sunrise-gold mr-2">1.</span>
-                          <span>
-                            <strong className="text-white">Online Qualifier:</strong> Top 8 athletes per division qualify
-                          </span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-sunrise-gold mr-2">2.</span>
-                          <span>
-                            <strong className="text-white">Win your Throwdown:</strong> 4 athletes qualify (1st place from each of 4 host gyms)
-                          </span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-sunrise-gold mr-2">3.</span>
-                          <span>
-                            <strong className="text-white">Global Throwdown Leaderboard:</strong> Next Top 4 individuals qualify
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-
+                    <table className="w-full text-sm">
+                      <thead>
+                        <tr className="border-b border-sunrise-gold/30">
+                          <th className="text-left text-white py-2 pr-2 text-xs md:text-sm">Competition</th>
+                          <th className="text-center text-forest-green-light py-2 px-1 text-xs md:text-sm">Online</th>
+                          <th className="text-center text-sunrise-gold py-2 px-1 text-xs md:text-sm">Throwdowns</th>
+                          <th className="text-center text-gray-300 py-2 px-1 text-xs md:text-sm">Global</th>
+                        </tr>
+                      </thead>
+                      <tbody className="text-gray-300">
+                        <tr className="border-b border-gray-700/50">
+                          <td className="py-2 pr-2 text-xs md:text-sm">Individual<br /><span className="text-gray-500">(Jul 11)</span></td>
+                          <td className="text-center py-2 px-1">5</td>
+                          <td className="text-center py-2 px-1">6</td>
+                          <td className="text-center py-2 px-1">5</td>
+                        </tr>
+                        <tr className="border-b border-gray-700/50">
+                          <td className="py-2 pr-2 text-xs md:text-sm">Masters Indy<br /><span className="text-gray-500">(Jul 11)</span></td>
+                          <td className="text-center py-2 px-1">6</td>
+                          <td className="text-center py-2 px-1">4</td>
+                          <td className="text-center py-2 px-1">6</td>
+                        </tr>
+                        <tr className="border-b border-gray-700/50">
+                          <td className="py-2 pr-2 text-xs md:text-sm">Masters Teams<br /><span className="text-gray-500">(Jul 18)</span></td>
+                          <td className="text-center py-2 px-1">6</td>
+                          <td className="text-center py-2 px-1">5</td>
+                          <td className="text-center py-2 px-1">5</td>
+                        </tr>
+                        <tr>
+                          <td className="py-2 pr-2 text-xs md:text-sm">Teams<br /><span className="text-gray-500">(Aug 1)</span></td>
+                          <td className="text-center py-2 px-1">4</td>
+                          <td className="text-center py-2 px-1">8</td>
+                          <td className="text-center py-2 px-1">4</td>
+                        </tr>
+                      </tbody>
+                    </table>
                     <p className="text-xs text-gray-400 mt-4 italic">
-                      = 16 total qualification spots per division. Even if you don't win your local Throwdown, a strong
-                      performance can still earn you a Championship invite through the Global Throwdown Leaderboard!
+                      * 16 spots per division. Subject to change if more throwdowns are added. A strong Throwdown performance can earn a Championship invite through the Global Leaderboard!
                     </p>
                   </div>
 
