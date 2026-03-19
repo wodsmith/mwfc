@@ -158,8 +158,8 @@ export default function Timeline2026() {
                         </tr>
                         <tr className="border-b border-gray-700/50">
                           <td className="py-2 pr-2 text-xs md:text-sm">Masters Teams<br /><span className="text-gray-500">(Jul 18)</span></td>
-                          <td className="text-center py-2 px-1">6</td>
                           <td className="text-center py-2 px-1">5</td>
+                          <td className="text-center py-2 px-1">6</td>
                           <td className="text-center py-2 px-1">5</td>
                         </tr>
                         <tr>
@@ -404,8 +404,8 @@ export default function Timeline2026() {
                         </tr>
                         <tr className="border-b border-gray-700/50">
                           <td className="py-2 pr-2 text-xs md:text-sm">Masters Teams<br /><span className="text-gray-500">(Jul 18)</span></td>
-                          <td className="text-center py-2 px-1">6</td>
                           <td className="text-center py-2 px-1">5</td>
+                          <td className="text-center py-2 px-1">6</td>
                           <td className="text-center py-2 px-1">5</td>
                         </tr>
                         <tr>
