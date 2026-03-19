@@ -22,7 +22,7 @@ export default function DivisionLeaderboard({
   return (
     <div>
       {/* Division selector */}
-      <div className="flex gap-2 mb-6">
+      <div className="flex flex-wrap gap-2 mb-6">
         {divisions.map((d) => (
           <button
             type="button"
@@ -98,7 +98,7 @@ export default function DivisionLeaderboard({
                         {event.points}
                       </span>
                       <span className="block text-xs text-gray-500">
-                        ({event.rank})
+                        {event.score}
                       </span>
                     </td>
                   ))}

@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useLeaderboard } from "@/hooks/useLeaderboard";
+import Image from "next/image";
 import DivisionLeaderboard from "./_components/DivisionLeaderboard";
 import GymLeaderboard from "./_components/GymLeaderboard";
 
@@ -26,6 +27,23 @@ export default function AllValleyOpenPage() {
               </span>
             </h1>
             <p className="text-gray-400">Feb 28 &ndash; Mar 14, 2026</p>
+            <a
+              href="https://wodsmith.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-full bg-stone-900 border border-gray-700 hover:border-sunrise-gold transition-colors"
+            >
+              <span className="text-gray-400 text-sm">Powered by</span>
+              <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-white">
+                <Image
+                  src="/wodsmith-logo.png"
+                  alt="WODsmith"
+                  width={16}
+                  height={16}
+                />
+              </span>
+              <span className="text-white text-sm"><span className="font-black">WOD</span>smith</span>
+            </a>
           </div>
 
           {/* Loading */}
@@ -68,7 +86,7 @@ export default function AllValleyOpenPage() {
           {/* Leaderboard tabs */}
           {data && (
             <Tabs defaultValue="division">
-              <TabsList className="mx-auto bg-stone-900 border border-gray-700 mb-8">
+              <TabsList className="bg-stone-900 border border-gray-700 mb-8">
                 <TabsTrigger
                   value="division"
                   className="data-[state=active]:bg-sunrise-gold data-[state=active]:text-pitch-black text-gray-300 px-6 py-2 font-bold"

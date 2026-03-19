@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ThrowdownMap from "@/components/ThrowdownMap";
@@ -34,6 +35,65 @@ export default function Timeline2026() {
           </a>
         </div>
       </div>
+
+      {/* Division Breakdown Section */}
+      <section className="pt-28 pb-16 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="font-bebas text-5xl md:text-6xl text-sunrise-gold mb-4">
+            FIND YOUR DIVISION
+          </h2>
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-12">
+            Not sure which division is right for you? Check out our division
+            breakdown for detailed movement standards and athlete profiles.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <div className="bg-stone-900 border border-gray-700 p-6 text-left">
+              <h3 className="font-bebas text-sunrise-gold text-3xl mb-2">
+                Elite
+              </h3>
+              <p className="text-gray-300">
+                Semifinal-level athletes. Heavy loads, complex gymnastics,
+                high volume.
+              </p>
+            </div>
+            <div className="bg-stone-900 border border-gray-700 p-6 text-left">
+              <h3 className="font-bebas text-sunrise-gold text-3xl mb-2">
+                RX
+              </h3>
+              <p className="text-gray-300">
+                Experienced athletes who complete workouts as prescribed. All
+                core skills.
+              </p>
+            </div>
+            <div className="bg-stone-900 border border-gray-700 p-6 text-left">
+              <h3 className="font-bebas text-sunrise-gold text-3xl mb-2">
+                Intermediate
+              </h3>
+              <p className="text-gray-300">
+                Developing athletes building toward RX. Reduced loading and
+                skill volume.
+              </p>
+            </div>
+            <div className="bg-stone-900 border border-gray-700 p-6 text-left">
+              <h3 className="font-bebas text-sunrise-gold text-3xl mb-2">
+                Rookie
+              </h3>
+              <p className="text-gray-300">
+                Newer competitors with foundational skills. Scaled movements,
+                moderate weights.
+              </p>
+            </div>
+          </div>
+
+          <Link
+            href="/divisions"
+            className="inline-block bg-sunrise-gold text-pitch-black px-8 py-4 font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg"
+          >
+            VIEW FULL DIVISION BREAKDOWN →
+          </Link>
+        </div>
+      </section>
 
       {/* Main Timeline Container */}
       <main className="relative container mx-auto px-4 py-20">
@@ -896,6 +956,7 @@ export default function Timeline2026() {
             </div>
           </div>
         </section>
+
       </main>
 
       <Footer />

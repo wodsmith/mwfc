@@ -107,7 +107,7 @@ export default function GymLeaderboard({ gyms }: GymLeaderboardProps) {
                       </tr>
                     </thead>
                     <tbody>
-                      {gym.athletes.map((athlete) => (
+                      {[...gym.athletes].sort((a, b) => b.contributingTotal - a.contributingTotal).map((athlete) => (
                         <tr
                           key={athlete.name}
                           className="border-t border-gray-800/50"
@@ -138,6 +138,9 @@ export default function GymLeaderboard({ gyms }: GymLeaderboardProps) {
                               )}
                             >
                               {ev.points}
+                              <span className="block text-xs text-gray-500 font-normal">
+                                {ev.score}
+                              </span>
                             </td>
                           ))}
                           <td className="py-2 px-2 text-right font-medium text-gray-300">

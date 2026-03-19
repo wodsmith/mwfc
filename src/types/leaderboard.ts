@@ -3,6 +3,7 @@ export interface LeaderboardEvent {
   eventName: string;
   points: number;
   rank: number;
+  score: string;
 }
 
 export interface LeaderboardAthlete {
@@ -25,6 +26,7 @@ export interface GymAthleteEvent {
   eventName: string;
   points: number;
   contributing: boolean;
+  score: string;
 }
 
 export interface GymAthlete {
