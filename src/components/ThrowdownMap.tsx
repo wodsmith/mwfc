@@ -81,7 +81,7 @@ const throwdownLocations: ThrowdownLocation[] = [
     { slug: "carson-city-crossfit-individuals-mwfc-throwdown-carson-city-nevada", label: "Individuals", date: "Jul 11", registrationCloses: "2026-06-16" },
     { slug: "carson-city-crossfit-masters-35-teams-of-2-mwfc-throwdown-carson-city-nevada", label: "Masters 35+ Teams of 2", date: "Jul 18", registrationCloses: "2026-06-23" },
   ]},
-  { id: 21, city: "Beaverton", state: "Oregon", stateCode: "OR", gym: "Beaverton Strength & Conditioning", x: 8.0, y: 14.5, competitions: [
+  { id: 21, city: "Beaverton", state: "Oregon", stateCode: "OR", gym: "Beaverton Strength & Conditioning", x: 8.0, y: 17.5, competitions: [
     { slug: "beaverton-crossfit-masters-35-team-of-2-mwfc-throwdown-beaverton-oregon", label: "Masters 35+ Teams of 2", date: "Jul 18", registrationCloses: "2026-06-23" },
   ]},
 ];
@@ -228,41 +228,67 @@ export default function ThrowdownMap() {
     <div id="throwdown-map" className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg overflow-hidden border border-gray-700 scroll-mt-28">
       {/* Header */}
       <div className="bg-gradient-to-r from-forest-green to-forest-green/80 px-6 py-4 border-b border-forest-green/50">
-        <button
-          type="button"
-          className="group flex items-center gap-2 cursor-pointer"
-          onClick={() => {
-            const url = `${window.location.origin}${window.location.pathname}#throwdown-map`;
-            navigator.clipboard.writeText(url);
-            setLinkCopied(true);
-            setTimeout(() => setLinkCopied(false), 2000);
-          }}
-        >
-          <h2 className="text-3xl md:text-4xl font-bebas text-white tracking-wider">
-            MWFC THROWDOWN HOST MAP
-          </h2>
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="text-white/40 group-hover:text-sunrise-gold transition-colors shrink-0 mt-1"
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div>
+            <button
+              type="button"
+              className="group flex items-center gap-2 cursor-pointer"
+              onClick={() => {
+                const url = `${window.location.origin}${window.location.pathname}#throwdown-map`;
+                navigator.clipboard.writeText(url);
+                setLinkCopied(true);
+                setTimeout(() => setLinkCopied(false), 2000);
+              }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bebas text-white tracking-wider">
+                MWFC THROWDOWN HOST MAP
+              </h2>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="text-white/40 group-hover:text-sunrise-gold transition-colors shrink-0 mt-1"
+              >
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+              </svg>
+              {linkCopied && (
+                <span className="text-sunrise-gold text-xs font-bold animate-pulse">Link copied!</span>
+              )}
+            </button>
+            <p className="text-white/80 text-sm mt-1">
+              Current Throwdown Host Locations
+              {!zoomedState && " — Click a highlighted state to zoom in"}
+            </p>
+          </div>
+          <a
+            href="https://wodsmith.com/compete?q=MWFC"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group/cta relative inline-flex items-center gap-2 bg-sunrise-gold text-black px-5 py-2.5 rounded font-bold text-sm tracking-wide hover:bg-sunrise-gold/90 transition-all duration-200 hover:shadow-[0_0_20px_rgba(255,183,0,0.3)] shrink-0 self-start sm:self-center"
           >
-            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-          </svg>
-          {linkCopied && (
-            <span className="text-sunrise-gold text-xs font-bold animate-pulse">Link copied!</span>
-          )}
-        </button>
-        <p className="text-white/80 text-sm mt-1">
-          Current Throwdown Host Locations
-          {!zoomedState && " — Click a highlighted state to zoom in"}
-        </p>
+            Browse All Throwdowns
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="transition-transform duration-200 group-hover/cta:translate-x-0.5"
+            >
+              <path d="M7 17L17 7" />
+              <path d="M7 7h10v10" />
+            </svg>
+          </a>
+        </div>
       </div>
 
       <div className="flex flex-col lg:flex-row">
