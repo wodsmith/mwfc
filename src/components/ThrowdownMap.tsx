@@ -84,6 +84,9 @@ const throwdownLocations: ThrowdownLocation[] = [
     { slug: "carson-city-crossfit-individuals-mwfc-throwdown-carson-city-nevada", label: "Individuals", date: "Jul 11", registrationCloses: "2026-06-16" },
     { slug: "carson-city-crossfit-masters-35-teams-of-2-mwfc-throwdown-carson-city-nevada", label: "Masters 35+ Teams of 2", date: "Jul 18", registrationCloses: "2026-06-23" },
   ]},
+  { id: 21, city: "Beaverton", state: "Oregon", stateCode: "OR", gym: "Beaverton Strength & Conditioning", x: 8.0, y: 14.5, competitions: [
+    { slug: "beaverton-crossfit-masters-35-team-of-2-mwfc-throwdown-beaverton-oregon", label: "Masters 35+ Teams of 2", date: "Jul 18", registrationCloses: "2026-06-23" },
+  ]},
 ];
 
 // Mountain West region states
