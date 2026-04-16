@@ -206,15 +206,15 @@ export default function Timeline2026() {
                       <tbody className="text-gray-300">
                         <tr className="border-b border-gray-700/50">
                           <td className="py-2 pr-2 text-xs md:text-sm">Individual<br /><span className="text-gray-500">(Jul 11)</span></td>
-                          <td className="text-center py-2 px-1">5</td>
                           <td className="text-center py-2 px-1">6</td>
-                          <td className="text-center py-2 px-1">5</td>
+                          <td className="text-center py-2 px-1">6</td>
+                          <td className="text-center py-2 px-1">4</td>
                         </tr>
                         <tr className="border-b border-gray-700/50">
                           <td className="py-2 pr-2 text-xs md:text-sm">Masters Indy<br /><span className="text-gray-500">(Jul 11)</span></td>
-                          <td className="text-center py-2 px-1">6</td>
-                          <td className="text-center py-2 px-1">4</td>
-                          <td className="text-center py-2 px-1">6</td>
+                          <td className="text-center py-2 px-1">8</td>
+                          <td className="text-center py-2 px-1">3</td>
+                          <td className="text-center py-2 px-1">5</td>
                         </tr>
                         <tr className="border-b border-gray-700/50">
                           <td className="py-2 pr-2 text-xs md:text-sm">Masters Teams<br /><span className="text-gray-500">(Jul 18)</span></td>
@@ -452,15 +452,15 @@ export default function Timeline2026() {
                       <tbody className="text-gray-300">
                         <tr className="border-b border-gray-700/50">
                           <td className="py-2 pr-2 text-xs md:text-sm">Individual<br /><span className="text-gray-500">(Jul 11)</span></td>
-                          <td className="text-center py-2 px-1">5</td>
                           <td className="text-center py-2 px-1">6</td>
-                          <td className="text-center py-2 px-1">5</td>
+                          <td className="text-center py-2 px-1">6</td>
+                          <td className="text-center py-2 px-1">4</td>
                         </tr>
                         <tr className="border-b border-gray-700/50">
                           <td className="py-2 pr-2 text-xs md:text-sm">Masters Indy<br /><span className="text-gray-500">(Jul 11)</span></td>
-                          <td className="text-center py-2 px-1">6</td>
-                          <td className="text-center py-2 px-1">4</td>
-                          <td className="text-center py-2 px-1">6</td>
+                          <td className="text-center py-2 px-1">8</td>
+                          <td className="text-center py-2 px-1">3</td>
+                          <td className="text-center py-2 px-1">5</td>
                         </tr>
                         <tr className="border-b border-gray-700/50">
                           <td className="py-2 pr-2 text-xs md:text-sm">Masters Teams<br /><span className="text-gray-500">(Jul 18)</span></td>
@@ -611,7 +611,7 @@ export default function Timeline2026() {
                       PATH 1: Online Qualifier
                     </p>
                     <p className="text-gray-300 text-sm md:text-base mb-1">
-                      <span className="text-sunrise-gold font-bold">Top 8 Athletes</span> per division
+                      <span className="text-sunrise-gold font-bold">Top 6 Athletes</span> per division
                     </p>
                     <p className="text-gray-400 text-xs md:text-sm">April 10-20, 2026</p>
                   </div>
@@ -621,7 +621,7 @@ export default function Timeline2026() {
                       PATH 2: Win Your Throwdown
                     </p>
                     <p className="text-gray-300 text-sm md:text-base mb-1">
-                      <span className="text-sunrise-gold font-bold">4 Athletes</span> qualify (1st place at each host gym)
+                      <span className="text-sunrise-gold font-bold">6 Athletes</span> qualify (1st place at each host gym)
                     </p>
                     <p className="text-gray-400 text-xs md:text-sm">July 11th - Individual Competitions</p>
                   </div>
@@ -658,7 +658,7 @@ export default function Timeline2026() {
                       PATH 1: Team Online Qualifier
                     </p>
                     <p className="text-gray-300 text-sm md:text-base mb-1">
-                      <span className="text-forest-green-light font-bold">Top 5 Teams</span> per division
+                      <span className="text-forest-green-light font-bold">Top 4 Teams</span> per division
                     </p>
                     <p className="text-gray-400 text-xs md:text-sm">April 10-20, 2026</p>
                   </div>
@@ -678,7 +678,7 @@ export default function Timeline2026() {
                       PATH 3: Global Throwdown Leaderboard
                     </p>
                     <p className="text-gray-300 text-sm md:text-base mb-1">
-                      <span className="text-forest-green-light font-bold">Next Top 3</span> teams from all throwdowns
+                      <span className="text-forest-green-light font-bold">Next Top 4</span> teams from all throwdowns
                     </p>
                     <p className="text-gray-400 text-xs md:text-sm">Aggregate scores across all events</p>
                   </div>

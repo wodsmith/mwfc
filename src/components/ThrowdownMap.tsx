@@ -68,9 +68,6 @@ const throwdownLocations: ThrowdownLocation[] = [
   { id: 15, city: "Riverton", state: "Utah", stateCode: "UT", gym: "Skol CrossFit", x: 22.9, y: 38.5, competitions: [
     { slug: "crossfit-skol-masters-35-teams-of-2-mwfc-throwdown-riverton-utah", label: "Masters 35+ Teams of 2", date: "Jul 18", registrationCloses: "2026-06-23" },
   ]},
-  { id: 16, city: "Whitefish", state: "Montana", stateCode: "MT", gym: "Big Mountain CrossFit", x: 22.3, y: 10, competitions: [
-    { slug: "big-mountain-crossfit-masters-35-individual-mwfc-throwdown-whitefish-montana", label: "Masters 35+ Individual", date: "Jul 11", registrationCloses: "2026-06-16" },
-  ]},
   { id: 17, city: "Lehi", state: "Utah", stateCode: "UT", gym: "CrossFit Lehi", x: 23, y: 39, competitions: [
     { slug: "crossfit-lehi-individual-mwfc-throwdown-lehi-utah", label: "Individual", date: "Jul 11", registrationCloses: "2026-06-16" },
   ]},
