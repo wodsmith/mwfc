@@ -299,7 +299,7 @@ function tagClass(variant: "prime" | "default" | "time") {
     return "bg-sunrise-gold text-pitch-black border-sunrise-gold font-bold";
   if (variant === "time")
     return "text-sunrise-gold border-sunrise-gold/40 bg-transparent";
-  return "text-stone-300 border-stone-700 bg-transparent";
+  return "text-gray-300 border-gray-700 bg-transparent";
 }
 
 function PartBlock({ part, activeTier }: { part: Part; activeTier?: TierKey }) {
@@ -309,28 +309,28 @@ function PartBlock({ part, activeTier }: { part: Part; activeTier?: TierKey }) {
   const hasVariant = !!variant;
 
   return (
-    <div className="bg-stone-900 border border-stone-800 p-4 sm:p-5">
-      <div className="flex items-center justify-between gap-3 mb-3 pb-3 border-b border-dashed border-stone-800">
-        <div className="font-bebas text-xl sm:text-2xl tracking-wide text-white leading-none">
+    <div className="bg-pitch-black/50 border-l-4 border-sunrise-gold p-5 sm:p-6">
+      <div className="flex items-center justify-between gap-3 mb-4 pb-3 border-b border-sunrise-gold/20">
+        <div className="font-bebas text-2xl sm:text-3xl tracking-wide text-white leading-none">
           <span className="text-sunrise-gold mr-2">{part.ord}</span>
           {part.label}
         </div>
-        <div className="font-mono text-[10px] tracking-wider uppercase text-pitch-black bg-sunrise-gold px-2 py-1 font-bold whitespace-nowrap">
+        <div className="text-[10px] tracking-wider uppercase text-pitch-black bg-sunrise-gold px-2 py-1 font-bold whitespace-nowrap">
           {part.scheme}
         </div>
       </div>
-      <pre className="font-mono text-[13px] leading-relaxed text-stone-200 whitespace-pre-wrap m-0">
+      <pre className="font-mono text-[13px] leading-relaxed text-gray-200 whitespace-pre-wrap m-0">
         {body}
-        {highlight && (
-          <>
-            {"\n"}
-            <span className="text-sunrise-gold font-bold">{highlight}</span>
-          </>
-        )}
       </pre>
+      {highlight && (
+        <div className="flex items-start mt-4 text-sunrise-gold">
+          <span className="mr-3 text-xl leading-none">▸</span>
+          <span className="font-bold text-sm leading-relaxed">{highlight}</span>
+        </div>
+      )}
       {!hasVariant && activeTier && part.variants && (
-        <div className="mt-3 font-mono text-[10px] tracking-wider uppercase text-stone-500">
-          No tier-specific scaling for this part — same for all divisions.
+        <div className="mt-3 text-[11px] tracking-wider uppercase text-gray-400 italic">
+          No tier-specific scaling — same for all divisions.
         </div>
       )}
     </div>
@@ -351,7 +351,7 @@ function WorkoutRow({
   );
 
   return (
-    <div className="border-b border-stone-800 last:border-b-0">
+    <div className="border-b border-sunrise-gold/20 last:border-b-0">
       <button
         type="button"
         onClick={onToggle}
@@ -359,26 +359,26 @@ function WorkoutRow({
         className={`w-full text-left grid grid-cols-[56px_1fr_28px] md:grid-cols-[72px_1.4fr_1.6fr_1fr_36px] items-center gap-3 md:gap-4 px-4 py-4 md:px-6 md:py-5 transition-colors relative cursor-pointer ${
           isOpen
             ? "bg-gradient-to-r from-sunrise-gold/10 to-transparent"
-            : "hover:bg-stone-800/40"
+            : "hover:bg-sunrise-gold/5"
         }`}
       >
         <span
-          className={`absolute left-0 top-0 bottom-0 w-[3px] transition-colors ${
+          className={`absolute left-0 top-0 bottom-0 w-1 transition-colors ${
             isOpen ? "bg-sunrise-gold" : "bg-transparent"
           }`}
           aria-hidden
         />
-        <div className="font-bebas text-2xl md:text-4xl text-sunrise-gold leading-none tracking-wide">
+        <div className="font-bebas text-3xl md:text-5xl text-sunrise-gold leading-none tracking-wide">
           {workout.num}
-          <span className="block font-mono text-[9px] tracking-widest text-stone-500 mt-1 uppercase">
+          <span className="block text-[10px] tracking-widest text-gray-500 mt-1.5 uppercase font-sans">
             WOD
           </span>
         </div>
         <div>
-          <div className="font-bebas text-lg md:text-2xl text-white tracking-wide leading-none">
+          <div className="font-bebas text-xl md:text-3xl text-white tracking-wide leading-none">
             {workout.title}
           </div>
-          <div className="font-mono text-[10px] tracking-widest text-stone-400 mt-1.5 uppercase">
+          <div className="text-[11px] tracking-widest text-gray-400 mt-2 uppercase">
             {workout.sub}
           </div>
         </div>
@@ -386,13 +386,13 @@ function WorkoutRow({
           {workout.tags.map((t) => (
             <span
               key={t.label}
-              className={`inline-flex items-center font-mono text-[10px] tracking-wider uppercase px-2 py-1 border ${tagClass(t.variant)}`}
+              className={`inline-flex items-center text-[10px] tracking-wider uppercase px-2 py-1 border ${tagClass(t.variant)}`}
             >
               {t.label}
             </span>
           ))}
         </div>
-        <div className="hidden md:block font-mono text-[11px] text-right text-stone-400 leading-tight">
+        <div className="hidden md:block text-[11px] text-right text-gray-400 leading-tight">
           <span className="block text-white font-bold uppercase tracking-wider text-[10px] mb-0.5">
             {workout.rightMeta.kicker}
           </span>
@@ -400,7 +400,7 @@ function WorkoutRow({
         </div>
         <div
           className={`text-center transition-all ${
-            isOpen ? "text-sunrise-gold rotate-180" : "text-stone-500"
+            isOpen ? "text-sunrise-gold rotate-180" : "text-gray-500"
           }`}
           aria-hidden
         >
@@ -409,16 +409,16 @@ function WorkoutRow({
       </button>
 
       {isOpen && (
-        <div className="bg-pitch-black border-t border-stone-800 relative">
+        <div className="bg-pitch-black/60 border-t border-sunrise-gold/30 relative">
           <span
-            className="absolute left-0 top-0 bottom-0 w-[3px] bg-sunrise-gold"
+            className="absolute left-0 top-0 bottom-0 w-1 bg-sunrise-gold"
             aria-hidden
           />
           <div className="px-4 py-6 md:pl-[75px] md:pr-6 md:py-8 grid grid-cols-1 md:grid-cols-[1fr_300px] gap-6 md:gap-10">
             <div className="flex flex-col gap-5">
               {workout.tiers && workout.tiers.length > 0 && (
                 <div className="flex flex-wrap items-center gap-2 pb-1">
-                  <span className="font-mono text-[10px] tracking-wider uppercase text-stone-500 mr-1">
+                  <span className="text-[11px] tracking-wider uppercase text-gray-400 mr-1 font-bold">
                     Division Tier
                   </span>
                   {workout.tiers.map((t) => (
@@ -426,10 +426,10 @@ function WorkoutRow({
                       key={t.key}
                       type="button"
                       onClick={() => setActiveTier(t.key)}
-                      className={`font-mono text-[10px] tracking-wide uppercase px-2.5 py-1.5 border transition-colors cursor-pointer ${
+                      className={`text-[11px] tracking-wide uppercase px-3 py-1.5 border transition-all cursor-pointer ${
                         activeTier === t.key
                           ? "bg-sunrise-gold text-pitch-black border-sunrise-gold font-bold"
-                          : "bg-transparent text-stone-300 border-stone-700 hover:border-stone-500 hover:text-white"
+                          : "bg-transparent text-gray-300 border-gray-700 hover:border-sunrise-gold hover:text-white"
                       }`}
                     >
                       {t.label}
@@ -445,25 +445,25 @@ function WorkoutRow({
                 />
               ))}
             </div>
-            <aside className="bg-stone-900 border border-stone-800 p-5 self-start">
-              <div className="font-bebas text-base tracking-widest text-sunrise-gold mb-3 pb-2.5 border-b border-stone-800">
+            <aside className="bg-gradient-to-br from-forest-green/20 to-sunrise-gold/20 border border-sunrise-gold/30 p-5 self-start">
+              <h4 className="font-bebas text-2xl tracking-wide text-sunrise-gold mb-4 pb-3 border-b border-sunrise-gold/30">
                 EVENT META
-              </div>
+              </h4>
               <dl className="m-0">
                 {workout.meta.map((m, i) => (
                   <div
                     key={m.k}
-                    className={`flex justify-between items-baseline gap-3 py-2 font-mono text-[11px] ${
+                    className={`flex justify-between items-baseline gap-3 py-2 text-[12px] ${
                       i < workout.meta.length - 1
-                        ? "border-b border-dashed border-stone-800"
+                        ? "border-b border-dashed border-sunrise-gold/20"
                         : ""
                     }`}
                   >
-                    <dt className="text-stone-500 uppercase tracking-wider">
+                    <dt className="text-gray-400 uppercase tracking-wider">
                       {m.k}
                     </dt>
                     <dd
-                      className={`m-0 font-semibold text-right ${
+                      className={`m-0 font-bold text-right ${
                         m.gold ? "text-sunrise-gold" : "text-white"
                       }`}
                     >
@@ -472,9 +472,9 @@ function WorkoutRow({
                   </div>
                 ))}
               </dl>
-              <div className="mt-3.5 font-mono text-[10px] tracking-wide text-stone-500 uppercase leading-relaxed">
-                <span>ELIGIBLE — </span>
-                <span className="text-stone-300 font-semibold">
+              <div className="mt-4 pt-3 border-t border-sunrise-gold/20 text-[10px] tracking-wide text-gray-400 uppercase leading-relaxed">
+                <span className="text-sunrise-gold font-bold">Eligible — </span>
+                <span className="text-gray-200 font-semibold normal-case tracking-normal">
                   {workout.eligibility}
                 </span>
               </div>
@@ -490,24 +490,26 @@ export default function QualifierWorkouts() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="mt-12">
-      <div className="flex items-end justify-between gap-6 mb-5 pb-3 border-b border-stone-800">
-        <div>
-          <div className="font-mono text-[10px] tracking-[0.18em] uppercase text-sunrise-gold mb-2">
-            Online Qualifier — Programming
-          </div>
-          <h4 className="font-bebas text-3xl md:text-4xl text-white tracking-wide leading-none m-0">
+    <section className="mt-16">
+      <div className="mb-8">
+        <span className="inline-block bg-sunrise-gold text-pitch-black px-4 py-1.5 text-xs font-bold tracking-wider uppercase mb-4">
+          Online Qualifier — Programming
+        </span>
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3 pb-4 border-b border-sunrise-gold/30">
+          <h4 className="font-bebas text-4xl md:text-5xl text-white tracking-wide leading-none m-0">
             THE WORKOUTS
           </h4>
-        </div>
-        <div className="hidden md:block font-mono text-[10px] uppercase tracking-widest text-stone-500 text-right leading-relaxed">
-          4 EVENTS · 22 SCALING LEVELS
-          <br />
-          <span className="text-stone-300">APR 10 → APR 20, 2026</span>
+          <div className="text-[11px] uppercase tracking-widest text-gray-400 md:text-right leading-relaxed">
+            <span className="text-sunrise-gold font-bold">
+              4 Events · 22 Scaling Levels
+            </span>
+            <br />
+            <span>Apr 10 → Apr 20, 2026</span>
+          </div>
         </div>
       </div>
 
-      <div className="bg-stone-900 border border-stone-800">
+      <div className="bg-pitch-black/50 border border-sunrise-gold/30">
         {WORKOUTS.map((w, i) => (
           <WorkoutRow
             key={w.num}
@@ -518,7 +520,7 @@ export default function QualifierWorkouts() {
         ))}
       </div>
 
-      <p className="mt-4 font-mono text-[11px] text-stone-500 leading-relaxed">
+      <p className="mt-5 text-sm text-gray-400 leading-relaxed">
         Tap a workout to expand. Pick a Division Tier (Elite / RX / INT /
         Rookie) to see the prescription for that division. View standards and
         submit scores on{" "}
@@ -526,7 +528,7 @@ export default function QualifierWorkouts() {
           href="https://wodsmith.com/compete/mwfc-mountain-west-fitness-championship-online-qualifier-2026"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sunrise-gold hover:underline"
+          className="text-sunrise-gold font-bold hover:underline"
         >
           wodsmith.com →
         </a>
