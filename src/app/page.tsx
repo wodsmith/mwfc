@@ -1,1134 +1,312 @@
+import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
-import QualifierWorkouts from "@/components/QualifierWorkouts";
-import ThrowdownMap from "@/components/ThrowdownMap";
 
-export default function Timeline2026() {
+const divisions = [
+  {
+    name: "Elite",
+    eyebrow: "Invite only",
+    description:
+      "High-level athletes selected for the top championship field. Expect advanced gymnastics, heavy loads, and high-output tests across the weekend.",
+  },
+  {
+    name: "RX",
+    eyebrow: "Experienced competitors",
+    description:
+      "For athletes who regularly compete as prescribed and are ready for demanding barbell, gymnastics, and conditioning tests.",
+  },
+  {
+    name: "Intermediate",
+    eyebrow: "Competitive and developing",
+    description:
+      "A strong fit for athletes building toward RX who want a serious competition experience with adjusted loading and skill volume.",
+  },
+  {
+    name: "Rookie",
+    eyebrow: "First-time friendly",
+    description:
+      "Built for newer competitors who want the energy of championship weekend with approachable standards and smart scaling.",
+  },
+];
+
+const eventPhotos = [
+  {
+    src: "/athlete-photos/muscle-up.jpg",
+    alt: "Athlete performing ring muscle-ups at the Mountain West Fitness Championship",
+  },
+  {
+    src: "/athlete-photos/sandbag-lunge.jpg",
+    alt: "Athlete carrying a sandbag during last year's championship",
+  },
+  {
+    src: "/athlete-photos/sled-push.PNG",
+    alt: "Athlete pushing a sled during the Mountain West Fitness Championship",
+  },
+  {
+    src: "/athlete-photos/ropeclimb.jpg",
+    alt: "Athlete climbing a rope in competition",
+  },
+];
+
+const weekendDetails = [
+  "Two days of championship competition in Caldwell, Idaho",
+  "Individual and team divisions across multiple skill levels",
+  "Elite divisions are invite only",
+  "Professional event floor, vendors, spectators, and community energy",
+];
+
+export default function Home() {
   return (
     <>
       <Navigation />
-      <div className="min-h-screen bg-pitch-black mt-24">
-        {/* Hero Section */}
-        <div className="relative flex items-center justify-center overflow-hidden">
-          <div className="relative z-10 text-center px-4">
-            <div className="inline-block bg-sunrise-gold text-pitch-black px-6 py-2 font-bold text-sm mb-6">
-              ⚡ OCTOBER 9-10, 2026 ⚡
-            </div>
-            <h1 className="text-7xl md:text-8xl font-bebas text-white mb-4">
-              MOUNTAIN WEST
-              <span className="block text-sunrise-gold">
-                FITNESS CHAMPIONSHIP
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-2">
-              The ultimate fitness competition in the Mountain West region.
-              Qualify through online workouts or local throwdowns.
-            </p>
-            <p className="text-lg text-sunrise-gold font-bold mb-8">
-              Championship Weekend: October 9-10, 2026 • Caldwell, Idaho
-            </p>
-            <a
-              href="#qualify"
-              className="inline-block bg-sunrise-gold text-pitch-black px-8 py-4 font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg"
-            >
-              SEE HOW TO QUALIFY →
-            </a>
+      <div className="min-h-screen bg-pitch-black mt-24 text-white">
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0">
+            <Image
+              src="/header-background.png"
+              alt="Mountain West Fitness Championship event floor"
+              fill
+              priority
+              className="object-cover"
+              sizes="100vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/65 to-pitch-black" />
           </div>
-        </div>
 
-        {/* Division Breakdown Section */}
-        <section className="pt-28 pb-16 px-4">
-          <div className="max-w-6xl mx-auto text-center">
-            <h2 className="font-bebas text-5xl md:text-6xl text-sunrise-gold mb-4">
-              FIND YOUR DIVISION
-            </h2>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-12">
-              Not sure which division is right for you? Check out our division
-              breakdown for detailed movement standards and athlete profiles.
-            </p>
+          <div className="relative z-10 container mx-auto px-4 pt-20 pb-16 md:pt-28 md:pb-24">
+            <div className="max-w-5xl">
+              <div className="inline-flex bg-sunrise-gold text-pitch-black px-5 py-2 font-bold text-sm uppercase tracking-wide mb-8">
+                October 9-10, 2026 | Caldwell, Idaho
+              </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-              <div className="bg-stone-900 border border-gray-700 p-6 text-left">
-                <h3 className="font-bebas text-sunrise-gold text-3xl mb-2">
-                  Elite
-                </h3>
-                <p className="text-gray-300">
-                  Semifinal-level athletes. Heavy loads, complex gymnastics,
-                  high volume.
-                </p>
-              </div>
-              <div className="bg-stone-900 border border-gray-700 p-6 text-left">
-                <h3 className="font-bebas text-sunrise-gold text-3xl mb-2">
-                  RX
-                </h3>
-                <p className="text-gray-300">
-                  Experienced athletes who complete workouts as prescribed. All
-                  core skills.
-                </p>
-              </div>
-              <div className="bg-stone-900 border border-gray-700 p-6 text-left">
-                <h3 className="font-bebas text-sunrise-gold text-3xl mb-2">
-                  Intermediate
-                </h3>
-                <p className="text-gray-300">
-                  Developing athletes building toward RX. Reduced loading and
-                  skill volume.
-                </p>
-              </div>
-              <div className="bg-stone-900 border border-gray-700 p-6 text-left">
-                <h3 className="font-bebas text-sunrise-gold text-3xl mb-2">
-                  Rookie
-                </h3>
-                <p className="text-gray-300">
-                  Newer competitors with foundational skills. Scaled movements,
-                  moderate weights.
-                </p>
+              <h1 className="font-bebas text-6xl md:text-8xl lg:text-9xl leading-none mb-6">
+                Mountain West
+                <span className="block text-sunrise-gold">
+                  Fitness Championship
+                </span>
+              </h1>
+
+              <p className="text-xl md:text-2xl text-gray-200 max-w-3xl leading-relaxed mb-8">
+                The Mountain West Championship is back for a full weekend of
+                competition, community, and high-energy tests for athletes
+                across the region.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="#registration"
+                  className="inline-flex items-center justify-center bg-sunrise-gold text-pitch-black px-8 py-4 font-bold text-lg hover:bg-yellow-400 transition-colors shadow-lg"
+                >
+                  Registration Details
+                </a>
+                <Link
+                  href="/divisions"
+                  className="inline-flex items-center justify-center border border-white/40 text-white px-8 py-4 font-bold text-lg hover:border-sunrise-gold hover:text-sunrise-gold transition-colors"
+                >
+                  View Divisions
+                </Link>
               </div>
             </div>
-
-            <Link
-              href="/divisions"
-              className="inline-block bg-sunrise-gold text-pitch-black px-8 py-4 font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg"
-            >
-              VIEW FULL DIVISION BREAKDOWN →
-            </Link>
           </div>
         </section>
 
-        {/* Main Timeline Container */}
-        <main className="relative container mx-auto px-4 py-20">
-          {/* Section Header */}
-          <div className="text-center mb-20">
-            <h2 className="text-6xl font-bebas text-white mb-6">
-              THE ROAD TO CHAMPIONSHIP
-            </h2>
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto">
-              Your path to the 2026 Championship starts here. Compete in the
-              online qualifier, battle at local throwdowns, and prove you belong
-              on the biggest stage in the Mountain West.
-            </p>
-          </div>
-
-          {/* Timeline */}
-          <div className="relative timeline-container">
-            {/* Timeline Line - Left Side */}
-            <div className="absolute left-0 md:left-32 top-0 bottom-0 w-1 bg-sunrise-gold hidden md:block timeline-line"></div>
-
-            {/* Phase 1: Online Qualifier */}
-            <div className="relative flex items-start mb-32">
-              <div className="hidden md:block w-32 flex-shrink-0">
-                <div className="sticky top-8">
-                  <div className="bg-gradient-to-br from-forest-green/90 to-forest-green/60 backdrop-blur-sm border border-forest-green/30 text-white px-4 py-2 font-bold text-sm">
-                    APR 10-20
-                  </div>
-                </div>
-              </div>
-
-              <div className="md:ml-16 flex-grow">
-                <div className="mb-8">
-                  <div className="flex flex-col gap-2 mb-4">
-                    <span className="inline-block bg-gradient-to-br from-forest-green/90 to-forest-green/60 backdrop-blur-sm border border-forest-green/30 text-white px-4 py-2 text-sm font-bold w-fit">
-                      PHASE 1
-                    </span>
-                    <span className="md:hidden inline-block bg-gradient-to-br from-forest-green/90 to-forest-green/60 backdrop-blur-sm border border-forest-green/30 text-white px-4 py-2 text-xs font-bold w-fit">
-                      APR 10-20, 2026
-                    </span>
-                  </div>
-                  <h3 className="text-5xl font-bebas text-white mb-6">
-                    ONLINE QUALIFIER
-                  </h3>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                      The online qualifier opens the door to every athlete in
-                      the Mountain West region and beyond. Over 10 days in
-                      April, athletes will complete a series of workouts
-                      designed to test every aspect of functional fitness and
-                      secure their spot directly to the Championship.
-                    </p>
-                    <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                      Submit your scores, upload your videos, and join hundreds
-                      of athletes vying for their chance to compete.
-                    </p>
-                    <div className="bg-pitch-black/50 border-l-4 border-forest-green p-6">
-                      <h4 className="text-2xl font-bebas text-forest-green-light mb-4">
-                        QUALIFIER DETAILS
-                      </h4>
-                      <ul className="space-y-3 text-gray-300">
-                        <li className="flex items-start">
-                          <span className="text-forest-green-light mr-3 text-xl">
-                            ▸
-                          </span>
-                          <span>
-                            10-day qualifying window: April 10-20, 2026
-                          </span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-forest-green-light mr-3 text-xl">
-                            ▸
-                          </span>
-                          <span>Video submission required for validation</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-forest-green-light mr-3 text-xl">
-                            ▸
-                          </span>
-                          <span>Top finishers advance to the Championship</span>
-                        </li>
-                      </ul>
-                    </div>
-                    <a
-                      href="https://wodsmith.com/compete/mwfc-mountain-west-fitness-championship-online-qualifier-2026"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block bg-forest-green text-white px-8 py-4 font-bold text-lg hover:bg-forest-green-light transition-all transform hover:scale-105 shadow-lg mt-6"
-                    >
-                      REGISTER FOR THE ONLINE QUALIFIER →
-                    </a>
-                  </div>
-                  <div className="space-y-6">
-                    <div className="bg-gradient-to-br from-forest-green/20 to-sunrise-gold/20 border border-sunrise-gold/30 p-4 md:p-8">
-                      <h4 className="text-xl md:text-2xl font-bebas text-sunrise-gold mb-3 md:mb-4">
-                        QUALIFICATION SPOTS BREAKDOWN
-                      </h4>
-                      <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-3 md:mb-4">
-                        16 total spots per division. Three paths to qualify:
-                        Throwdown winners, Online Qualifier top finishers, and
-                        Global Throwdown Leaderboard.
-                      </p>
-                      <table className="w-full text-sm">
-                        <thead>
-                          <tr className="border-b border-sunrise-gold/30">
-                            <th className="text-left text-white py-2 pr-2 text-xs md:text-sm">
-                              Competition
-                            </th>
-                            <th className="text-center text-forest-green-light py-2 px-1 text-xs md:text-sm">
-                              Online
-                            </th>
-                            <th className="text-center text-sunrise-gold py-2 px-1 text-xs md:text-sm">
-                              Throwdowns
-                            </th>
-                            <th className="text-center text-gray-300 py-2 px-1 text-xs md:text-sm">
-                              Global
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody className="text-gray-300">
-                          <tr className="border-b border-gray-700/50">
-                            <td className="py-2 pr-2 text-xs md:text-sm">
-                              Individual
-                              <br />
-                              <span className="text-gray-500">(Jul 11)</span>
-                            </td>
-                            <td className="text-center py-2 px-1">6</td>
-                            <td className="text-center py-2 px-1">6</td>
-                            <td className="text-center py-2 px-1">4</td>
-                          </tr>
-                          <tr className="border-b border-gray-700/50">
-                            <td className="py-2 pr-2 text-xs md:text-sm">
-                              Masters Indy
-                              <br />
-                              <span className="text-gray-500">(Jul 11)</span>
-                            </td>
-                            <td className="text-center py-2 px-1">8</td>
-                            <td className="text-center py-2 px-1">3</td>
-                            <td className="text-center py-2 px-1">5</td>
-                          </tr>
-                          <tr className="border-b border-gray-700/50">
-                            <td className="py-2 pr-2 text-xs md:text-sm">
-                              Masters Teams
-                              <br />
-                              <span className="text-gray-500">(Jul 18)</span>
-                            </td>
-                            <td className="text-center py-2 px-1">5</td>
-                            <td className="text-center py-2 px-1">6</td>
-                            <td className="text-center py-2 px-1">5</td>
-                          </tr>
-                          <tr>
-                            <td className="py-2 pr-2 text-xs md:text-sm">
-                              Teams
-                              <br />
-                              <span className="text-gray-500">(Aug 1)</span>
-                            </td>
-                            <td className="text-center py-2 px-1">4</td>
-                            <td className="text-center py-2 px-1">8</td>
-                            <td className="text-center py-2 px-1">4</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      <p className="text-xs text-gray-400 mt-3 md:mt-4 italic">
-                        * 16 spots per division. Subject to change if more
-                        throwdowns are added.
-                      </p>
-                    </div>
-                    {/* <div className="bg-forest-green/10 border border-forest-green/30 p-8 h-64 flex items-center justify-center">
-                    <p className="text-forest-green-light text-center">
-                      [Image: Athletes recording qualifier workouts]
-                    </p>
-                  </div> */}
-                  </div>
-                </div>
-
-                <QualifierWorkouts />
-              </div>
-            </div>
-
-            {/* Phase 2: Throwdowns */}
-            <div className="relative flex items-start mb-32">
-              <div className="hidden md:block w-32 flex-shrink-0">
-                <div className="sticky top-8">
-                  <div className="bg-gradient-to-br from-forest-green/90 to-forest-green/60 backdrop-blur-sm border border-forest-green/30 text-white px-4 py-2 font-bold text-sm">
-                    JULY 2026
-                  </div>
-                </div>
-              </div>
-
-              <div className="md:ml-16 flex-grow">
-                <div className="mb-8">
-                  <div className="flex flex-col gap-2 mb-4">
-                    <span className="inline-block bg-gradient-to-br from-sunrise-gold/90 to-sunrise-gold/60 backdrop-blur-sm border border-sunrise-gold/30 text-pitch-black px-4 py-2 text-sm font-bold w-fit">
-                      PHASE 2
-                    </span>
-                    <span className="md:hidden inline-block bg-gradient-to-br from-sunrise-gold/90 to-sunrise-gold/60 backdrop-blur-sm border border-sunrise-gold/30 text-pitch-black px-4 py-2 text-xs font-bold w-fit">
-                      JULY 2026
-                    </span>
-                  </div>
-                  <h3 className="text-5xl font-bebas text-white mb-6">
-                    MWFC THROWDOWNS
-                  </h3>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                      One-day, team-based fitness competitions hosted by gyms
-                      across the Mountain West. Three competition weekends in
-                      July, each featuring different partner divisions. Teams of
-                      2 will compete in 4 programmed workouts with full support
-                      from the MWFC team.
-                    </p>
-
-                    <div className="bg-pitch-black/50 border-l-4 border-sunrise-gold p-6 mb-6">
-                      <h4 className="text-2xl font-bebas text-sunrise-gold mb-4">
-                        COMPETITION DATES
-                      </h4>
-                      <ul className="space-y-4 text-gray-300">
-                        <li className="flex items-start flex-col">
-                          <div className="flex items-center mb-2">
-                            <span className="text-sunrise-gold mr-3 text-xl">
-                              ▸
-                            </span>
-                            <span className="font-bold text-white">
-                              July 11th - Individual Competition
-                            </span>
-                          </div>
-                          <span className="ml-8 text-sm">
-                            4 Divisions: Men's RX, Men's Intermediate, Women's
-                            RX, Women's Intermediate (60 Athlete Cap)
-                          </span>
-                          <span className="ml-8 text-xs text-gray-400 mt-1">
-                            6 Gym Hosts
-                          </span>
-                        </li>
-                        <li className="flex items-start flex-col">
-                          <div className="flex items-center mb-2">
-                            <span className="text-sunrise-gold mr-3 text-xl">
-                              ▸
-                            </span>
-                            <span className="font-bold text-white">
-                              July 11th - Individual Masters 35+ Competition
-                            </span>
-                          </div>
-                          <span className="ml-8 text-sm">
-                            4 Divisions: Masters 35+ Men's RX, Men's
-                            Intermediate, Women's RX, Women's Intermediate (60
-                            Athlete Cap)
-                          </span>
-                          <span className="ml-8 text-xs text-gray-400 mt-1">
-                            4 Gym Hosts
-                          </span>
-                        </li>
-                        <li className="flex items-start flex-col">
-                          <div className="flex items-center mb-2">
-                            <span className="text-sunrise-gold mr-3 text-xl">
-                              ▸
-                            </span>
-                            <span className="font-bold text-white">
-                              July 18th - Masters Team Competition
-                            </span>
-                          </div>
-                          <span className="ml-8 text-sm">
-                            6 Divisions: Men's Masters 35+ (M/M) RX, INT, Rookie
-                            & Women's Masters 35+ (F/F) RX, INT, Rookie (60 Team
-                            Cap)
-                          </span>
-                          <span className="ml-8 text-xs text-gray-400 mt-1">
-                            5 Gym Hosts
-                          </span>
-                        </li>
-                        <li className="flex items-start flex-col">
-                          <div className="flex items-center mb-2">
-                            <span className="text-sunrise-gold mr-3 text-xl">
-                              ▸
-                            </span>
-                            <span className="font-bold text-white">
-                              August 1st - Team Competition
-                            </span>
-                          </div>
-                          <span className="ml-8 text-sm">
-                            6 Divisions: Men's (M/M) RX, INT, Rookie & Women's
-                            (F/F) RX, INT, Rookie (60 Team Cap)
-                          </span>
-                          <span className="ml-8 text-xs text-gray-400 mt-1">
-                            8 Gym Hosts
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div className="bg-pitch-black/50 border-l-4 border-forest-green p-6">
-                      <h4 className="text-2xl font-bebas text-forest-green-light mb-4">
-                        EVENT STRUCTURE
-                      </h4>
-                      <ul className="space-y-3 text-gray-300">
-                        <li className="flex items-start">
-                          <span className="text-forest-green-light mr-3 text-xl">
-                            ▸
-                          </span>
-                          <span>
-                            10 Heats of 6 Lanes (60 Team Max Capacity)
-                          </span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-forest-green-light mr-3 text-xl">
-                            ▸
-                          </span>
-                          <span>
-                            7:00am Check-In, 8:00am Briefing, 9:00am Start
-                          </span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-forest-green-light mr-3 text-xl">
-                            ▸
-                          </span>
-                          <span>4 Workouts: 9:00am-6:00pm (if sold out)</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-forest-green-light mr-3 text-xl">
-                            ▸
-                          </span>
-                          <span>Podium Ceremony @ 6:15pm</span>
-                        </li>
-                        {/* <li className="flex items-start">
-                        <span className="text-forest-green-light mr-3 text-xl">▸</span>
-                        <span>Team Registration: $149/Team (includes athlete shirts)</span>
-                      </li> */}
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="space-y-6">
-                    <div className="bg-gradient-to-br from-forest-green/20 to-sunrise-gold/20 border border-sunrise-gold/30 p-8">
-                      <h4 className="text-2xl font-bebas text-sunrise-gold mb-4">
-                        WHAT IS A THROWDOWN?
-                      </h4>
-                      <p className="text-gray-300 leading-relaxed mb-4">
-                        Think of MWFC Throwdowns as your first step on the Road
-                        to the Championship. These are one-day, team-based
-                        fitness competitions designed to give beginner and
-                        intermediate athletes a taste of the adrenaline,
-                        camaraderie, and challenge that come with
-                        competition—without the pressure of a full-scale event.
-                      </p>
-                      <div className="bg-sunrise-gold/10 border border-sunrise-gold/30 p-4 rounded mb-4">
-                        <p className="text-white font-bold mb-1">
-                          Registration Costs:
-                        </p>
-                        <p className="text-gray-300 text-sm">
-                          <span className="text-sunrise-gold font-bold">
-                            Team Competitions:
-                          </span>{" "}
-                          $199/Team (includes athlete t-shirts)
-                        </p>
-                        <p className="text-gray-300 text-sm">
-                          <span className="text-sunrise-gold font-bold">
-                            Individual Competitions:
-                          </span>{" "}
-                          $149/Athlete (includes athlete t-shirt)
-                        </p>
-                      </div>
-                      <ul className="space-y-2 text-gray-300 text-sm">
-                        <li className="flex items-start">
-                          <span className="text-sunrise-gold mr-2">•</span>
-                          <span>Train and compete with your gym fam</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-sunrise-gold mr-2">•</span>
-                          <span>
-                            Athlete t-shirts included with registration
-                          </span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-sunrise-gold mr-2">•</span>
-                          <span>Earn your shot at the MWFC Championship</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-sunrise-gold mr-2">•</span>
-                          <span>
-                            See how you stack up on the Global Throwdown
-                            Leaderboard
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div className="bg-gradient-to-br from-sunrise-gold/20 to-forest-green/20 border border-sunrise-gold/30 p-4 md:p-8">
-                      <h4 className="text-2xl font-bebas text-sunrise-gold mb-4">
-                        QUALIFICATION SPOTS BY COMPETITION
-                      </h4>
-                      <p className="text-gray-300 leading-relaxed mb-4 text-sm md:text-base">
-                        All scores from every Throwdown feed the Global
-                        Throwdown Leaderboard. 16 spots per division, allocated
-                        across three paths:
-                      </p>
-                      <table className="w-full text-sm">
-                        <thead>
-                          <tr className="border-b border-sunrise-gold/30">
-                            <th className="text-left text-white py-2 pr-2 text-xs md:text-sm">
-                              Competition
-                            </th>
-                            <th className="text-center text-forest-green-light py-2 px-1 text-xs md:text-sm">
-                              Online
-                            </th>
-                            <th className="text-center text-sunrise-gold py-2 px-1 text-xs md:text-sm">
-                              Throwdowns
-                            </th>
-                            <th className="text-center text-gray-300 py-2 px-1 text-xs md:text-sm">
-                              Global
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody className="text-gray-300">
-                          <tr className="border-b border-gray-700/50">
-                            <td className="py-2 pr-2 text-xs md:text-sm">
-                              Individual
-                              <br />
-                              <span className="text-gray-500">(Jul 11)</span>
-                            </td>
-                            <td className="text-center py-2 px-1">6</td>
-                            <td className="text-center py-2 px-1">6</td>
-                            <td className="text-center py-2 px-1">4</td>
-                          </tr>
-                          <tr className="border-b border-gray-700/50">
-                            <td className="py-2 pr-2 text-xs md:text-sm">
-                              Masters Indy
-                              <br />
-                              <span className="text-gray-500">(Jul 11)</span>
-                            </td>
-                            <td className="text-center py-2 px-1">8</td>
-                            <td className="text-center py-2 px-1">3</td>
-                            <td className="text-center py-2 px-1">5</td>
-                          </tr>
-                          <tr className="border-b border-gray-700/50">
-                            <td className="py-2 pr-2 text-xs md:text-sm">
-                              Masters Teams
-                              <br />
-                              <span className="text-gray-500">(Jul 18)</span>
-                            </td>
-                            <td className="text-center py-2 px-1">5</td>
-                            <td className="text-center py-2 px-1">6</td>
-                            <td className="text-center py-2 px-1">5</td>
-                          </tr>
-                          <tr>
-                            <td className="py-2 pr-2 text-xs md:text-sm">
-                              Teams
-                              <br />
-                              <span className="text-gray-500">(Aug 1)</span>
-                            </td>
-                            <td className="text-center py-2 px-1">4</td>
-                            <td className="text-center py-2 px-1">8</td>
-                            <td className="text-center py-2 px-1">4</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      <p className="text-xs text-gray-400 mt-4 italic">
-                        * 16 spots per division. Subject to change if more
-                        throwdowns are added. A strong Throwdown performance can
-                        earn a Championship invite through the Global
-                        Leaderboard!
-                      </p>
-                    </div>
-
-                    {/* <div className="bg-forest-green/10 border border-forest-green/30 p-8 h-64 flex items-center justify-center">
-                    <p className="text-forest-green-light text-center">
-                      [Image: Athletes competing at regional throwdowns]
-                    </p>
-                  </div> */}
-                  </div>
-                </div>
-
-                {/* Throwdown Map */}
-                <div className="mt-12">
-                  <ThrowdownMap />
-                </div>
-              </div>
-            </div>
-
-            {/* Phase 3: Championship */}
-            <div className="relative flex items-start mb-32">
-              <div className="hidden md:block w-32 flex-shrink-0">
-                <div className="sticky top-8">
-                  <div className="bg-gradient-to-br from-sunrise-gold/90 to-forest-green/60 backdrop-blur-sm border border-sunrise-gold/30 text-white px-4 py-2 font-bold text-sm">
-                    OCT 9-10
-                  </div>
-                </div>
-              </div>
-
-              <div className="md:ml-16 flex-grow">
-                <div className="mb-8">
-                  <div className="flex flex-col gap-2 mb-4">
-                    <span className="inline-block bg-gradient-to-br from-sunrise-gold/90 to-forest-green/60 backdrop-blur-sm border border-sunrise-gold/30 text-white px-4 py-2 text-sm font-bold w-fit">
-                      PHASE 3
-                    </span>
-                    <span className="md:hidden inline-block bg-gradient-to-br from-sunrise-gold/90 to-forest-green/60 backdrop-blur-sm border border-sunrise-gold/30 text-white px-4 py-2 text-xs font-bold w-fit">
-                      OCT 9-10, 2026
-                    </span>
-                  </div>
-                  <h3 className="text-5xl font-bebas text-white mb-6">
-                    2026 CHAMPIONSHIP
-                    <span className="block text-sunrise-gold text-3xl mt-2">
-                      OCTOBER 9-10TH, 2026
-                    </span>
-                  </h3>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                      Everything leads to this. Two days of elite competition at
-                      the Canyon County Event Center in Caldwell, Idaho. The
-                      best athletes from throwdowns across the region and online
-                      qualifier will converge to crown the 2026 Mountain West
-                      Fitness Champions.
-                    </p>
-                    <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                      Experience the energy of 400+ athletes pushing their
-                      limits, the roar of the crowd, and the thrill of victory.
-                      With live streaming, professional commentary, and a
-                      festival atmosphere, the championship weekend is more than
-                      a competition - it's a celebration of the Mountain West
-                      fitness community.
-                    </p>
-                    <div className="bg-pitch-black/50 border-l-4 border-sunrise-gold p-6">
-                      <h4 className="text-2xl font-bebas text-sunrise-gold mb-4">
-                        CHAMPIONSHIP FEATURES
-                      </h4>
-                      <ul className="space-y-3 text-gray-300">
-                        <li className="flex items-start">
-                          <span className="text-sunrise-gold mr-3 text-xl">
-                            ▸
-                          </span>
-                          <span>42,000 sq ft climate-controlled venue</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-sunrise-gold mr-3 text-xl">
-                            ▸
-                          </span>
-                          <span>Elite, RX, Scaled, and Team divisions</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-sunrise-gold mr-3 text-xl">
-                            ▸
-                          </span>
-                          <span>Live streaming and professional coverage</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-sunrise-gold mr-3 text-xl">
-                            ▸
-                          </span>
-                          <span>$50,000+ in prizes and awards</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  {/* <div className="bg-gradient-to-br from-forest-green/20 to-sunrise-gold/20 border border-sunrise-gold/30 p-8 h-96 flex items-center justify-center">
-                  <p className="text-sunrise-gold text-center">
-                    [Image: Championship podium celebration]
+        <main>
+          <section
+            id="registration"
+            className="border-y border-sunrise-gold/30 bg-gradient-to-r from-sunrise-gold/20 via-forest-green/20 to-sunrise-gold/10"
+          >
+            <div className="container mx-auto px-4 py-10 md:py-12">
+              <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+                <div>
+                  <p className="text-sm font-bold uppercase tracking-[0.18em] text-sunrise-gold mb-3">
+                    Registration opens soon
                   </p>
-                </div> */}
+                  <h2 className="font-bebas text-5xl md:text-6xl text-white mb-4">
+                    June 14 at 12:00 PM MST
+                  </h2>
+                  <p className="text-lg text-gray-200 max-w-3xl leading-relaxed">
+                    Registration for the 2026 Mountain West Fitness Championship
+                    opens Sunday, June 14, 2026 at 12:00 PM MST. Spots will be
+                    available for RX, Intermediate, and Rookie divisions. Elite
+                    divisions are invite only.
+                  </p>
+                </div>
+
+                <div className="bg-pitch-black/70 border border-sunrise-gold/40 p-6">
+                  <p className="text-sunrise-gold font-bold uppercase tracking-wide mb-2">
+                    Championship Weekend
+                  </p>
+                  <p className="font-bebas text-4xl text-white mb-1">
+                    October 9-10, 2026
+                  </p>
+                  <p className="text-gray-300">
+                    Canyon County Event Center | Caldwell, Idaho
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          {/* How to Qualify Section */}
-          <section id="qualify" className="mt-32 relative">
-            <div className="bg-gradient-to-br from-sunrise-gold/10 to-forest-green/10 border-2 border-sunrise-gold/40 p-4 md:p-8 rounded-lg">
-              <div className="text-center mb-8 md:mb-12">
-                <h2 className="text-4xl md:text-5xl font-bebas text-white mb-3 md:mb-4">
-                  HOW TO QUALIFY FOR THE CHAMPIONSHIP
+          <section className="container mx-auto px-4 py-20 md:py-28">
+            <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+              <div>
+                <p className="text-sm font-bold uppercase tracking-[0.18em] text-forest-green-light mb-3">
+                  The competition
+                </p>
+                <h2 className="font-bebas text-5xl md:text-6xl text-white mb-6">
+                  Built for the Championship Stage
                 </h2>
-                <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto px-2">
-                  Three different paths lead to the October Championship. Here's
-                  exactly how to earn your spot.
+                <p className="text-lg text-gray-300 leading-relaxed mb-8">
+                  This season is focused on the championship itself. Athletes
+                  will come together in Caldwell for a polished, high-energy
+                  event that showcases the depth of the Mountain West fitness
+                  community.
+                </p>
+
+                <div className="grid gap-4">
+                  {weekendDetails.map((detail) => (
+                    <div
+                      key={detail}
+                      className="flex gap-4 border border-white/10 bg-stone-900/80 p-4"
+                    >
+                      <span className="text-sunrise-gold text-xl leading-none">
+                        &#9656;
+                      </span>
+                      <p className="text-gray-200">{detail}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3 md:gap-4">
+                {eventPhotos.map((photo, index) => (
+                  <div
+                    key={photo.src}
+                    className={`relative overflow-hidden border border-white/10 bg-stone-900 ${
+                      index === 0 || index === 3
+                        ? "aspect-[4/5]"
+                        : "aspect-[4/4]"
+                    }`}
+                  >
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      fill
+                      loading="eager"
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 50vw, 28vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="bg-stone-950 border-y border-white/10">
+            <div className="container mx-auto px-4 py-20 md:py-28">
+              <div className="max-w-3xl mb-12">
+                <p className="text-sm font-bold uppercase tracking-[0.18em] text-sunrise-gold mb-3">
+                  Divisions
+                </p>
+                <h2 className="font-bebas text-5xl md:text-6xl text-white mb-4">
+                  Find the Right Floor
+                </h2>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Choose the division that matches your current capacity and
+                  competition goals. The Elite field will be selected by invite,
+                  while the other championship divisions open with registration
+                  on June 14.
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
-                {/* Individual Path */}
-                <div className="bg-pitch-black/60 border-2 border-sunrise-gold/30 p-4 md:p-8 rounded-lg">
-                  <h3 className="text-2xl md:text-3xl font-bebas text-sunrise-gold mb-3 md:mb-6 text-center">
-                    INDIVIDUAL ATHLETES
-                  </h3>
-                  <p className="text-gray-400 text-xs md:text-sm mb-4 md:mb-6 text-center px-2">
-                    Men's & Women's: RX, Intermediate (+ Masters 35+)
-                  </p>
-
-                  <div className="space-y-4 md:space-y-6">
-                    <div className="border-l-4 border-sunrise-gold pl-3 md:pl-4">
-                      <p className="text-white font-bold text-base md:text-lg mb-1 md:mb-2">
-                        PATH 1: Online Qualifier
-                      </p>
-                      <p className="text-gray-300 text-sm md:text-base mb-1">
-                        <span className="text-sunrise-gold font-bold">
-                          Top 6 Athletes
-                        </span>{" "}
-                        per division
-                      </p>
-                      <p className="text-gray-400 text-xs md:text-sm">
-                        April 10-20, 2026
-                      </p>
-                    </div>
-
-                    <div className="border-l-4 border-sunrise-gold pl-3 md:pl-4">
-                      <p className="text-white font-bold text-base md:text-lg mb-1 md:mb-2">
-                        PATH 2: Win Your Throwdown
-                      </p>
-                      <p className="text-gray-300 text-sm md:text-base mb-1">
-                        <span className="text-sunrise-gold font-bold">
-                          6 Athletes
-                        </span>{" "}
-                        qualify (1st place at each host gym)
-                      </p>
-                      <p className="text-gray-400 text-xs md:text-sm">
-                        July 11th - Individual Competitions
-                      </p>
-                    </div>
-
-                    <div className="border-l-4 border-sunrise-gold pl-3 md:pl-4">
-                      <p className="text-white font-bold text-base md:text-lg mb-1 md:mb-2">
-                        PATH 3: Global Throwdown Leaderboard
-                      </p>
-                      <p className="text-gray-300 text-sm md:text-base mb-1">
-                        <span className="text-sunrise-gold font-bold">
-                          Next Top 4
-                        </span>{" "}
-                        individuals from all throwdowns
-                      </p>
-                      <p className="text-gray-400 text-xs md:text-sm">
-                        Aggregate scores across all events
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="mt-6 md:mt-8 bg-sunrise-gold/20 border border-sunrise-gold/40 p-3 md:p-4 rounded text-center">
-                    <p className="text-white font-bold text-xl md:text-2xl">
-                      16 TOTAL SPOTS
+              <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+                {divisions.map((division) => (
+                  <article
+                    key={division.name}
+                    className="border border-white/10 bg-pitch-black p-6"
+                  >
+                    <p className="text-xs font-bold uppercase tracking-[0.16em] text-forest-green-light mb-3">
+                      {division.eyebrow}
                     </p>
-                    <p className="text-gray-300 text-xs md:text-sm">
-                      per division
+                    <h3 className="font-bebas text-4xl text-sunrise-gold mb-4">
+                      {division.name}
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      {division.description}
                     </p>
-                  </div>
-                </div>
-
-                {/* Team Path */}
-                <div className="bg-pitch-black/60 border-2 border-forest-green/30 p-4 md:p-8 rounded-lg">
-                  <h3 className="text-2xl md:text-3xl font-bebas text-forest-green-light mb-3 md:mb-6 text-center">
-                    TEAM DIVISIONS
-                  </h3>
-                  <p className="text-gray-400 text-xs md:text-sm mb-4 md:mb-6 text-center px-2">
-                    Men's (M/M), Women's (F/F), Masters 35+ (M/M & F/F): RX,
-                    INT, Rookie
-                  </p>
-
-                  <div className="space-y-4 md:space-y-6">
-                    <div className="border-l-4 border-forest-green pl-3 md:pl-4">
-                      <p className="text-white font-bold text-base md:text-lg mb-1 md:mb-2">
-                        PATH 1: Team Online Qualifier
-                      </p>
-                      <p className="text-gray-300 text-sm md:text-base mb-1">
-                        <span className="text-forest-green-light font-bold">
-                          Top 4 Teams
-                        </span>{" "}
-                        per division
-                      </p>
-                      <p className="text-gray-400 text-xs md:text-sm">
-                        April 10-20, 2026
-                      </p>
-                    </div>
-
-                    <div className="border-l-4 border-forest-green pl-3 md:pl-4">
-                      <p className="text-white font-bold text-base md:text-lg mb-1 md:mb-2">
-                        PATH 2: Win Your Throwdown
-                      </p>
-                      <p className="text-gray-300 text-sm md:text-base mb-1">
-                        <span className="text-forest-green-light font-bold">
-                          8 Teams
-                        </span>{" "}
-                        qualify (1st place at each host gym)
-                      </p>
-                      <p className="text-gray-400 text-xs md:text-sm">
-                        July 18th & August 1st - Team Competitions
-                      </p>
-                    </div>
-
-                    <div className="border-l-4 border-forest-green pl-3 md:pl-4">
-                      <p className="text-white font-bold text-base md:text-lg mb-1 md:mb-2">
-                        PATH 3: Global Throwdown Leaderboard
-                      </p>
-                      <p className="text-gray-300 text-sm md:text-base mb-1">
-                        <span className="text-forest-green-light font-bold">
-                          Next Top 4
-                        </span>{" "}
-                        teams from all throwdowns
-                      </p>
-                      <p className="text-gray-400 text-xs md:text-sm">
-                        Aggregate scores across all events
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="mt-6 md:mt-8 bg-forest-green/20 border border-forest-green/40 p-3 md:p-4 rounded text-center">
-                    <p className="text-white font-bold text-xl md:text-2xl">
-                      16 TOTAL SPOTS
-                    </p>
-                    <p className="text-gray-300 text-xs md:text-sm">
-                      per division
-                    </p>
-                  </div>
-                </div>
+                  </article>
+                ))}
               </div>
 
-              <div className="mt-8 md:mt-12 text-center px-2">
-                <p className="text-gray-300 text-base md:text-lg max-w-4xl mx-auto">
-                  <span className="text-sunrise-gold font-bold">
-                    Key Takeaway:
-                  </span>{" "}
-                  Multiple chances to qualify! Compete in the Online Qualifier
-                  in April, attend in-person Throwdowns in July, or rank high on
-                  the Global Throwdown Leaderboard across all events to secure
-                  your spot at the October Championship.
+              <div className="mt-10">
+                <Link
+                  href="/divisions"
+                  className="inline-flex bg-sunrise-gold text-pitch-black px-8 py-4 font-bold text-lg hover:bg-yellow-400 transition-colors shadow-lg"
+                >
+                  View Full Division Breakdown
+                </Link>
+              </div>
+            </div>
+          </section>
+
+          <section className="container mx-auto px-4 py-20 md:py-28">
+            <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
+              <div className="relative aspect-[16/11] overflow-hidden border border-white/10 bg-stone-900">
+                <Image
+                  src="/athlete-photos/fan-high-five.png"
+                  alt="Athlete celebrating with spectators at last year's Mountain West Fitness Championship"
+                  fill
+                  loading="eager"
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+              </div>
+
+              <div>
+                <p className="text-sm font-bold uppercase tracking-[0.18em] text-forest-green-light mb-3">
+                  Last year's energy
+                </p>
+                <h2 className="font-bebas text-5xl md:text-6xl text-white mb-6">
+                  Athletes, Vendors, Spectators, and a Packed Floor
+                </h2>
+                <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                  The championship weekend brings together the region's athletes
+                  and supporters for a competition that feels big, organized,
+                  and worth training for.
+                </p>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Expect a professional venue, multiple workouts, a crowd that
+                  knows the stakes, and divisions designed to make every heat
+                  competitive.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Host Gym Section */}
-          <section id="apply" className="mt-32 relative">
-            <div className="text-center mb-12">
-              <h2 className="text-6xl font-bebas text-white mb-6">
-                HOST A THROWDOWN
-              </h2>
-              <p className="text-xl text-gray-400 max-w-4xl mx-auto">
-                Bring the MWFC experience to your community. Host an official
-                throwdown and be part of the Road to Championship.
-              </p>
-            </div>
-
-            {/* Host Applications */}
-            <div className="grid md:grid-cols-2 gap-8 mb-16">
-              <div className="bg-pitch-black/50 border border-sunrise-gold/30 p-8 rounded-lg">
-                <div className="inline-block bg-sunrise-gold text-pitch-black px-4 py-2 text-sm font-bold mb-4">
-                  APPLICATIONS OPEN NOW
-                </div>
-                <h3 className="text-4xl font-bebas text-white mb-2">
-                  HOST GYM APPLICATIONS
-                </h3>
-                <p className="text-sunrise-gold font-bold mb-6">
-                  Apply by March 1st, 2026
-                </p>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  Gyms across the Mountain West and beyond can become official
-                  hosts of MWFC 2026 throwdowns. Bring world-class competition
-                  to your community with comprehensive support from the MWFC
-                  team.
-                </p>
-                <div className="bg-pitch-black/50 border-l-4 border-sunrise-gold p-4 mb-6">
-                  <h4 className="text-xl font-bebas text-sunrise-gold mb-3">
-                    KEY REQUIREMENTS
-                  </h4>
-                  <ul className="space-y-2 text-gray-300 text-sm">
-                    <li className="flex items-start">
-                      <span className="text-sunrise-gold mr-2">▸</span>
-                      <span>
-                        6-lanes with 15ft lane length and 6 rig stations
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-sunrise-gold mr-2">▸</span>
-                      <span>Capacity for 60-120 athletes and spectators</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-sunrise-gold mr-2">▸</span>
-                      <span>Application deadline: March 1, 2026</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="bg-pitch-black/50 border border-forest-green/30 p-8 rounded-lg">
-                <div className="inline-block bg-forest-green text-white px-4 py-2 text-sm font-bold mb-4">
-                  MARCH 15, 2026
-                </div>
-                <h3 className="text-4xl font-bebas text-white mb-6">
-                  HOST SELECTION & PREPARATION
-                </h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  Selected host gyms will be announced and begin working with
-                  the MWFC team. Each host receives the official MWFC Throwdown
-                  Kit with everything needed for a successful event.
-                </p>
-                <div className="bg-pitch-black/50 border-l-4 border-forest-green p-4">
-                  <h4 className="text-xl font-bebas text-forest-green-light mb-3">
-                    WHAT YOU'LL RECEIVE
-                  </h4>
-                  <ul className="space-y-2 text-gray-300 text-sm">
-                    <li className="flex items-start">
-                      <span className="text-forest-green-light mr-2">▸</span>
-                      <span>
-                        Marketing templates and social media campaigns
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-forest-green-light mr-2">▸</span>
-                      <span>Equipment checklist and setup guides</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-forest-green-light mr-2">▸</span>
-                      <span>Direct access to MWFC support team</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Revenue CTA */}
-            <div className="bg-gradient-to-br from-forest-green/20 to-sunrise-gold/20 border border-sunrise-gold/30 p-12 backdrop-blur-sm rounded-lg">
-              <div className="text-center">
-                <h3 className="text-5xl font-bebas mb-6 text-white">
-                  BRING A MWFC THROWDOWN TO YOUR GYM
-                </h3>
-                <div className="max-w-6xl mx-auto mb-12">
-                  {/* Key Highlights */}
-                  <div className="grid md:grid-cols-3 gap-6 mb-8">
-                    <div className="bg-pitch-black/40 backdrop-blur-sm p-6 rounded-lg border border-sunrise-gold/20">
-                      <p className="text-4xl font-bebas text-sunrise-gold mb-2">
-                        50/50
-                      </p>
-                      <p className="text-sm uppercase tracking-wide text-gray-200">
-                        Revenue Share
-                      </p>
-                      <p className="text-xs mt-2 text-gray-400">
-                        Make up to $6K for hosting
-                      </p>
-                    </div>
-                    <div className="bg-pitch-black/40 backdrop-blur-sm p-6 rounded-lg border border-sunrise-gold/20">
-                      <p className="text-4xl font-bebas text-sunrise-gold mb-2">
-                        4
-                      </p>
-                      <p className="text-sm uppercase tracking-wide text-gray-200">
-                        Programmed Workouts
-                      </p>
-                      <p className="text-xs mt-2 text-gray-400">
-                        Event support from MWFC Team
-                      </p>
-                    </div>
-                    <div className="bg-pitch-black/40 backdrop-blur-sm p-6 rounded-lg border border-sunrise-gold/20">
-                      <p className="text-4xl font-bebas text-sunrise-gold mb-2">
-                        60
-                      </p>
-                      <p className="text-sm uppercase tracking-wide text-gray-200">
-                        Max Capacity
-                      </p>
-                      <p className="text-xs mt-2 text-gray-400">
-                        10 Heats of 6 Lanes
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Revenue Breakdown Section */}
-                  <div className="grid md:grid-cols-2 gap-6 mb-8">
-                    {/* Team Competition Revenue */}
-                    <div className="bg-pitch-black/60 border border-sunrise-gold/30 p-6 rounded-lg text-left">
-                      <h3 className="text-2xl font-bebas text-sunrise-gold mb-4">
-                        TEAM COMPETITION REVENUE
-                      </h3>
-                      <div className="mb-4">
-                        <p className="text-gray-300 mb-2">
-                          <span className="text-white font-bold">
-                            Registration:
-                          </span>{" "}
-                          $199/Team
-                        </p>
-                        <p className="text-gray-300 mb-4">
-                          <span className="text-white font-bold">
-                            Host Receives:
-                          </span>{" "}
-                          $100 per Team
-                        </p>
-                      </div>
-                      <div className="space-y-2">
-                        <p className="text-sm text-gray-400 mb-3 uppercase tracking-wide font-bold">
-                          Potential Revenue:
-                        </p>
-                        <div className="grid grid-cols-2 gap-2 text-sm">
-                          <div className="bg-pitch-black/40 p-2 rounded">
-                            <span className="text-gray-300">30 Teams:</span>
-                            <span className="text-sunrise-gold font-bold ml-2">
-                              $3,000
-                            </span>
-                          </div>
-                          <div className="bg-pitch-black/40 p-2 rounded">
-                            <span className="text-gray-300">40 Teams:</span>
-                            <span className="text-sunrise-gold font-bold ml-2">
-                              $4,000
-                            </span>
-                          </div>
-                          <div className="bg-pitch-black/40 p-2 rounded">
-                            <span className="text-gray-300">50 Teams:</span>
-                            <span className="text-sunrise-gold font-bold ml-2">
-                              $5,000
-                            </span>
-                          </div>
-                          <div className="bg-sunrise-gold/20 border border-sunrise-gold p-2 rounded">
-                            <span className="text-white font-bold">
-                              60 Teams:
-                            </span>
-                            <span className="text-sunrise-gold font-bold ml-2">
-                              $6,000
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      <p className="text-xs text-gray-500 mt-3 italic">
-                        July 18th & August 1st - Team Competitions
-                      </p>
-                    </div>
-
-                    {/* Individual Competition Revenue */}
-                    <div className="bg-pitch-black/60 border border-forest-green/30 p-6 rounded-lg text-left">
-                      <h3 className="text-2xl font-bebas text-forest-green-light mb-4">
-                        INDIVIDUAL COMPETITION REVENUE
-                      </h3>
-                      <div className="mb-4">
-                        <p className="text-gray-300 mb-2">
-                          <span className="text-white font-bold">
-                            Registration:
-                          </span>{" "}
-                          $149/Athlete
-                        </p>
-                        <p className="text-gray-300 mb-4">
-                          <span className="text-white font-bold">
-                            Host Receives:
-                          </span>{" "}
-                          $75 per Athlete
-                        </p>
-                      </div>
-                      <div className="space-y-2">
-                        <p className="text-sm text-gray-400 mb-3 uppercase tracking-wide font-bold">
-                          Potential Revenue:
-                        </p>
-                        <div className="grid grid-cols-2 gap-2 text-sm">
-                          <div className="bg-pitch-black/40 p-2 rounded">
-                            <span className="text-gray-300">30 Athletes:</span>
-                            <span className="text-forest-green-light font-bold ml-2">
-                              $2,250
-                            </span>
-                          </div>
-                          <div className="bg-pitch-black/40 p-2 rounded">
-                            <span className="text-gray-300">40 Athletes:</span>
-                            <span className="text-forest-green-light font-bold ml-2">
-                              $3,000
-                            </span>
-                          </div>
-                          <div className="bg-pitch-black/40 p-2 rounded">
-                            <span className="text-gray-300">50 Athletes:</span>
-                            <span className="text-forest-green-light font-bold ml-2">
-                              $3,750
-                            </span>
-                          </div>
-                          <div className="bg-forest-green/20 border border-forest-green p-2 rounded">
-                            <span className="text-white font-bold">
-                              60 Athletes:
-                            </span>
-                            <span className="text-forest-green-light font-bold ml-2">
-                              $4,500
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      <p className="text-xs text-gray-500 mt-3 italic">
-                        July 11th - Individual & Masters Individual Competitions
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Additional Revenue Opportunities */}
-                  <div className="bg-pitch-black/40 border border-sunrise-gold/20 p-6 rounded-lg mb-8">
-                    <h3 className="text-2xl font-bebas text-sunrise-gold mb-4">
-                      ADDITIONAL REVENUE OPPORTUNITIES
-                    </h3>
-                    <div className="grid md:grid-cols-4 gap-4 text-sm">
-                      <div className="text-center">
-                        <p className="text-sunrise-gold font-bold text-lg">
-                          $100
-                        </p>
-                        <p className="text-gray-300">Booth Spaces</p>
-                      </div>
-                      <div className="text-center">
-                        <p className="text-sunrise-gold font-bold text-lg">
-                          $500-1,000
-                        </p>
-                        <p className="text-gray-300">Competition Sponsors</p>
-                      </div>
-                      <div className="text-center">
-                        <p className="text-sunrise-gold font-bold text-lg">
-                          $250-500
-                        </p>
-                        <p className="text-gray-300">Workout Sponsors</p>
-                      </div>
-                      <div className="text-center">
-                        <p className="text-sunrise-gold font-bold text-lg">
-                          Variable
-                        </p>
-                        <p className="text-gray-300">MWFC Apparel Sales</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <p className="text-lg mb-6 text-gray-300">
-                    Host a one-day competition with everything you need for a
-                    successful event. Choose from July 11th, July 18th, or
-                    August 1st, 2026.
+          <section className="bg-sunrise-gold text-pitch-black">
+            <div className="container mx-auto px-4 py-12 md:py-16">
+              <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+                <div>
+                  <p className="text-sm font-bold uppercase tracking-[0.18em] mb-3">
+                    Mark your calendar
                   </p>
-                  <p className="text-sm text-gray-400">
-                    Fill out the application below and we will reach out to
-                    schedule a call to discuss and answer any questions you
-                    might have.
+                  <h2 className="font-bebas text-5xl md:text-6xl mb-3">
+                    Registration opens June 14 at noon MST
+                  </h2>
+                  <p className="text-lg font-medium max-w-3xl">
+                    RX, Intermediate, and Rookie athletes can register when
+                    spots open. Elite divisions are invite only.
                   </p>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                  <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSdoBX3eX-YB7FmYX0CgBYu4Rsh7XG911AApBRsel8rnVHhxNg/viewform"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-sunrise-gold text-pitch-black px-8 py-4 font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg"
-                  >
-                    APPLY TO HOST A THROWDOWN →
-                  </a>
-                </div>
+                <Link
+                  href="/divisions"
+                  className="inline-flex justify-center border-2 border-pitch-black px-8 py-4 font-bold text-lg hover:bg-pitch-black hover:text-sunrise-gold transition-colors"
+                >
+                  Check Division Standards
+                </Link>
               </div>
             </div>
           </section>
