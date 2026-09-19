@@ -121,6 +121,19 @@ export default function DivisionsPage() {
               experience appropriate to the athlete&rsquo;s skill and strength
               level. Review the movement standards below to find the right fit.
             </p>
+            <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a
+                href="https://competitioncorner.net/events/21483/details"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-sunrise-gold text-pitch-black px-8 py-4 font-bold text-lg hover:bg-yellow-400 transition-colors shadow-lg"
+              >
+                Register Now
+              </a>
+              <span className="text-sm text-gray-500">
+                RX, Intermediate &amp; Rookie open &middot; Elite is invite only
+              </span>
+            </div>
           </div>
 
           {/* Mobile ToC — horizontal scroll */}
@@ -411,6 +424,34 @@ export default function DivisionsPage() {
             </div>
           </div>
         </div>
+
+        {/* Closing CTA band */}
+        <section className="border-y border-sunrise-gold/30 bg-gradient-to-r from-sunrise-gold/20 via-forest-green/20 to-sunrise-gold/10">
+          <div className="container mx-auto px-4 py-16 md:py-20">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+              <div className="max-w-2xl">
+                <p className="text-sm font-bold uppercase tracking-[0.18em] text-sunrise-gold mb-3">
+                  Found your floor?
+                </p>
+                <h2 className="font-bebas text-5xl md:text-6xl text-white leading-none">
+                  Claim your spot on the championship stage
+                </h2>
+                <p className="text-lg text-gray-200 leading-relaxed mt-4">
+                  RX, Intermediate, and Rookie divisions are open now. Elite is
+                  invite only. Register before spots fill.
+                </p>
+              </div>
+              <a
+                href="https://competitioncorner.net/events/21483/details"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 inline-flex items-center justify-center bg-sunrise-gold text-pitch-black px-10 py-5 font-bold text-xl hover:bg-yellow-400 transition-colors shadow-lg"
+              >
+                Register Now
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
       <Footer />
     </>

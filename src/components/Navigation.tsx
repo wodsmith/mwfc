@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import WorkoutDropdown from "@/components/WorkoutDropdown";
 
 export default function Navigation2025() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,20 +23,23 @@ export default function Navigation2025() {
 
         <div className="hidden lg:flex items-center space-x-4">
           <Link
-            href="/all-valley-open"
+            href="/divisions"
             className="border border-sunrise-gold text-sunrise-gold px-6 py-3 font-bold text-lg rounded hover:bg-sunrise-gold/10 transition-colors"
           >
-            All Valley Open 2026
+            Divisions
           </Link>
-          <Link
-            href="/2025"
+          <a
+            href="https://competitioncorner.net/events/21483/details"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-sunrise-gold text-black px-6 py-3 font-bold text-lg rounded hover:bg-sunrise-gold/90 transition-colors"
           >
-            2025 Competition
-          </Link>
+            Register
+          </a>
         </div>
 
         <button
+          type="button"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="lg:hidden text-white p-2"
           aria-label="Toggle menu"
@@ -47,6 +49,7 @@ export default function Navigation2025() {
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
+            aria-hidden="true"
           >
             {isMenuOpen ? (
               <path
@@ -71,17 +74,19 @@ export default function Navigation2025() {
         <div className="lg:hidden mt-6 bg-black/90 rounded-lg p-6 mx-4">
           <div className="flex flex-col space-y-4">
             <Link
-              href="/all-valley-open"
+              href="/divisions"
               className="border border-sunrise-gold text-sunrise-gold px-6 py-3 font-bold text-lg rounded hover:bg-sunrise-gold/10 transition-colors text-center"
             >
-              All Valley Open 2026
+              Divisions
             </Link>
-            <Link
-              href="/2025"
+            <a
+              href="https://competitioncorner.net/events/21483/details"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-sunrise-gold text-black px-6 py-3 font-bold text-lg rounded hover:bg-sunrise-gold/90 transition-colors text-center"
             >
-              2025 Competition
-            </Link>
+              Register
+            </a>
           </div>
         </div>
       )}

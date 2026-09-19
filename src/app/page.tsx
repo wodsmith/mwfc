@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ChampionshipWorkouts2026 from "@/components/ChampionshipWorkouts2026";
 import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
 
@@ -95,10 +96,12 @@ export default function Home() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="#registration"
+                  href="https://competitioncorner.net/events/21483/details"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-sunrise-gold text-pitch-black px-8 py-4 font-bold text-lg hover:bg-yellow-400 transition-colors shadow-lg"
                 >
-                  Registration Details
+                  Register Now
                 </a>
                 <Link
                   href="/divisions"
@@ -120,17 +123,24 @@ export default function Home() {
               <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
                 <div>
                   <p className="text-sm font-bold uppercase tracking-[0.18em] text-sunrise-gold mb-3">
-                    Registration opens soon
+                    Registration is open
                   </p>
                   <h2 className="font-bebas text-5xl md:text-6xl text-white mb-4">
-                    June 14 at 12:00 PM MST
+                    Secure Your Spot
                   </h2>
-                  <p className="text-lg text-gray-200 max-w-3xl leading-relaxed">
+                  <p className="text-lg text-gray-200 max-w-3xl leading-relaxed mb-6">
                     Registration for the 2026 Mountain West Fitness Championship
-                    opens Sunday, June 14, 2026 at 12:00 PM MST. Spots will be
-                    available for RX, Intermediate, and Rookie divisions. Elite
-                    divisions are invite only.
+                    is now open. Spots are available for RX, Intermediate, and
+                    Rookie divisions. Elite divisions are invite only.
                   </p>
+                  <a
+                    href="https://competitioncorner.net/events/21483/details"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center bg-sunrise-gold text-pitch-black px-8 py-4 font-bold text-lg hover:bg-yellow-400 transition-colors shadow-lg"
+                  >
+                    Register Now
+                  </a>
                 </div>
 
                 <div className="bg-pitch-black/70 border border-sunrise-gold/40 p-6">
@@ -251,6 +261,8 @@ export default function Home() {
             </div>
           </section>
 
+          <ChampionshipWorkouts2026 />
+
           <section className="container mx-auto px-4 py-20 md:py-28">
             <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
               <div className="relative aspect-[16/11] overflow-hidden border border-white/10 bg-stone-900">
@@ -291,22 +303,24 @@ export default function Home() {
               <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
                 <div>
                   <p className="text-sm font-bold uppercase tracking-[0.18em] mb-3">
-                    Mark your calendar
+                    Spots are live
                   </p>
                   <h2 className="font-bebas text-5xl md:text-6xl mb-3">
-                    Registration opens June 14 at noon MST
+                    Registration is now open
                   </h2>
                   <p className="text-lg font-medium max-w-3xl">
-                    RX, Intermediate, and Rookie athletes can register when
-                    spots open. Elite divisions are invite only.
+                    RX, Intermediate, and Rookie athletes can register now.
+                    Elite divisions are invite only.
                   </p>
                 </div>
-                <Link
-                  href="/divisions"
+                <a
+                  href="https://competitioncorner.net/events/21483/details"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex justify-center border-2 border-pitch-black px-8 py-4 font-bold text-lg hover:bg-pitch-black hover:text-sunrise-gold transition-colors"
                 >
-                  Check Division Standards
-                </Link>
+                  Register Now
+                </a>
               </div>
             </div>
           </section>
