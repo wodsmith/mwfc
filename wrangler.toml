@@ -1,5 +1,4 @@
 name = "mwfc"
-account_id = "cb6389040876842df9db689f910adfd7"
 compatibility_date = "2024-11-08"
 pages_build_output_dir = "./out"
 

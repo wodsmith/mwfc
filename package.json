@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "biome check",
     "format": "biome format --write",
-    "deploy": "npm run build && npx wrangler pages deploy"
+    "deploy": "npm run build && CLOUDFLARE_ACCOUNT_ID=cb6389040876842df9db689f910adfd7 npx wrangler pages deploy out --project-name mwfc --branch main"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
